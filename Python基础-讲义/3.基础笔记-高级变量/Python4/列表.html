@@ -1,0 +1,483 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book Python基础语言 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>列表 | Python基础语言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../Python4/元组.html" />
+    
+    
+    <link rel="prev" href="../index.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="0.1"
+        data-chapter-title="列表"
+        data-filepath="Python4/列表.md"
+        data-basepath=".."
+        data-revision="Tue Feb 27 2018 20:29:16 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        3.高级变量类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="0.1" data-path="Python4/列表.html">
+            
+                
+                    <a href="../Python4/列表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        列表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="Python4/元组.html">
+            
+                
+                    <a href="../Python4/元组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        元组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="Python4/字典.html">
+            
+                
+                    <a href="../Python4/字典.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        字典
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="Python4/字符串.html">
+            
+                
+                    <a href="../Python4/字符串.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.5" data-path="Python4/公共语法.html">
+            
+                
+                    <a href="../Python4/公共语法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        公共语法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础语言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="01-&#x5217;&#x8868;">01. &#x5217;&#x8868;</h2>
+<h3 id="11-&#x5217;&#x8868;&#x7684;&#x5B9A;&#x4E49;">1.1 &#x5217;&#x8868;&#x7684;&#x5B9A;&#x4E49;</h3>
+<ul>
+<li><code>List</code>&#xFF08;&#x5217;&#x8868;&#xFF09; &#x662F; <code>Python</code> &#x4E2D;&#x4F7F;&#x7528; <strong>&#x6700;&#x9891;&#x7E41;</strong> &#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E2D;&#x901A;&#x5E38;&#x53EB;&#x505A; <strong>&#x6570;&#x7EC4;</strong></li>
+<li>&#x4E13;&#x95E8;&#x7528;&#x4E8E;&#x5B58;&#x50A8; <strong>&#x4E00;&#x4E32; &#x6570;&#x636E;</strong>&#xFF0C;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E; &#x79F0;&#x4E3A; <strong>&#x5143;&#x7D20;</strong></li>
+<li>&#x5217;&#x8868;&#x7528; <code>[]</code> &#x5B9A;&#x4E49;&#xFF0C;<strong>&#x5143;&#x7D20;</strong> &#x4E4B;&#x95F4;&#x4F7F;&#x7528; <code>,</code> &#x5206;&#x9694;</li>
+<li>&#x5217;&#x8868;&#x7684; <strong>&#x7D22;&#x5F15;</strong> &#x4ECE; <code>0</code> &#x5F00;&#x59CB;<ul>
+<li><strong>&#x7D22;&#x5F15;</strong> &#x5C31;&#x662F;&#x5143;&#x7D20;&#x5728; <strong>&#x5217;&#x8868;</strong> &#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x7F16;&#x53F7;&#xFF0C;<strong>&#x7D22;&#x5F15;</strong> &#x53C8;&#x53EF;&#x4EE5;&#x88AB;&#x79F0;&#x4E3A; <strong>&#x4E0B;&#x6807;</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/QQ20171224-003130@2x.png" alt=""></p>
+<pre><code class="lang-python">name_list = [<span class="hljs-string">&quot;zhangsan&quot;</span>, <span class="hljs-string">&quot;lisi&quot;</span>, <span class="hljs-string">&quot;wangwu&quot;</span>]
+<span class="hljs-comment"># &#x53D6;&#x51FA;&#x5217;&#x8868;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x503C;</span>
+print(name_list[<span class="hljs-number">1</span>])  <span class="hljs-comment"># &#x8F93;&#x51FA; lisi</span>
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4ECE;&#x5217;&#x8868;&#x4E2D;&#x53D6;&#x503C;&#x65F6;&#xFF0C;&#x5982;&#x679C; <strong>&#x8D85;&#x51FA;&#x7D22;&#x5F15;&#x8303;&#x56F4;</strong>&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x62A5;&#x9519;</p>
+</blockquote>
+<h3 id="12-&#x5217;&#x8868;&#x5E38;&#x7528;&#x64CD;&#x4F5C;">1.2 &#x5217;&#x8868;&#x5E38;&#x7528;&#x64CD;&#x4F5C;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x5206;&#x7C7B;</th>
+<th>&#x5173;&#x952E;&#x5B57; / &#x51FD;&#x6570; / &#x65B9;&#x6CD5;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>&#x589E;&#x52A0;</td>
+<td><font color="red">&#x5217;&#x8868;.append(&#x6570;&#x636E;)</font></td>
+<td>&#x5728;&#x672B;&#x5C3E;&#x8FFD;&#x52A0;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.insert(&#x7D22;&#x5F15;, &#x6570;&#x636E;)</td>
+<td>&#x5728;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;&#x6570;&#x636E;(&#x4F4D;&#x7F6E;&#x524D;&#x6709;&#x7A7A;&#x5143;&#x7D20;&#x4F1A;&#x8865;&#x4F4D;)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.extend(Iterable)</td>
+<td>&#x5C06;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x4E2D; &#x7684;&#x5143;&#x7D20; &#x8FFD;&#x52A0;&#x5230;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>&#x5220;&#x9664;</td>
+<td>del &#x5217;&#x8868;[&#x7D22;&#x5F15;]</td>
+<td>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><font color="red">&#x5217;&#x8868;.remove(&#x6570;&#x636E;)</font></td>
+<td>&#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x51FA;&#x73B0;&#x7684;&#x6307;&#x5B9A;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.pop()</td>
+<td>&#x5220;&#x9664;&#x672B;&#x5C3E;&#x6570;&#x636E;,&#x8FD4;&#x56DE;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.pop(&#x7D22;&#x5F15;)</td>
+<td>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.clear</td>
+<td>&#x6E05;&#x7A7A;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>3</td>
+<td>&#x4FEE;&#x6539;</td>
+<td><font color="red">&#x5217;&#x8868;[&#x7D22;&#x5F15;] = &#x6570;&#x636E;</font></td>
+<td>&#x4FEE;&#x6539;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6570;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#x4F1A;&#x62A5;&#x9519;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>&#x67E5;&#x8BE2;</td>
+<td><font color="red">&#x5217;&#x8868;[&#x7D22;&#x5F15;]</font></td>
+<td>&#x6839;&#x636E;&#x7D22;&#x5F15;&#x53D6;&#x503C;&#xFF0C;&#x7D22;&#x5F15;&#x4E0D;&#x5B58;&#x5728;&#x4F1A;&#x62A5;&#x9519;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.index(&#x6570;&#x636E;)</td>
+<td>&#x6839;&#x636E;&#x503C;&#x67E5;&#x8BE2;&#x7D22;&#x5F15;&#xFF0C;&#x8FD4;&#x56DE;&#x9996;&#x6B21;&#x51FA;&#x73B0;&#x65F6;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x6CA1;&#x6709;&#x67E5;&#x5230;&#x4F1A;&#x62A5;&#x9519;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.count(&#x6570;&#x636E;)</td>
+<td>&#x6570;&#x636E;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><font color="red">len(&#x5217;&#x8868;)</font></td>
+<td>&#x5217;&#x8868;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><font color="red">if &#x6570;&#x636E; in &#x5217;&#x8868;:</font></td>
+<td>&#x68C0;&#x67E5;&#x5217;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x67D0;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>&#x6392;&#x5E8F;</td>
+<td><font color="red">&#x5217;&#x8868;.sort()</font></td>
+<td>&#x5347;&#x5E8F;&#x6392;&#x5E8F;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.sort(reverse=True)</td>
+<td>&#x964D;&#x5E8F;&#x6392;&#x5E8F;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>&#x5217;&#x8868;.reverse()</td>
+<td>&#x9006;&#x5E8F;&#x3001;&#x53CD;&#x8F6C;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x5173;&#x952E;&#x5B57;&#x3001;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#xFF08;&#x79D1;&#x666E;&#xFF09;">&#x5173;&#x952E;&#x5B57;&#x3001;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#xFF08;&#x79D1;&#x666E;&#xFF09;</h4>
+<ul>
+<li><strong>&#x5173;&#x952E;&#x5B57;</strong> &#x662F; Python &#x5185;&#x7F6E;&#x7684;&#x3001;&#x5177;&#x6709;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x7684;&#x6807;&#x8BC6;&#x7B26;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> keyword
+print(keyword.kwlist)
+</code></pre>
+<ul>
+<li><strong>&#x51FD;&#x6570;</strong> &#x5C01;&#x88C5;&#x4E86;&#x72EC;&#x7ACB;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;</li>
+</ul>
+<pre><code class="lang-python">&#x51FD;&#x6570;&#x540D;(&#x53C2;&#x6570;)
+</code></pre>
+<ul>
+<li><strong>&#x65B9;&#x6CD5;</strong> &#x548C;&#x51FD;&#x6570;&#x7C7B;&#x4F3C;&#xFF0C;&#x540C;&#x6837;&#x662F;&#x5C01;&#x88C5;&#x4E86;&#x72EC;&#x7ACB;&#x7684;&#x529F;&#x80FD;</li>
+<li><strong>&#x65B9;&#x6CD5;</strong> &#x9700;&#x8981;&#x901A;&#x8FC7; <strong>&#x5BF9;&#x8C61;</strong> &#x6765;&#x8C03;&#x7528;&#xFF0C;&#x8868;&#x793A;&#x9488;&#x5BF9;&#x8FD9;&#x4E2A; <strong>&#x5BF9;&#x8C61;</strong> &#x8981;&#x505A;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+<pre><code class="lang-python">&#x5BF9;&#x8C61;.&#x65B9;&#x6CD5;&#x540D;(&#x53C2;&#x6570;)
+</code></pre>
+<h3 id="13-&#x5FAA;&#x73AF;&#x904D;&#x5386;">1.3 &#x5FAA;&#x73AF;&#x904D;&#x5386;</h3>
+<ul>
+<li><strong>&#x904D;&#x5386;</strong> &#x5C31;&#x662F; <strong>&#x4ECE;&#x5934;&#x5230;&#x5C3E;</strong> <strong>&#x4F9D;&#x6B21;</strong> &#x4ECE; <strong>&#x5217;&#x8868;</strong> &#x4E2D;&#x53D6;&#x51FA; <strong>&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</strong>&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x76F8;&#x540C;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>Python&#x4E2D;&#x5B9E;&#x73B0;&#x904D;&#x5386;&#x7684;&#x65B9;&#x5F0F;&#x5F88;&#x591A;&#xFF0C;&#x6BD4;&#x5982;while&#x5FAA;&#x73AF;&#x3001;for&#x5FAA;&#x73AF;&#x3001;&#x8FED;&#x4EE3;&#x5668;&#x7B49;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># while&#x5FAA;&#x73AF;&#x5B9E;&#x73B0;&#x5217;&#x8868;&#x7684;&#x904D;&#x5386;</span>
+i = <span class="hljs-number">0</span>
+name_list = [<span class="hljs-string">&quot;zhangsan&quot;</span>, <span class="hljs-string">&quot;lisi&quot;</span>, <span class="hljs-string">&quot;wangwu&quot;</span>]
+list_count = len(name_list)
+<span class="hljs-keyword">while</span> i &lt; list_count:
+    name = name_list[i]
+    print(name)
+    i += <span class="hljs-number">1</span>
+</code></pre>
+<ul>
+<li>Python&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x5217;&#x8868;&#x7684;&#x904D;&#x5386;&#x6548;&#x7387;&#xFF0C;&#x4E13;&#x95E8;&#x63D0;&#x4F9B; <strong>for&#x5FAA;&#x73AF;</strong> &#x5B9E;&#x73B0;&#x904D;&#x5386;</li>
+<li>Python&#x4E2D;for&#x5FAA;&#x73AF;&#x7684;&#x672C;&#x8D28;&#x662F; <strong>&#x8FED;&#x4EE3;&#x5668;</strong></li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment"># for &#x5B9E;&#x73B0;&#x5217;&#x8868;&#x7684;&#x904D;&#x5386;</span>
+<span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> name_list:
+
+    &#x5FAA;&#x73AF;&#x5185;&#x90E8;&#x9488;&#x5BF9;&#x5217;&#x8868;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+    print(name)
+</code></pre>
+<p><img src="media/14972568611505/002_forin%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="002_forin&#x5FAA;&#x73AF;&#x6D41;&#x7A0B;&#x56FE;-w420"></p>
+<h3 id="14--&#x5217;&#x8868;&#x5D4C;&#x5957;">1.4  &#x5217;&#x8868;&#x5D4C;&#x5957;</h3>
+<ul>
+<li><p>&#x7C7B;&#x4F3C;while&#x5FAA;&#x73AF;&#x7684;&#x5D4C;&#x5957;&#xFF0C;&#x5217;&#x8868;&#x4E5F;&#x662F;&#x652F;&#x6301;&#x5D4C;&#x5957;&#x7684;</p>
+</li>
+<li><p>&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x5C31;&#x662F;&#x5217;&#x8868;&#x7684;&#x5D4C;&#x5957;</p>
+</li>
+</ul>
+<pre><code class="lang-python">schoolNames = [[<span class="hljs-string">&apos;&#x5317;&#x4EAC;&#x5927;&#x5B66;&apos;</span>,<span class="hljs-string">&apos;&#x6E05;&#x534E;&#x5927;&#x5B66;&apos;</span>],
+                [<span class="hljs-string">&apos;&#x5357;&#x5F00;&#x5927;&#x5B66;&apos;</span>,<span class="hljs-string">&apos;&#x5929;&#x6D25;&#x5927;&#x5B66;&apos;</span>,<span class="hljs-string">&apos;&#x5929;&#x6D25;&#x5E08;&#x8303;&#x5927;&#x5B66;&apos;</span>],
+                [<span class="hljs-string">&apos;&#x5C71;&#x4E1C;&#x5927;&#x5B66;&apos;</span>,<span class="hljs-string">&apos;&#x4E2D;&#x56FD;&#x6D77;&#x6D0B;&#x5927;&#x5B66;&apos;</span>]]
+</code></pre>
+<ul>
+<li><p>&#x5E94;&#x7528;</p>
+<p>  &#x4E00;&#x4E2A;&#x5B66;&#x6821;&#xFF0C;&#x6709;3&#x4E2A;&#x529E;&#x516C;&#x5BA4;&#xFF0C;&#x73B0;&#x5728;&#x6709;8&#x4F4D;&#x8001;&#x5E08;&#x7B49;&#x5F85;&#x5DE5;&#x4F4D;&#x7684;&#x5206;&#x914D;&#xFF0C;&#x8BF7;&#x7F16;&#x5199;&#x7A0B;&#x5E8F;:
+  1&gt; &#x5B8C;&#x6210;&#x968F;&#x673A;&#x7684;&#x5206;&#x914D;
+  2&gt; &#x83B7;&#x53D6;&#x529E;&#x516C;&#x5BA4;&#x4FE1;&#x606F; (&#x6BCF;&#x4E2A;&#x529E;&#x516C;&#x5BA4;&#x4E2D;&#x7684;&#x4EBA;&#x6570;&#xFF0C;&#x53CA;&#x5206;&#x522B;&#x662F;&#x8C01;)</p>
+</li>
+</ul>
+<pre><code class="lang-python">
+<span class="hljs-keyword">import</span> random
+
+<span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7528;&#x6765;&#x4FDD;&#x5B58;3&#x4E2A;&#x529E;&#x516C;&#x5BA4;</span>
+offices = [[],[],[]]
+
+<span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x7528;&#x6765;&#x5B58;&#x50A8;8&#x4F4D;&#x8001;&#x5E08;&#x7684;&#x540D;&#x5B57;</span>
+names = [<span class="hljs-string">&apos;A&apos;</span>,<span class="hljs-string">&apos;B&apos;</span>,<span class="hljs-string">&apos;C&apos;</span>,<span class="hljs-string">&apos;D&apos;</span>,<span class="hljs-string">&apos;E&apos;</span>,<span class="hljs-string">&apos;F&apos;</span>,<span class="hljs-string">&apos;G&apos;</span>,<span class="hljs-string">&apos;H&apos;</span>]
+
+<span class="hljs-comment"># &#x5B8C;&#x6210;&#x968F;&#x673A;&#x5206;&#x914D;</span>
+i = <span class="hljs-number">0</span>
+<span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names:
+    index = random.randint(<span class="hljs-number">0</span>,<span class="hljs-number">2</span>)    
+    offices[index].append(name)
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x529E;&#x516C;&#x5BA4;&#x4FE1;&#x606F;</span>
+i = <span class="hljs-number">1</span>
+<span class="hljs-keyword">for</span> tempNames <span class="hljs-keyword">in</span> offices:
+    print(<span class="hljs-string">&apos;&#x529E;&#x516C;&#x5BA4;%d&#x7684;&#x4EBA;&#x6570;&#x4E3A;:%d&apos;</span>%(i,len(tempNames)))
+    i+=<span class="hljs-number">1</span>
+    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> tempNames:
+        print(<span class="hljs-string">&quot;%s&quot;</span>%name,end=<span class="hljs-string">&apos;&apos;</span>)
+    print(<span class="hljs-string">&quot;\n&quot;</span>)
+    print(<span class="hljs-string">&quot;-&quot;</span>*<span class="hljs-number">20</span>)
+</code></pre>
+<h3 id="15-&#x5E94;&#x7528;&#x573A;&#x666F;">1.5 <strong>&#x5E94;&#x7528;&#x573A;&#x666F;</strong></h3>
+<ul>
+<li>&#x5C3D;&#x7BA1; <code>Python</code> &#x7684; <strong>&#x5217;&#x8868;</strong> &#x4E2D;&#x53EF;&#x4EE5; <strong>&#x5B58;&#x50A8;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;</strong></li>
+<li>&#x4F46;&#x662F;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x662F;<ol>
+<li><strong>&#x5217;&#x8868;</strong> &#x5B58;&#x50A8;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x901A;&#x8FC7; <strong>for&#x5FAA;&#x73AF;</strong>&#xFF0C;&#x5728;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#x90E8;&#xFF0C;&#x9488;&#x5BF9;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x5143;&#x7D20;&#xFF0C;&#x6267;&#x884C;&#x76F8;&#x540C;&#x7684;&#x64CD;&#x4F5C;</li>
+</ol>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: 3.高级变量类型"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Python4/元组.html" class="navigation navigation-next " aria-label="Next page: 元组"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python基础语言 -->
+</html>

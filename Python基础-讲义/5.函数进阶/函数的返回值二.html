@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>函数返回值(二) | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./函数的参数二.html" />
+    
+    
+    <link rel="prev" href="./局部变量和全局变量.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="0.2"
+        data-chapter-title="函数返回值(二)"
+        data-filepath="函数的返回值二.md"
+        data-basepath="."
+        data-revision="Fri Dec 22 2017 18:42:21 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        5.函数高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="局部变量和全局变量.html">
+            
+                
+                    <a href="./局部变量和全局变量.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        局部变量、全局变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="0.2" data-path="函数的返回值二.html">
+            
+                
+                    <a href="./函数的返回值二.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        函数返回值(二)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="函数的参数二.html">
+            
+                
+                    <a href="./函数的参数二.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        函数参数(二)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="拆包、交换变量的值.html">
+            
+                
+                    <a href="./拆包、交换变量的值.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        拆包、交换变量的值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.5" data-path="引用.html">
+            
+                
+                    <a href="./引用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        引用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.6" data-path="可变和不可变类型.html">
+            
+                
+                    <a href="./可变和不可变类型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.6.</b>
+                        
+                        可变和不可变类型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="03-&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF08;&#x4E8C;&#xFF09;">03. &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#xFF08;&#x4E8C;&#xFF09;</h2>
+<h3 id="31-&#x591A;&#x4E2A;return">3.1 &#x591A;&#x4E2A;return</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_even_num</span><span class="hljs-params">(num)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x5224;&#x65AD;&#x5947;&#x5076;&#x6570;&quot;&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> num % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+</code></pre>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;return&#x8BED;&#x53E5;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;return&#x8BED;&#x53E5;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x4F1A;&#x7ED3;&#x675F;</li>
+</ul>
+<h3 id="32-&#x591A;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;">3.2 &#x591A;&#x4E2A;&#x8FD4;&#x56DE;&#x503C;</h3>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func2</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>, <span class="hljs-number">1.5</span>
+
+a = func2()
+print(a)
+
+a, b = func2()
+print(a)
+print(b)
+
+a, b, c = <span class="hljs-number">1</span>, <span class="hljs-number">1.5</span>, <span class="hljs-string">&quot;hello&quot;</span>
+print(a)
+print(b)
+print(c)
+</code></pre>
+<ul>
+<li>&#x5F53;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x65F6;&#xFF0C;python&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x6570;&#x636E; <strong>&#x7EC4;&#x5305;</strong> &#x6210;&#x5143;&#x7EC4;</li>
+<li>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x63A5;&#x6536;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;python&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x5143;&#x7EC4; <strong>&#x62C6;&#x5305;</strong> &#x6210;&#x5355;&#x4E2A;&#x6570;&#x636E;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./局部变量和全局变量.html" class="navigation navigation-prev " aria-label="Previous page: 局部变量、全局变量"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./函数的参数二.html" class="navigation navigation-next " aria-label="Next page: 函数参数(二)"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

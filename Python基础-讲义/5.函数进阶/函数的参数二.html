@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>函数参数(二) | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./拆包、交换变量的值.html" />
+    
+    
+    <link rel="prev" href="./函数的返回值二.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="0.3"
+        data-chapter-title="函数参数(二)"
+        data-filepath="函数的参数二.md"
+        data-basepath="."
+        data-revision="Fri Dec 22 2017 18:42:21 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        5.函数高级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="局部变量和全局变量.html">
+            
+                
+                    <a href="./局部变量和全局变量.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        局部变量、全局变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="函数的返回值二.html">
+            
+                
+                    <a href="./函数的返回值二.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        函数返回值(二)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="0.3" data-path="函数的参数二.html">
+            
+                
+                    <a href="./函数的参数二.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        函数参数(二)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="拆包、交换变量的值.html">
+            
+                
+                    <a href="./拆包、交换变量的值.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        拆包、交换变量的值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.5" data-path="引用.html">
+            
+                
+                    <a href="./引用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        引用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.6" data-path="可变和不可变类型.html">
+            
+                
+                    <a href="./可变和不可变类型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.6.</b>
+                        
+                        可变和不可变类型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="04-&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E8C;">04. &#x51FD;&#x6570;&#x53C2;&#x6570;(&#x4E8C;)</h2>
+<h3 id="41-&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">4.1 &#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h3>
+<ul>
+<li>&#x5F62;&#x53C2;&#x8BBE;&#x5B9A;&#x9ED8;&#x8BA4;&#x503C; &#x79F0;&#x4E3A; <strong>&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</strong></li>
+<li>&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F20;&#x5165;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x53C2;&#xFF0C;&#x5219;&#x5B9E;&#x53C2;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printinfo</span><span class="hljs-params">(name, age = <span class="hljs-number">35</span>)</span>:</span>
+   <span class="hljs-comment"># &#x6253;&#x5370;&#x4EFB;&#x4F55;&#x4F20;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+   print(<span class="hljs-string">&quot;Name: %s&quot;</span>, % name)
+   print(<span class="hljs-string">&quot;Age: %s&quot;</span>, % age)
+
+<span class="hljs-comment"># &#x8C03;&#x7528;printinfo&#x51FD;&#x6570;</span>
+printinfo(<span class="hljs-string">&quot;miki&quot;</span>)
+printinfo(<span class="hljs-string">&quot;miki&quot;</span>, <span class="hljs-number">20</span>)
+</code></pre>
+<ul>
+<li><strong>&#x6CE8;&#x610F;&#xFF1A;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x4E00;&#x5B9A;&#x8981;&#x4F4D;&#x4E8E;&#x53C2;&#x6570;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;&#x9762;</strong>&#x3002;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printinfo</span><span class="hljs-params">(name, age=<span class="hljs-number">35</span>, sex)</span>:</span>
+<span class="hljs-prompt">... </span>    <span class="hljs-keyword">print</span> name
+...
+  File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>
+SyntaxError: non-default argument follows default argument
+</code></pre>
+<h3 id="42-&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;">4.2 &#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</h3>
+<p>&#x8C03;&#x7528;&#x51FD;&#x6570;&#x65F6;&#xFF0C;<strong>&#x5B9E;&#x53C2;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5BF9;&#x5E94;&#x7684;&#x5F62;&#x53C2;</strong>&#xFF0C;&#x79F0;&#x4E3A; <strong>&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</strong></p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">printinfo</span><span class="hljs-params">(name, age)</span>:</span>
+   <span class="hljs-comment"># &#x6253;&#x5370;&#x4EFB;&#x4F55;&#x4F20;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+   print(<span class="hljs-string">&quot;Name: %s&quot;</span>, % name)
+   print(<span class="hljs-string">&quot;Age: %s&quot;</span>, % age)
+
+printinfo(age=<span class="hljs-number">9</span>,name=<span class="hljs-string">&quot;miki&quot;</span> )
+</code></pre>
+<h3 id="43-&#x53EF;&#x53D8;&#x53C2;&#x6570;">4.3 &#x53EF;&#x53D8;&#x53C2;&#x6570;</h3>
+<blockquote>
+<p>&#x9700;&#x6C42;&#xFF1A; &#x53C2;&#x6570;&#x6570;&#x91CF;&#x4E0D;&#x786E;&#x5B9A;&#xFF0C;&#x80FD;&#x5426;&#x63A5;&#x6536;&#xFF1F;</p>
+</blockquote>
+<h4 id="args">args</h4>
+<ul>
+<li>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49; <strong>&#x53EF;&#x53D8;&#x53C2;&#x6570;</strong>&#xFF0C;<strong>&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;</strong></li>
+<li><strong>&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x7684;&#x524D;&#x8FB9;&#x9700;&#x8981;&#x6DFB;&#x52A0;*</strong>&#xFF0C;&#x7528;&#x4E8E;&#x63D0;&#x793A;python&#x89E3;&#x91CA;&#x5668;&#x8BE5;&#x53C2;&#x6570;&#x4E3A;&#x53EF;&#x53D8;&#x53C2;&#x6570;</li>
+<li>&#x4F7F;&#x7528;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x7528;args&#x5373;&#x53EF;&#xFF08;&#x4E0D;&#x9700;&#x8981;&#x52A0;*&#xFF09;</li>
+<li>&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x7684;&#x672C;&#x8D28;&#x662F; <strong>&#x5C06;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x5305;&#x88C5;&#x6210;&#x4E86;&#x5143;&#x7EC4;</strong></li>
+</ul>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_num</span><span class="hljs-params">(a, b, *args)</span>:</span>  
+    result = a + b
+    <span class="hljs-keyword">for</span> temp <span class="hljs-keyword">in</span> args:
+        result += temp
+
+    <span class="hljs-keyword">return</span> result
+
+sum_num(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, .., n)
+
+<span class="hljs-comment"># &#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x4E00;&#x65E6;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x6709;&#x5B9E;&#x53C2;&#x90FD;&#x8981;&#x4F7F;&#x7528;&#xFF0C;&#x9664;&#x975E;&#x8BE5;&#x5B9E;&#x53C2;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x53EF;&#x53D8;&#x53C2;&#x6570;</span>
+<span class="hljs-comment"># sum_num(1, 2, 3, 4, a=5)</span>
+<span class="hljs-comment"># sum_num(a=5, b=4)</span>
+</code></pre>
+<h4 id="kwargs">kwargs</h4>
+<ul>
+<li>&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x5F62;&#x5F0F; <strong>&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;</strong></li>
+<li>&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#x65F6;&#x9700;&#x8981;&#x5728;&#x53D8;&#x91CF;&#x540D;&#x524D;&#x6DFB;&#x52A0;&#x4E24;&#x4E2A;*</li>
+<li>&#x8FD9;&#x79CD;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x4F1A;&#x5C06; <strong>&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x5305;&#x88C5;&#x6210;&#x5B57;&#x5178;</strong></li>
+</ul>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_num</span><span class="hljs-params">(a, b, *args, **kwargs)</span>:</span>  
+    print(a)
+    print(b)
+    print(args)
+    print(kwargs)
+
+sum_num(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, .., n, mm=<span class="hljs-number">5</span>, nn=<span class="hljs-number">6</span>)
+</code></pre>
+<h4 id="&#x4F20;&#x9012;&#x53EF;&#x53D8;&#x53C2;&#x6570;">&#x4F20;&#x9012;&#x53EF;&#x53D8;&#x53C2;&#x6570;</h4>
+<ul>
+<li>&#x89E3;&#x5305;</li>
+</ul>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum_num</span><span class="hljs-params">(a, b, *args, **kwargs)</span>:</span>  
+    print(a)
+    print(b)
+    print(args)
+    print(kwargs)
+    test(*args, **kwargs)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+    print(args)
+    print(kwargs)
+
+sum_num(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, .., n, mm=<span class="hljs-number">5</span>, nn=<span class="hljs-number">6</span>)
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./函数的返回值二.html" class="navigation navigation-prev " aria-label="Previous page: 函数返回值(二)"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./拆包、交换变量的值.html" class="navigation navigation-next " aria-label="Next page: 拆包、交换变量的值"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

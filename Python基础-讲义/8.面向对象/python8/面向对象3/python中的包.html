@@ -1,0 +1,744 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book Python基础语言 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>python中的包 | Python基础语言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../python8/面向对象3/反恐精英讲义.html" />
+    
+    
+    <link rel="prev" href="../../python8/面向对象3/模块制作.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="3.5"
+        data-chapter-title="python中的包"
+        data-filepath="python8/面向对象3/python中的包.md"
+        data-basepath="../.."
+        data-revision="Thu Mar 08 2018 07:49:07 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Python面向对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="python8/面向对象1/index.html">
+            
+                
+                    <a href="../../python8/面向对象1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        面向对象1
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="python8/面向对象1/面向对象编程.html">
+            
+                
+                    <a href="../../python8/面向对象1/面向对象编程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        面向对象编程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="python8/面向对象1/类和对象.html">
+            
+                
+                    <a href="../../python8/面向对象1/类和对象.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        类和对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="python8/面向对象1/定义类.html">
+            
+                
+                    <a href="../../python8/面向对象1/定义类.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        定义类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="python8/面向对象1/创建对象.html">
+            
+                
+                    <a href="../../python8/面向对象1/创建对象.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        创建对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="python8/面向对象1/self.html">
+            
+                
+                    <a href="../../python8/面向对象1/self.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        self
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="python8/面向对象1/init.html">
+            
+                
+                    <a href="../../python8/面向对象1/init.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        init
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="python8/面向对象1/str.html">
+            
+                
+                    <a href="../../python8/面向对象1/str.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        str
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="python8/面向对象1/演练-烤地瓜.html">
+            
+                
+                    <a href="../../python8/面向对象1/演练-烤地瓜.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        应用-烤地瓜
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="python8/面向对象1/演练-存放家具.html">
+            
+                
+                    <a href="../../python8/面向对象1/演练-存放家具.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        应用-搬家具
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="python8/面向对象2/index.html">
+            
+                
+                    <a href="../../python8/面向对象2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        面向对象2
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="python8/面向对象2/私有属性.html">
+            
+                
+                    <a href="../../python8/面向对象2/私有属性.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        私有属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="python8/面向对象2/私有方法.html">
+            
+                
+                    <a href="../../python8/面向对象2/私有方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        私有方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="python8/面向对象2/__del__.html">
+            
+                
+                    <a href="../../python8/面向对象2/__del__.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        del
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="python8/面向对象2/单继承.html">
+            
+                
+                    <a href="../../python8/面向对象2/单继承.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        继承
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="python8/面向对象2/在子类中添加新功能.html">
+            
+                
+                    <a href="../../python8/面向对象2/在子类中添加新功能.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        子类添加新功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="python8/面向对象2/多层继承.html">
+            
+                
+                    <a href="../../python8/面向对象2/多层继承.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        多层继承
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="python8/面向对象2/重写父类方法.html">
+            
+                
+                    <a href="../../python8/面向对象2/重写父类方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        重写
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="python8/面向对象2/调用被重写的父类方法.html">
+            
+                
+                    <a href="../../python8/面向对象2/调用被重写的父类方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        调用被重写的父类方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="python8/面向对象2/私有方法、属性，继承问题.html">
+            
+                
+                    <a href="../../python8/面向对象2/私有方法、属性，继承问题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        私有方法、属性，继承问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="python8/面向对象2/多继承.html">
+            
+                
+                    <a href="../../python8/面向对象2/多继承.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        多继承
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="python8/面向对象2/多态.html">
+            
+                
+                    <a href="../../python8/面向对象2/多态.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        多态
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="python8/面向对象2/类属性、实例属性.html">
+            
+                
+                    <a href="../../python8/面向对象2/类属性、实例属性.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.12.</b>
+                        
+                        实例属性、类属性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="python8/面向对象2/静态方法和类方法.html">
+            
+                
+                    <a href="../../python8/面向对象2/静态方法和类方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.</b>
+                        
+                        类方法、静态方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="python8/面向对象3/index.html">
+            
+                
+                    <a href="../../python8/面向对象3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        面向对象3
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="python8/面向对象3/__new__方法.html">
+            
+                
+                    <a href="../../python8/面向对象3/__new__方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        new方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="python8/面向对象3/单例模式.html">
+            
+                
+                    <a href="../../python8/面向对象3/单例模式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        单例模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="python8/面向对象3/模块介绍.html">
+            
+                
+                    <a href="../../python8/面向对象3/模块介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        模块导入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="python8/面向对象3/模块制作.html">
+            
+                
+                    <a href="../../python8/面向对象3/模块制作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        模块制作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="python8/面向对象3/python中的包.html">
+            
+                
+                    <a href="../../python8/面向对象3/python中的包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        python中的包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="python8/面向对象3/反恐精英讲义.html">
+            
+                
+                    <a href="../../python8/面向对象3/反恐精英讲义.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        应用-反恐精英
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="python8/面向对象3/异常介绍.html">
+            
+                
+                    <a href="../../python8/面向对象3/异常介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        异常介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="python8/面向对象3/捕获异常.html">
+            
+                
+                    <a href="../../python8/面向对象3/捕获异常.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        捕获异常
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="python8/面向对象3/异常的传递.html">
+            
+                
+                    <a href="../../python8/面向对象3/异常的传递.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        异常的传递
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="python8/面向对象3/抛出自定义异常.html">
+            
+                
+                    <a href="../../python8/面向对象3/抛出自定义异常.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        抛出自定义的异常
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Python基础语言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="python&#x4E2D;&#x7684;&#x5305;">python&#x4E2D;&#x7684;&#x5305;</h1>
+<h2 id="1-&#x521B;&#x5EFA;&#x5305;">1. &#x521B;&#x5EFA;&#x5305;</h2>
+<ul>
+<li>&#x6709;2&#x4E2A;&#x6A21;&#x5757;&#x529F;&#x80FD;&#x6709;&#x4E9B;&#x8054;&#x7CFB;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;</li>
+</ul>
+<p><img src="../../assets/QQ20170725-160220.png" alt=""></p>
+<ul>
+<li>&#x8981;&#x7EC4;&#x6210;&#x5305;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x521B;&#x5EFA;<strong>init</strong>.py&#x6587;&#x4EF6;</li>
+</ul>
+<p><img src="../../assets/QQ20170725-160333.png" alt=""></p>
+<h2 id="&#x603B;&#x7ED3;&#xFF1A;">&#x603B;&#x7ED3;&#xFF1A;</h2>
+<ul>
+<li>&#x5305;&#x5C06;&#x6709;&#x8054;&#x7CFB;&#x7684;&#x6A21;&#x5757;&#x7EC4;&#x7EC7;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5373;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x4E3A;<strong>init</strong>.py &#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x5C31;&#x79F0;&#x4E4B;&#x4E3A;&#x5305;</li>
+<li>&#x6709;&#x6548;&#x907F;&#x514D;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x51B2;&#x7A81;&#x95EE;&#x9898;&#xFF0C;&#x8BA9;&#x5E94;&#x7528;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;&#x66F4;&#x52A0;&#x6E05;&#x6670;</li>
+</ul>
+<h2 id="2-&#x4F7F;&#x7528;&#x5305;">2. &#x4F7F;&#x7528;&#x5305;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4F7F;&#x7528;import&#x5BFC;&#x5165;</span>
+
+<span class="hljs-keyword">import</span> test.send_msg
+
+test.send_msg.send_msg()
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># from..import&#x5BFC;&#x5165;</span>
+
+<span class="hljs-keyword">from</span> test.send_msg <span class="hljs-keyword">import</span> send_msg
+
+send_msg()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../python8/面向对象3/模块制作.html" class="navigation navigation-prev " aria-label="Previous page: 模块制作"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../python8/面向对象3/反恐精英讲义.html" class="navigation navigation-next " aria-label="Next page: 应用-反恐精英"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python基础语言 -->
+</html>

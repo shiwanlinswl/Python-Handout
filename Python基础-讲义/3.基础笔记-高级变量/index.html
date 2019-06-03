@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book Python基础语言 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>3.高级变量类型 | Python基础语言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="传智播客-Python学科-Python基础语法">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./Python4/列表.html" />
+    
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="0"
+        data-chapter-title="3.高级变量类型"
+        data-filepath="README.md"
+        data-basepath="."
+        data-revision="Tue Feb 27 2018 20:29:16 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter active" data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        3.高级变量类型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="Python4/列表.html">
+            
+                
+                    <a href="./Python4/列表.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        列表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="Python4/元组.html">
+            
+                
+                    <a href="./Python4/元组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        元组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="Python4/字典.html">
+            
+                
+                    <a href="./Python4/字典.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        字典
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="Python4/字符串.html">
+            
+                
+                    <a href="./Python4/字符串.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        字符串
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.5" data-path="Python4/公共语法.html">
+            
+                
+                    <a href="./Python4/公共语法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        公共语法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >Python基础语言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x9AD8;&#x7EA7;&#x53D8;&#x91CF;&#x7C7B;&#x578B;">&#x9AD8;&#x7EA7;&#x53D8;&#x91CF;&#x7C7B;&#x578B;</h1>
+<h2 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x5217;&#x8868;</li>
+<li>&#x5143;&#x7EC4;</li>
+<li>&#x5B57;&#x5178;</li>
+<li>&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x516C;&#x5171;&#x8BED;&#x6CD5;</li>
+</ul>
+<h3 id="&#x77E5;&#x8BC6;&#x70B9;&#x56DE;&#x987E;">&#x77E5;&#x8BC6;&#x70B9;&#x56DE;&#x987E;</h3>
+<ul>
+<li>Python &#x4E2D;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x5206;&#x4E3A; <strong>&#x6570;&#x5B57;&#x578B;</strong> &#x548C; <strong>&#x975E;&#x6570;&#x5B57;&#x578B;</strong></li>
+<li>&#x6570;&#x5B57;&#x578B;<ul>
+<li>&#x6574;&#x578B; (<code>int</code>)</li>
+<li>&#x6D6E;&#x70B9;&#x578B;&#xFF08;<code>float</code>&#xFF09;</li>
+<li>&#x5E03;&#x5C14;&#x578B;&#xFF08;<code>bool</code>&#xFF09; <ul>
+<li>&#x771F; <code>True</code> </li>
+<li>&#x5047; <code>False</code> </li>
+</ul>
+</li>
+<li>&#x590D;&#x6570;&#x578B; (<code>complex</code>)<ul>
+<li>&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x5E73;&#x9762;&#x573A;&#x95EE;&#x9898;&#x3001;&#x6CE2;&#x52A8;&#x95EE;&#x9898;&#x3001;&#x7535;&#x611F;&#x7535;&#x5BB9;&#x7B49;&#x95EE;&#x9898;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x975E;&#x6570;&#x5B57;&#x578B;</p>
+<ul>
+<li>&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x5217;&#x8868;</li>
+<li>&#x5143;&#x7EC4;</li>
+<li>&#x5B57;&#x5178;</li>
+</ul>
+</li>
+<li><p>&#x5728; <code>Python</code> &#x4E2D;&#xFF0C;&#x6240;&#x6709; <strong>&#x975E;&#x6570;&#x5B57;&#x578B;&#x53D8;&#x91CF;</strong> &#x90FD;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x90FD;&#x662F;&#x4E00;&#x4E2A; <strong>&#x5E8F;&#x5217;</strong> <code>sequence</code>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A; <strong>&#x5BB9;&#x5668;</strong></li>
+<li><strong>&#x53D6;&#x503C;</strong> <code>[]</code></li>
+<li><strong>&#x904D;&#x5386;</strong> <code>for in</code></li>
+<li><strong>&#x8BA1;&#x7B97;&#x957F;&#x5EA6;</strong>&#x3001;<strong>&#x6700;&#x5927;/&#x6700;&#x5C0F;&#x503C;</strong>&#x3001;<strong>&#x6BD4;&#x8F83;</strong>&#x3001;<strong>&#x5220;&#x9664;</strong></li>
+<li><strong>&#x94FE;&#x63A5;</strong> <code>+</code> &#x548C; <strong>&#x91CD;&#x590D;</strong> <code>*</code></li>
+<li><strong>&#x5207;&#x7247;</strong></li>
+</ol>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <a href="./Python4/列表.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 列表"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python基础语言 -->
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book Python基础语言 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>匿名函数 | Python基础语言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../python6/递归函数.html" />
+    
+    
+    <link rel="prev" href="../python6/列表推导式.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="0.5"
+        data-chapter-title="匿名函数"
+        data-filepath="python6/匿名函数.md"
+        data-basepath=".."
+        data-revision="Fri Mar 09 2018 18:37:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        6.加强练习
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="python6/模块.html">
+            
+                
+                    <a href="../python6/模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        模块的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="python6/名片管理系统.html">
+            
+                
+                    <a href="../python6/名片管理系统.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        学生管理系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="python6/set、list、tuple.html">
+            
+                
+                    <a href="../python6/set、list、tuple.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        set、list、tuple
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="python6/列表推导式.html">
+            
+                
+                    <a href="../python6/列表推导式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        列表推导式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="0.5" data-path="python6/匿名函数.html">
+            
+                
+                    <a href="../python6/匿名函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        匿名函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.6" data-path="python6/递归函数.html">
+            
+                
+                    <a href="../python6/递归函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.6.</b>
+                        
+                        递归函数（了解）
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础语言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x533F;&#x540D;&#x51FD;&#x6570;">&#x533F;&#x540D;&#x51FD;&#x6570;</h2>
+<p>&#x7528;lambda&#x5173;&#x952E;&#x8BCD;&#x80FD;&#x521B;&#x5EFA;&#x5C0F;&#x578B;&#x533F;&#x540D;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x79CD;&#x51FD;&#x6570;&#x5F97;&#x540D;&#x4E8E;&#x7701;&#x7565;&#x4E86;&#x7528;def&#x58F0;&#x660E;&#x51FD;&#x6570;&#x7684;&#x6807;&#x51C6;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>lambda&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">lambda</span> [arg1 [,arg2,.....argn]]:expression
+</code></pre>
+<p>&#x5982;&#x4E0B;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-python">sum = <span class="hljs-keyword">lambda</span> arg1, arg2: arg1 + arg2
+
+<span class="hljs-comment"># &#x8C03;&#x7528;sum&#x51FD;&#x6570;</span>
+print(<span class="hljs-string">&quot;Value of total : &quot;</span> % sum( <span class="hljs-number">10</span>, <span class="hljs-number">20</span> ))
+print(<span class="hljs-string">&quot;Value of total :  &quot;</span>% sum( <span class="hljs-number">20</span>, <span class="hljs-number">20</span> ))
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x5B9E;&#x4F8B;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-python">Value of total :  <span class="hljs-number">30</span>
+Value of total :  <span class="hljs-number">40</span>
+</code></pre>
+<p>Lambda&#x51FD;&#x6570;&#x80FD;&#x63A5;&#x6536;&#x4EFB;&#x4F55;&#x6570;&#x91CF;&#x7684;&#x53C2;&#x6570;&#x4F46;&#x53EA;&#x80FD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;</p>
+<p>&#x533F;&#x540D;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8C03;&#x7528;print&#xFF0C;&#x56E0;&#x4E3A;lambda&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;</p>
+<h2 id="&#x5E94;&#x7528;&#x573A;&#x5408;">&#x5E94;&#x7528;&#x573A;&#x5408;</h2>
+<h3 id="&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;">&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;</h3>
+<ol>
+<li>&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x51FD;&#x6570;<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun</span><span class="hljs-params">(a, b, opt)</span>:</span>
+<span class="hljs-meta">... </span>    print(<span class="hljs-string">&quot;a = &quot;</span> % a)
+<span class="hljs-meta">... </span>    print(<span class="hljs-string">&quot;b = &quot;</span> % b)
+<span class="hljs-meta">... </span>    print(<span class="hljs-string">&quot;result =&quot;</span> % opt(a, b))
+...
+<span class="hljs-meta">&gt;&gt;&gt; </span>fun(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-keyword">lambda</span> x,y:x+y)
+a = <span class="hljs-number">1</span>
+b = <span class="hljs-number">2</span>
+result = <span class="hljs-number">3</span>
+</code></pre>
+</li>
+<li>&#x4F5C;&#x4E3A;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</li>
+</ol>
+<h4 id="&#x60F3;&#x4E00;&#x60F3;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x6570;&#x636E;&#x5982;&#x4F55;&#x6307;&#x5B9A;&#x6309;age&#x6216;name&#x6392;&#x5E8F;&#xFF1F;">&#x60F3;&#x4E00;&#x60F3;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x6570;&#x636E;&#x5982;&#x4F55;&#x6307;&#x5B9A;&#x6309;age&#x6216;name&#x6392;&#x5E8F;&#xFF1F;</h4>
+<pre><code class="lang-python">stus = [
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;zhangsan&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">18</span>}, 
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;lisi&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">19</span>}, 
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;wangwu&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">17</span>}
+]
+</code></pre>
+<h4 id="&#x6309;name&#x6392;&#x5E8F;&#xFF1A;">&#x6309;name&#x6392;&#x5E8F;&#xFF1A;</h4>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>stus.sort(key = <span class="hljs-keyword">lambda</span> x: x[<span class="hljs-string">&apos;name&apos;</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span>stus
+[{<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">19</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;lisi&apos;</span>}, {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">17</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;wangwu&apos;</span>}, {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">18</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;zhangsan&apos;</span>}]
+</code></pre>
+<h4 id="&#x6309;age&#x6392;&#x5E8F;&#xFF1A;">&#x6309;age&#x6392;&#x5E8F;&#xFF1A;</h4>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>stus.sort(key = <span class="hljs-keyword">lambda</span> x: x[<span class="hljs-string">&apos;age&apos;</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span>stus
+[{<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">17</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;wangwu&apos;</span>}, {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">18</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;zhangsan&apos;</span>}, {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">19</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;lisi&apos;</span>}]
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../python6/列表推导式.html" class="navigation navigation-prev " aria-label="Previous page: 列表推导式"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../python6/递归函数.html" class="navigation navigation-next " aria-label="Next page: 递归函数（了解）"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python基础语言 -->
+</html>

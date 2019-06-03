@@ -1,0 +1,1680 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book python高级 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>文件目录 | python高级</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day01/05.常用Linux命令的基本使用.html" />
+    
+    
+    <link rel="prev" href="../day01/03.Ubuntu图形界面入门.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="1.4"
+        data-chapter-title="文件目录"
+        data-filepath="day01/04.文件目录.md"
+        data-basepath=".."
+        data-revision="Wed Jun 13 2018 07:32:03 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Python高级
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="day01/index.html">
+            
+                
+                    <a href="../day01/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Linux系统基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="day01/01.操作系统.html">
+            
+                
+                    <a href="../day01/01.操作系统.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        操作系统(科普章节)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="day01/02.操作系统发展史.html">
+            
+                
+                    <a href="../day01/02.操作系统发展史.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        操作系统发展史(科普章节)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="day01/03.Ubuntu图形界面入门.html">
+            
+                
+                    <a href="../day01/03.Ubuntu图形界面入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Ubuntu图形界面入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="day01/04.文件目录.html">
+            
+                
+                    <a href="../day01/04.文件目录.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        文件目录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="day01/05.常用Linux命令的基本使用.html">
+            
+                
+                    <a href="../day01/05.常用Linux命令的基本使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        常用Linux命令的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="day01/06.Linux终端命令格式.html">
+            
+                
+                    <a href="../day01/06.Linux终端命令格式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        Linux终端命令格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="day01/07.常用Linux命令选项的使用.html">
+            
+                
+                    <a href="../day01/07.常用Linux命令选项的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        常用Linux命令选项的使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day02/index.html">
+            
+                
+                    <a href="../day02/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Linux系统命令
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day02/01.高级Linux命令及命令选项.html">
+            
+                
+                    <a href="../day02/01.高级Linux命令及命令选项.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        高级Linux命令及命令选项
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day02/02.远程登录和远程拷贝.html">
+            
+                
+                    <a href="../day02/02.远程登录和远程拷贝.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        远程登录和远程拷贝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="day02/03.软件安装与卸载.html">
+            
+                
+                    <a href="../day02/03.软件安装与卸载.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        软件安装与卸载
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="day02/04.编辑器vim.html">
+            
+                
+                    <a href="../day02/04.编辑器vim.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        编辑器vim
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="day02/05.命令总结.html">
+            
+                
+                    <a href="../day02/05.命令总结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        命令总结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day03/index.html">
+            
+                
+                    <a href="../day03/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        网络-UDP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day03/01.网络概述.html">
+            
+                
+                    <a href="../day03/01.网络概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        网络概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day03/02.ip地址.html">
+            
+                
+                    <a href="../day03/02.ip地址.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        IP地址
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day03/03.Linux命令-ping和ifconfig.html">
+            
+                
+                    <a href="../day03/03.Linux命令-ping和ifconfig.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Linux命令-ping和ifconfig
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="day03/04.端口.html">
+            
+                
+                    <a href="../day03/04.端口.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        端口
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="day03/05.网络传输方式udp.html">
+            
+                
+                    <a href="../day03/05.网络传输方式udp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        网络传输方式-UDP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="day03/06.socket介绍.html">
+            
+                
+                    <a href="../day03/06.socket介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        socket介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="day03/07.udp网络程序-发送、接收数据.html">
+            
+                
+                    <a href="../day03/07.udp网络程序-发送、接收数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        udp网络程序-发送、接收数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="day03/08.数据编码和解码.html">
+            
+                
+                    <a href="../day03/08.数据编码和解码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        数据编码和解码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="day03/09.udp绑定端口号.html">
+            
+                
+                    <a href="../day03/09.udp绑定端口号.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        udp绑定端口号
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="day03/11.案例-UDP发送广播消息.html">
+            
+                
+                    <a href="../day03/11.案例-UDP发送广播消息.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        案例-udp发送广播消息
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="day03/12.udp聊天器.html">
+            
+                
+                    <a href="../day03/12.udp聊天器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.11.</b>
+                        
+                        案例-udp聊天器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day04/index.html">
+            
+                
+                    <a href="../day04/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        网络-TCP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day04/01.tcp简介.html">
+            
+                
+                    <a href="../day04/01.tcp简介.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        网络传输方式-TCP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day04/02.tcp网络程序-客户端.html">
+            
+                
+                    <a href="../day04/02.tcp网络程序-客户端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        TCP网络程序-客户端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day04/03.tcp网络程序-服务端.html">
+            
+                
+                    <a href="../day04/03.tcp网络程序-服务端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        TCP网络程序-服务端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="day04/04.tcp注意点.html">
+            
+                
+                    <a href="../day04/04.tcp注意点.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        TCP注意点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="day04/05.案例-文件下载器.html">
+            
+                
+                    <a href="../day04/05.案例-文件下载器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        案例-文件下载器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="day04/06.tcp的3次握手.html">
+            
+                
+                    <a href="../day04/06.tcp的3次握手.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        tcp的3次握手
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="day04/07.tcp的4次挥手.html">
+            
+                
+                    <a href="../day04/07.tcp的4次挥手.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        tcp的4次挥手
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="day04/08.wireshark的使用.html">
+            
+                
+                    <a href="../day04/08.wireshark的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        wireshark的使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="day05/index.html">
+            
+                
+                    <a href="../day05/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        多任务-线程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="day05/01.多任务的介绍.html">
+            
+                
+                    <a href="../day05/01.多任务的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        多任务的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="day05/02.线程.html">
+            
+                
+                    <a href="../day05/02.线程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        线程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="day05/03.线程注意点.html">
+            
+                
+                    <a href="../day05/03.线程注意点.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        线程的注意点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="day05/04.自定义线程.html">
+            
+                
+                    <a href="../day05/04.自定义线程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        自定义线程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="day05/05.多线程-共享全局变量.html">
+            
+                
+                    <a href="../day05/05.多线程-共享全局变量.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        多线程-共享全局变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="day05/06.多线程-共享全局变量问题.html">
+            
+                
+                    <a href="../day05/06.多线程-共享全局变量问题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        多线程-共享全局变量问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="day05/07.互斥锁.html">
+            
+                
+                    <a href="../day05/07.互斥锁.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        互斥锁
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="day05/08.死锁.html">
+            
+                
+                    <a href="../day05/08.死锁.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        死锁
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="day05/09.案例-多任务udp聊天器.html">
+            
+                
+                    <a href="../day05/09.案例-多任务udp聊天器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        案例-多任务版udp聊天器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="day05/10.案例-多任务版TCP服务端.html">
+            
+                
+                    <a href="../day05/10.案例-多任务版TCP服务端.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        案例-多任务版TCP服务端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" data-path="day05/11.案例-多任务版文件下载.html">
+            
+                
+                    <a href="../day05/11.案例-多任务版文件下载.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.11.</b>
+                        
+                        案例-多任务版文件下载
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="day06/index.html">
+            
+                
+                    <a href="../day06/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        多任务-进程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="day06/01.进程介绍.html">
+            
+                
+                    <a href="../day06/01.进程介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        进程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="day06/02.进程的使用.html">
+            
+                
+                    <a href="../day06/02.进程的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        进程的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="day06/03.进程注意点.html">
+            
+                
+                    <a href="../day06/03.进程注意点.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        进程注意点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="day06/04.进程间通信-Queue.html">
+            
+                
+                    <a href="../day06/04.进程间通信-Queue.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        进程间通信-Queue
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="day06/05.进程池.html">
+            
+                
+                    <a href="../day06/05.进程池.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        进程的创建-进程池
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="day06/06.进程、线程对比.html">
+            
+                
+                    <a href="../day06/06.进程、线程对比.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        进程和线程的对比
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="day06/07.案例-文件夹拷贝器-多任务版.html">
+            
+                
+                    <a href="../day06/07.案例-文件夹拷贝器-多任务版.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        案例-多任务版文件夹拷贝器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="day07/index.html">
+            
+                
+                    <a href="../day07/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        多任务-协程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="day07/01.迭代.html">
+            
+                
+                    <a href="../day07/01.迭代.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        迭代
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="day07/02.迭代器.html">
+            
+                
+                    <a href="../day07/02.迭代器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        迭代器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="day07/03.生成器.html">
+            
+                
+                    <a href="../day07/03.生成器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        生成器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="day07/04.协程-yield.html">
+            
+                
+                    <a href="../day07/04.协程-yield.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        协程-yield
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="day07/05.协程-greenlet.html">
+            
+                
+                    <a href="../day07/05.协程-greenlet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        协程-greenlet
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="day07/06.协程-gevent.html">
+            
+                
+                    <a href="../day07/06.协程-gevent.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        协程-gevent
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="day07/07.进程、线程、协程对比.html">
+            
+                
+                    <a href="../day07/07.进程、线程、协程对比.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        进程、线程、协程区别
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="day07/08.案例-gevent多任务图片下载.html">
+            
+                
+                    <a href="../day07/08.案例-gevent多任务图片下载.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        案例-gevent多任务图片下载
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="day08/index.html">
+            
+                
+                    <a href="../day08/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        正则表达式
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="day08/01.正则表达式的介绍.html">
+            
+                
+                    <a href="../day08/01.正则表达式的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        正则表达式的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="day08/02.re模块介绍.html">
+            
+                
+                    <a href="../day08/02.re模块介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        re模块介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="day08/03.匹配单个字符.html">
+            
+                
+                    <a href="../day08/03.匹配单个字符.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        匹配单个字符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="day08/04.匹配多个字符.html">
+            
+                
+                    <a href="../day08/04.匹配多个字符.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        匹配多个字符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="day08/05.匹配开头和结尾.html">
+            
+                
+                    <a href="../day08/05.匹配开头和结尾.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        匹配开头和结尾
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="day08/06.匹配分组.html">
+            
+                
+                    <a href="../day08/06.匹配分组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        匹配分组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="day08/07.re模块的高级用法.html">
+            
+                
+                    <a href="../day08/07.re模块的高级用法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        re模块的高级用法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="day08/08.贪婪和非贪婪.html">
+            
+                
+                    <a href="../day08/08.贪婪和非贪婪.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        贪婪和非贪婪
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="day08/09.r的作用.html">
+            
+                
+                    <a href="../day08/09.r的作用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        r的作用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="day09/index.html">
+            
+                
+                    <a href="../day09/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        HTTP协议
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="day09/01.浏览器访问服务器的过程.html">
+            
+                
+                    <a href="../day09/01.浏览器访问服务器的过程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        浏览器访问服务器的过程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="day09/02.http协议.html">
+            
+                
+                    <a href="../day09/02.http协议.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        HTTP协议介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="day09/03.谷歌浏览器开发者工具查看http协议的通信过程.html">
+            
+                
+                    <a href="../day09/03.谷歌浏览器开发者工具查看http协议的通信过程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        开发工具查看http协议通信过程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="day09/04.http请求报文.html">
+            
+                
+                    <a href="../day09/04.http请求报文.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        HTTP请求报文格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="day09/05.获取请求报文原数据.html">
+            
+                
+                    <a href="../day09/05.获取请求报文原数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        获取请求报文原数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="day09/06.http响应报文.html">
+            
+                
+                    <a href="../day09/06.http响应报文.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        HTTP响应报文格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="day09/07.tcp长连接和短连接.html">
+            
+                
+                    <a href="../day09/07.tcp长连接和短连接.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.7.</b>
+                        
+                        长连接和短连接
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="day09/08.案例-模拟浏览器的实现.html">
+            
+                
+                    <a href="../day09/08.案例-模拟浏览器的实现.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.8.</b>
+                        
+                        案例-模拟浏览器的实现
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="day10/index.html">
+            
+                
+                    <a href="../day10/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Web静态服务器
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="day10/01.返回固定数据.html">
+            
+                
+                    <a href="../day10/01.返回固定数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        返回固定数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="day10/02.返回固定页面数据.html">
+            
+                
+                    <a href="../day10/02.返回固定页面数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        返回固定页面数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="day10/03.返回指定页面数据.html">
+            
+                
+                    <a href="../day10/03.返回指定页面数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        返回指定页面数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="day10/04.返回404页面数据.html">
+            
+                
+                    <a href="../day10/04.返回404页面数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                        返回404页面数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="day10/05.多任务web服务器.html">
+            
+                
+                    <a href="../day10/05.多任务web服务器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.</b>
+                        
+                        多任务web服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="day10/06.web服务器面向对象开发.html">
+            
+                
+                    <a href="../day10/06.web服务器面向对象开发.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.6.</b>
+                        
+                        web服务器面向对象开发
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="day10/07.给web服务器添加命令行参数.html">
+            
+                
+                    <a href="../day10/07.给web服务器添加命令行参数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.7.</b>
+                        
+                        给web服务器添加命令行参数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >python高级</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#xFF08;&#x7406;&#x89E3;&#xFF09;">&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#xFF08;&#x7406;&#x89E3;&#xFF09;</h1>
+<h2 id="&#x76EE;&#x6807;">&#x76EE;&#x6807;</h2>
+<ul>
+<li>&#x80FD;&#x591F;&#x8BF4;&#x51FA; Linux &#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x548C; Windows &#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x7684;&#x533A;&#x522B;</li>
+</ul>
+<h2 id="1-windows-&#x548C;-linux-&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x533A;&#x522B;">1. <code>Windows</code> &#x548C; <code>Linux</code> &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x533A;&#x522B;</h2>
+<h3 id="11-windows-&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">1.1 <code>Windows</code> &#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<ul>
+<li>&#x5728; <code>Windows</code> &#x4E0B;&#xFF0C;&#x6253;&#x5F00; &#x201C;&#x8BA1;&#x7B97;&#x673A;&#x201D;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x9A71;&#x52A8;&#x5668;&#x76D8;&#x7B26;&#xFF1A;</li>
+</ul>
+<p><img src="imgs/Windows&#x4E0B;&#x7684;&#x591A;&#x4E2A;&#x76D8;.png" alt="001_Windows&#x4E0B;&#x7684;&#x591A;&#x4E2A;&#x76D8;"></p>
+<ul>
+<li>&#x6BCF;&#x4E2A;&#x9A71;&#x52A8;&#x5668;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x6837;&#x5F62;&#x6210;&#x4E86;&#x591A;&#x4E2A;&#x6811;&#x5E76;&#x5217;&#x7684;&#x60C5;&#x5F62;&#xFF0C;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;</li>
+</ul>
+<p><img src="imgs/Windows&#x4E0B;&#x591A;&#x4E2A;&#x76D8;&#x4E3A;&#x8282;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5206;&#x652F;.png" alt="001-Windows&#x4E0B;&#x591A;&#x4E2A;&#x76D8;&#x4E3A;&#x8282;&#x70B9;&#x7684;&#x76EE;&#x5F55;&#x5206;&#x652F;"></p>
+<h3 id="12-linux-&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;">1.2 <code>Linux</code> &#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h3>
+<ul>
+<li>&#x5728; <code>Linux</code> &#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x770B;&#x4E0D;&#x5230;&#x8FD9;&#x4E9B;&#x9A71;&#x52A8;&#x5668;&#x76D8;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x662F;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x76EE;&#x5F55;&#xFF09;&#xFF1A;</li>
+</ul>
+<p><img src="imgs/Ubuntu&#x6587;&#x4EF6;&#x76EE;&#x5F55;.png" alt="002_Ubuntu&#x6587;&#x4EF6;&#x76EE;&#x5F55;"></p>
+<ul>
+<li><code>Ubuntu</code> &#x6CA1;&#x6709;&#x76D8;&#x7B26;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6839;&#x76EE;&#x5F55; <code>/</code>&#xFF0C;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x5728;&#x5B83;&#x4E0B;&#x9762;</li>
+</ul>
+<p><img src="imgs/Linux&#x7684;&#x6811;&#x5F62;&#x793A;&#x610F;&#x56FE;.png" alt="003-Linux&#x7684;&#x6811;&#x5F62;&#x793A;&#x610F;&#x56FE;"></p>
+<h3 id="13-&#x7528;&#x6237;&#x76EE;&#x5F55;">1.3 &#x7528;&#x6237;&#x76EE;&#x5F55;</h3>
+<p>&#x4F4D;&#x4E8E; <code>/home/user</code>&#xFF0C;&#x79F0;&#x4E4B;&#x4E3A;&#x7528;&#x6237;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-bash">/home/user
+~
+</code></pre>
+<h3 id="14-linux-&#x4E3B;&#x8981;&#x76EE;&#x5F55;&#x901F;&#x67E5;&#x8868;">1.4 <code>Linux</code> &#x4E3B;&#x8981;&#x76EE;&#x5F55;&#x901F;&#x67E5;&#x8868;</h3>
+<ul>
+<li>/&#xFF1A;&#x6839;&#x76EE;&#x5F55;&#xFF0C;<strong>&#x4E00;&#x822C;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x53EA;&#x5B58;&#x653E;&#x76EE;&#x5F55;</strong>&#xFF0C;&#x5728; linux &#x4E0B;&#x6709;&#x4E14;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x4E1C;&#x897F;&#x90FD;&#x662F;&#x4ECE;&#x8FD9;&#x91CC;&#x5F00;&#x59CB;<ul>
+<li>&#x5F53;&#x5728;&#x7EC8;&#x7AEF;&#x91CC;&#x8F93;&#x5165; <code>/home</code>&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x5728;&#x544A;&#x8BC9;&#x7535;&#x8111;&#xFF0C;&#x5148;&#x4ECE; <code>/</code>&#xFF08;&#x6839;&#x76EE;&#x5F55;&#xFF09;&#x5F00;&#x59CB;&#xFF0C;&#x518D;&#x8FDB;&#x5165;&#x5230; <code>home</code> &#x76EE;&#x5F55;</li>
+</ul>
+</li>
+<li>/bin&#x3001;/usr/bin&#xFF1A;&#x53EF;&#x6267;&#x884C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x5E38;&#x7528;&#x7684;&#x547D;&#x4EE4; ls&#x3001;tar&#x3001;mv&#x3001;cat &#x7B49;</li>
+<li>/boot&#xFF1A;&#x653E;&#x7F6E; linux &#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#x7528;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#xFF0C;&#x5982; linux &#x7684;&#x5185;&#x6838;&#x6587;&#x4EF6;&#xFF1A;<code>/boot/vmlinuz</code>&#xFF0C;&#x7CFB;&#x7EDF;&#x5F15;&#x5BFC;&#x7BA1;&#x7406;&#x5668;&#xFF1A;<code>/boot/grub</code></li>
+<li>/dev&#xFF1A;&#x5B58;&#x653E;linux&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#xFF0C;&#x8BBF;&#x95EE;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x8BBF;&#x95EE;&#x67D0;&#x4E2A;&#x8BBE;&#x5907;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x662F;&#x6302;&#x8F7D;&#x5149;&#x9A71;<code>mount /dev/cdrom /mnt</code></li>
+<li>/etc&#xFF1A;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x5728;&#x6B64;&#x76EE;&#x5F55;&#x4E0B;&#x5B58;&#x653E;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6709; <ul>
+<li>/etc/inittab</li>
+<li>/etc/fstab</li>
+<li>/etc/init.d</li>
+<li>/etc/X11</li>
+<li>/etc/sysconfig</li>
+<li>/etc/xinetd.d</li>
+</ul>
+</li>
+<li>/home&#xFF1A;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x7528;&#x6237;&#x5BB6;&#x76EE;&#x5F55;&#xFF0C;&#x65B0;&#x589E;&#x7528;&#x6237;&#x8D26;&#x53F7;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#x90FD;&#x5B58;&#x653E;&#x5728;&#x6B64;&#x76EE;&#x5F55;&#x4E0B;<ul>
+<li><code>~</code> &#x8868;&#x793A;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;</li>
+<li><code>~edu</code> &#x8868;&#x793A;&#x7528;&#x6237; <code>edu</code> &#x7684;&#x5BB6;&#x76EE;&#x5F55;</li>
+</ul>
+</li>
+<li>/lib&#x3001;/usr/lib&#x3001;/usr/local/lib&#xFF1A;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x5E93;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7A0B;&#x5E8F;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x65F6;&#x9700;&#x8981;&#x51FD;&#x6570;&#x5E93;&#x7684;&#x534F;&#x52A9;</li>
+<li>/lost+fount&#xFF1A;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x4E00;&#x4E9B;&#x9057;&#x5931;&#x7684;&#x7247;&#x6BB5;&#x653E;&#x7F6E;&#x4E8E;&#x6B64;&#x76EE;&#x5F55;&#x4E0B;</li>
+<li>/mnt: /media&#xFF1A;&#x5149;&#x76D8;&#x9ED8;&#x8BA4;&#x6302;&#x8F7D;&#x70B9;&#xFF0C;&#x901A;&#x5E38;&#x5149;&#x76D8;&#x6302;&#x8F7D;&#x4E8E; /mnt/cdrom &#x4E0B;&#xFF0C;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x6302;&#x8F7D;</li>
+<li>/opt&#xFF1A;&#x7ED9;&#x4E3B;&#x673A;&#x989D;&#x5916;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x6240;&#x6446;&#x653E;&#x7684;&#x76EE;&#x5F55;</li>
+<li>/proc&#xFF1A;&#x6B64;&#x76EE;&#x5F55;&#x7684;&#x6570;&#x636E;&#x90FD;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5982;&#x7CFB;&#x7EDF;&#x6838;&#x5FC3;&#xFF0C;&#x5916;&#x90E8;&#x8BBE;&#x5907;&#xFF0C;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF0C;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x90FD;&#x5B58;&#x653E;&#x4E8E;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5360;&#x7528;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#xFF0C;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x6587;&#x4EF6;&#x6709;&#xFF1A;/proc/cpuinfo&#x3001;/proc/interrupts&#x3001;/proc/dma&#x3001;/proc/ioports&#x3001;/proc/net/* &#x7B49;</li>
+<li>/root&#xFF1A;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;root&#x7684;&#x5BB6;&#x76EE;&#x5F55;</li>
+<li>/sbin&#x3001;/usr/sbin&#x3001;/usr/local/sbin&#xFF1A;&#x653E;&#x7F6E;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x4F7F;&#x7528;&#x7684;&#x53EF;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x5982; fdisk&#x3001;shutdown&#x3001;mount &#x7B49;&#x3002;&#x4E0E; /bin &#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x51E0;&#x4E2A;&#x76EE;&#x5F55;&#x662F;&#x7ED9;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458; root &#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6237;&#x53EA;&#x80FD;&quot;&#x67E5;&#x770B;&quot;&#x800C;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x548C;&#x4F7F;&#x7528;</li>
+<li>/tmp&#xFF1A;&#x4E00;&#x822C;&#x7528;&#x6237;&#x6216;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x4E34;&#x65F6;&#x5B58;&#x653E;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#xFF0C;&#x91CD;&#x8981;&#x6570;&#x636E;&#x4E0D;&#x53EF;&#x653E;&#x7F6E;&#x5728;&#x6B64;&#x76EE;&#x5F55;&#x4E0B;</li>
+<li>/srv&#xFF1A;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x6570;&#x636E;&#x76EE;&#x5F55;&#xFF0C;&#x5982; www &#x670D;&#x52A1;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x7F51;&#x9875;&#x6570;&#x636E;&#x5B58;&#x653E;&#x5728; /srv/www &#x5185;</li>
+<li>/usr&#xFF1A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B58;&#x653E;&#x76EE;&#x5F55;<ul>
+<li>/usr/bin&#xFF1A;&#x5B58;&#x653E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x6267;&#x884C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;</li>
+<li>/usr/share&#xFF1A;&#x5B58;&#x653E;&#x5171;&#x4EAB;&#x6570;&#x636E;</li>
+<li>/usr/lib&#xFF1A;&#x5B58;&#x653E;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x5374;&#x662F;&#x8BB8;&#x591A;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6240;&#x5FC5;&#x9700;&#x7684;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x5E93;&#x6587;&#x4EF6;</li>
+<li>/usr/local&#xFF1A;&#x5B58;&#x653E;&#x8F6F;&#x4EF6;&#x5347;&#x7EA7;&#x5305;</li>
+<li>/usr/share/doc&#xFF1A;&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x76EE;&#x5F55;</li>
+<li>/usr/share/man&#xFF1A;&#x7A0B;&#x5E8F;&#x8BF4;&#x660E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x76EE;&#x5F55;</li>
+</ul>
+</li>
+<li>/var&#xFF1A;&#x653E;&#x7F6E;&#x7CFB;&#x7EDF;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7ECF;&#x5E38;&#x53D8;&#x5316;&#x7684;&#x6587;&#x4EF6;<ul>
+<li>/var/log&#xFF1A;&#x968F;&#x65F6;&#x66F4;&#x6539;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6; </li>
+<li>/var/spool/mail&#xFF1A;&#x90AE;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x76EE;&#x5F55;</li>
+<li>/var/run&#xFF1A;&#x7A0B;&#x5E8F;&#x6216;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x5176; PID &#x5B58;&#x653E;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<ul>
+<li><strong> Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x76D8;&#x7B26;(C&#x3001;D&#x3001;E&#x3001;F) </strong></li>
+<li><strong> Linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;&#x591A;&#x4E2A;&#x76D8;&#x7B26;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x6839;&#x76EE;&#x5F55;(/) </strong></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day01/03.Ubuntu图形界面入门.html" class="navigation navigation-prev " aria-label="Previous page: Ubuntu图形界面入门"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day01/05.常用Linux命令的基本使用.html" class="navigation navigation-next " aria-label="Next page: 常用Linux命令的基本使用"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book python高级 -->
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book Python基础语言 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>学生管理系统 | Python基础语言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../python6/set、list、tuple.html" />
+    
+    
+    <link rel="prev" href="../python6/模块.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="0.2"
+        data-chapter-title="学生管理系统"
+        data-filepath="python6/名片管理系统.md"
+        data-basepath=".."
+        data-revision="Fri Mar 09 2018 18:37:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        6.加强练习
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="python6/模块.html">
+            
+                
+                    <a href="../python6/模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        模块的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="0.2" data-path="python6/名片管理系统.html">
+            
+                
+                    <a href="../python6/名片管理系统.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        学生管理系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="python6/set、list、tuple.html">
+            
+                
+                    <a href="../python6/set、list、tuple.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        set、list、tuple
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="python6/列表推导式.html">
+            
+                
+                    <a href="../python6/列表推导式.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        列表推导式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.5" data-path="python6/匿名函数.html">
+            
+                
+                    <a href="../python6/匿名函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        匿名函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.6" data-path="python6/递归函数.html">
+            
+                
+                    <a href="../python6/递归函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.6.</b>
+                        
+                        递归函数（了解）
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础语言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="02-&#x7EFC;&#x5408;&#x5E94;&#x7528;-&#x2014;&#x2014;-&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;">02. &#x7EFC;&#x5408;&#x5E94;&#x7528; &#x2014;&#x2014; &#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</h2>
+<h3 id="&#x7CFB;&#x7EDF;&#x9700;&#x6C42;">&#x7CFB;&#x7EDF;&#x9700;&#x6C42;</h3>
+<ul>
+<li>&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#xFF0C;&#x663E;&#x793A;&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x6B22;&#x8FCE;&#x754C;&#x9762;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x529F;&#x80FD;&#x83DC;&#x5355;</li>
+</ul>
+<pre><code>**************************************************
+&#x6B22;&#x8FCE;&#x4F7F;&#x7528;&#x3010;&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3011;V1.0
+
+1. &#x65B0;&#x5EFA;&#x540D;&#x7247;
+2. &#x663E;&#x793A;&#x5168;&#x90E8;
+3. &#x67E5;&#x8BE2;&#x540D;&#x7247;
+
+0. &#x9000;&#x51FA;&#x7CFB;&#x7EDF;
+**************************************************
+</code></pre><ul>
+<li>&#x7528;&#x6237;&#x7528;&#x6570;&#x5B57;&#x9009;&#x62E9;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;</li>
+<li>&#x6839;&#x636E;&#x529F;&#x80FD;&#x9009;&#x62E9;&#xFF0C;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;</li>
+<li>&#x7528;&#x6237;&#x540D;&#x7247;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x7684; &#x59D3;&#x540D;&#x3001;&#x7535;&#x8BDD;&#x3001;QQ&#x3001;&#x90AE;&#x4EF6;</li>
+<li>&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x540D;&#x7247;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x9009;&#x62E9; &#x4FEE;&#x6539; &#x6216;&#x8005; &#x5220;&#x9664; &#x540D;&#x7247;</li>
+</ul>
+<h3 id="&#x6B65;&#x9AA4;">&#x6B65;&#x9AA4;</h3>
+<ol>
+<li>&#x6846;&#x67B6;&#x642D;&#x5EFA;</li>
+<li>&#x65B0;&#x589E;&#x540D;&#x7247;</li>
+<li>&#x663E;&#x793A;&#x6240;&#x6709;&#x540D;&#x7247;</li>
+<li>&#x67E5;&#x8BE2;&#x540D;&#x7247;</li>
+<li>&#x67E5;&#x8BE2;&#x6210;&#x529F;&#x540E;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x540D;&#x7247;</li>
+<li>&#x8BA9; Python &#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x8FD0;&#x884C;</li>
+</ol>
+<h3 id="21-&#x6846;&#x67B6;&#x642D;&#x5EFA;">2.1 &#x6846;&#x67B6;&#x642D;&#x5EFA;</h3>
+<p>&#x76EE;&#x6807;</p>
+<ul>
+<li>&#x642D;&#x5EFA;&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF; &#x6846;&#x67B6;&#x7ED3;&#x6784;<ol>
+<li>&#x51C6;&#x5907;&#x6587;&#x4EF6;&#xFF0C;&#x786E;&#x5B9A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4FDD;&#x8BC1;&#x80FD;&#x591F; &#x5728;&#x9700;&#x8981;&#x7684;&#x4F4D;&#x7F6E; &#x7F16;&#x5199;&#x4EE3;&#x7801;</li>
+<li>&#x7F16;&#x5199; &#x4E3B;&#x8FD0;&#x884C;&#x5FAA;&#x73AF;&#xFF0C;&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x7684; &#x7528;&#x6237;&#x8F93;&#x5165;&#x548C;&#x5224;&#x65AD;</li>
+</ol>
+</li>
+</ul>
+<h3 id="22-&#x6587;&#x4EF6;&#x51C6;&#x5907;">2.2 &#x6587;&#x4EF6;&#x51C6;&#x5907;</h3>
+<ol>
+<li>&#x65B0;&#x5EFA; cards_main.py &#x4FDD;&#x5B58; &#x4E3B;&#x7A0B;&#x5E8F;&#x529F;&#x80FD;&#x4EE3;&#x7801;<ul>
+<li>&#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;</li>
+<li>&#x6BCF;&#x4E00;&#x6B21;&#x542F;&#x52A8;&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x90FD;&#x901A;&#x8FC7; main &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x542F;&#x52A8;</li>
+</ul>
+</li>
+<li>&#x65B0;&#x5EFA; cards_tools.py &#x4FDD;&#x5B58; &#x6240;&#x6709;&#x540D;&#x7247;&#x529F;&#x80FD;&#x51FD;&#x6570;<ul>
+<li>&#x5C06;&#x5BF9;&#x540D;&#x7247;&#x7684; &#x65B0;&#x589E;&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664; &#x7B49;&#x529F;&#x80FD;&#x5C01;&#x88C5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#x4E2D;</li>
+</ul>
+</li>
+</ol>
+<h3 id="23-&#x7F16;&#x5199;&#x4E3B;&#x8FD0;&#x884C;&#x5FAA;&#x73AF;">2.3 &#x7F16;&#x5199;&#x4E3B;&#x8FD0;&#x884C;&#x5FAA;&#x73AF;</h3>
+<p>&#x5728; cards_main &#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; &#x65E0;&#x9650;&#x5FAA;&#x73AF;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+
+    <span class="hljs-comment"># TODO(&#x5C0F;&#x660E;) &#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x83DC;&#x5355;</span>
+
+    action = input(<span class="hljs-string">&quot;&#x8BF7;&#x9009;&#x62E9;&#x64CD;&#x4F5C;&#x529F;&#x80FD;&#xFF1A;&quot;</span>)
+
+    print(<span class="hljs-string">&quot;&#x60A8;&#x9009;&#x62E9;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#xFF1A;%s&quot;</span> % action)
+
+    <span class="hljs-comment"># &#x6839;&#x636E;&#x7528;&#x6237;&#x8F93;&#x5165;&#x51B3;&#x5B9A;&#x540E;&#x7EED;&#x7684;&#x64CD;&#x4F5C;</span>
+    <span class="hljs-keyword">if</span> action <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>]:
+        <span class="hljs-keyword">pass</span>
+    <span class="hljs-keyword">elif</span> action == <span class="hljs-string">&quot;0&quot;</span>:
+        print(<span class="hljs-string">&quot;&#x6B22;&#x8FCE;&#x518D;&#x6B21;&#x4F7F;&#x7528;&#x3010;&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3011;&quot;</span>)
+
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&quot;&#x8F93;&#x5165;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x91CD;&#x65B0;&#x8F93;&#x5165;&quot;</span>)
+</code></pre>
+<h4 id="&#x5B57;&#x7B26;&#x4E32;&#x5224;&#x65AD;">&#x5B57;&#x7B26;&#x4E32;&#x5224;&#x65AD;</h4>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> action <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>]:
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> action == <span class="hljs-string">&quot;1&quot;</span> <span class="hljs-keyword">or</span> action == <span class="hljs-string">&quot;2&quot;</span> <span class="hljs-keyword">or</span> action == <span class="hljs-string">&quot;3&quot;</span>:
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528; in &#x9488;&#x5BF9; <strong>&#x5217;&#x8868;</strong> &#x5224;&#x65AD;&#xFF0C;&#x907F;&#x514D;&#x4F7F;&#x7528; or &#x62FC;&#x63A5;&#x590D;&#x6742;&#x7684;&#x903B;&#x8F91;&#x6761;&#x4EF6;</li>
+<li>&#x6CA1;&#x6709;&#x4F7F;&#x7528; int &#x8F6C;&#x6362;&#x7528;&#x6237;&#x8F93;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D; <strong>&#x4E00;&#x65E6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x4E0D;&#x662F;&#x6570;&#x5B57;</strong>&#xFF0C;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x51FA;&#x9519;</li>
+</ol>
+<h4 id="pass">pass</h4>
+<ul>
+<li>pass &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x8BED;&#x53E5;&#xFF0C;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x505A;&#x5360;&#x4F4D;&#x8BED;&#x53E5;</li>
+<li>&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#x7684;&#x5B8C;&#x6574;&#x6027;</li>
+</ul>
+<h4 id="&#x65E0;&#x9650;&#x5FAA;&#x73AF;">&#x65E0;&#x9650;&#x5FAA;&#x73AF;</h4>
+<ul>
+<li>&#x5728;&#x5F00;&#x53D1;&#x8F6F;&#x4EF6;&#x65F6;&#xFF0C;&#x5982;&#x679C; <strong>&#x4E0D;&#x5E0C;&#x671B;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x540E;</strong> &#x7ACB;&#x5373;&#x9000;&#x51FA;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E2A; <strong>&#x65E0;&#x9650;&#x5FAA;&#x73AF;</strong></li>
+<li><strong>&#x7531;&#x7528;&#x6237;&#x6765;&#x51B3;&#x5B9A;</strong> &#x9000;&#x51FA;&#x7A0B;&#x5E8F;&#x7684;&#x65F6;&#x673A;</li>
+</ul>
+<h4 id="todo-&#x6CE8;&#x91CA;">TODO &#x6CE8;&#x91CA;</h4>
+<ul>
+<li>&#x5728; <code>#</code> &#x540E;&#x8DDF;&#x4E0A; <code>TODO</code>&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x9700;&#x8981;&#x53BB;&#x505A;&#x7684;&#x5DE5;&#x4F5C;</li>
+</ul>
+<pre><code># TODO(&#x4F5C;&#x8005;/&#x90AE;&#x4EF6;) &#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x83DC;&#x5355;
+</code></pre><h3 id="24-&#x5728;-cardstools-&#x4E2D;&#x589E;&#x52A0;&#x56DB;&#x4E2A;&#x65B0;&#x51FD;&#x6570;">2.4 &#x5728; cards_tools &#x4E2D;&#x589E;&#x52A0;&#x56DB;&#x4E2A;&#x65B0;&#x51FD;&#x6570;</h3>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_menu</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x663E;&#x793A;&#x83DC;&#x5355;
+    &quot;&quot;&quot;</span>
+    <span class="hljs-keyword">pass</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_card</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x65B0;&#x5EFA;&#x540D;&#x7247;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x65B0;&#x5EFA;&#x540D;&#x7247;&quot;</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_all</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x663E;&#x793A;&#x5168;&#x90E8;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x663E;&#x793A;&#x5168;&#x90E8;&quot;</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">search_card</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x641C;&#x7D22;&#x540D;&#x7247;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x641C;&#x7D22;&#x540D;&#x7247;&quot;</span>)
+</code></pre>
+<h3 id="25-&#x5BFC;&#x5165;&#x6A21;&#x5757;">2.5 &#x5BFC;&#x5165;&#x6A21;&#x5757;</h3>
+<ul>
+<li>&#x5728; <code>cards_main.py</code> &#x4E2D;&#x4F7F;&#x7528; <code>import</code> &#x5BFC;&#x5165; <code>cards_tools</code> &#x6A21;&#x5757;
+import cards_tools</li>
+<li>&#x4FEE;&#x6539; <code>while</code> &#x5FAA;&#x73AF;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> cards_tools
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+
+    cards_tools.show_menu()
+
+    action = input(<span class="hljs-string">&quot;&#x8BF7;&#x9009;&#x62E9;&#x64CD;&#x4F5C;&#x529F;&#x80FD;&#xFF1A;&quot;</span>)
+
+    print(<span class="hljs-string">&quot;&#x60A8;&#x9009;&#x62E9;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#xFF1A;%s&quot;</span> % action)
+
+    <span class="hljs-comment"># &#x6839;&#x636E;&#x7528;&#x6237;&#x8F93;&#x5165;&#x51B3;&#x5B9A;&#x540E;&#x7EED;&#x7684;&#x64CD;&#x4F5C;</span>
+    <span class="hljs-keyword">if</span> action <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>]:
+
+        <span class="hljs-keyword">if</span> action == <span class="hljs-string">&quot;1&quot;</span>:
+            cards_tools.new_card()
+
+        <span class="hljs-keyword">elif</span> action == <span class="hljs-string">&quot;2&quot;</span>:
+            cards_tools.show_all()
+
+        <span class="hljs-keyword">elif</span> action == <span class="hljs-string">&quot;3&quot;</span>:
+            cards_tools.search_card()
+
+    <span class="hljs-keyword">elif</span> action == <span class="hljs-string">&quot;0&quot;</span>:
+        print(<span class="hljs-string">&quot;&#x6B22;&#x8FCE;&#x518D;&#x6B21;&#x4F7F;&#x7528;&#x3010;&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3011;&quot;</span>)
+
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&quot;&#x8F93;&#x5165;&#x9519;&#x8BEF;&#xFF0C;&#x8BF7;&#x91CD;&#x65B0;&#x8F93;&#x5165;&#xFF1A;&quot;</span>)
+</code></pre>
+<blockquote>
+<p>&#x81F3;&#x6B64;&#xFF1A;cards_main &#x4E2D;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x5F00;&#x53D1;&#x5B8C;&#x6BD5;&#xFF01;</p>
+</blockquote>
+<h3 id="26-&#x5B8C;&#x6210;-showmenu-&#x51FD;&#x6570;">2.6 &#x5B8C;&#x6210; show_menu &#x51FD;&#x6570;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_menu</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x663E;&#x793A;&#x83DC;&#x5355;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;*&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x6B22;&#x8FCE;&#x4F7F;&#x7528;&#x3010;&#x83DC;&#x5355;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3011;V1.0&quot;</span>)
+    print(<span class="hljs-string">&quot;&quot;</span>)
+    print(<span class="hljs-string">&quot;1. &#x65B0;&#x5EFA;&#x540D;&#x7247;&quot;</span>)
+    print(<span class="hljs-string">&quot;2. &#x663E;&#x793A;&#x5168;&#x90E8;&quot;</span>)
+    print(<span class="hljs-string">&quot;3. &#x67E5;&#x8BE2;&#x540D;&#x7247;&quot;</span>)
+    print(<span class="hljs-string">&quot;&quot;</span>)
+    print(<span class="hljs-string">&quot;0. &#x9000;&#x51FA;&#x7CFB;&#x7EDF;&quot;</span>)
+    print(<span class="hljs-string">&quot;*&quot;</span> * <span class="hljs-number">50</span>)
+</code></pre>
+<h3 id="27-&#x4FDD;&#x5B58;&#x540D;&#x7247;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;">2.7 &#x4FDD;&#x5B58;&#x540D;&#x7247;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;</h3>
+<p><strong>&#x7A0B;&#x5E8F;&#x5C31;&#x662F;&#x7528;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x800C;&#x53D8;&#x91CF;&#x5C31;&#x662F;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;</strong></p>
+<ul>
+<li>&#x4F7F;&#x7528; <strong>&#x5B57;&#x5178;</strong> &#x8BB0;&#x5F55; <strong>&#x6BCF;&#x4E00;&#x5F20;&#x540D;&#x7247;</strong> &#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</li>
+<li>&#x4F7F;&#x7528; <strong>&#x5217;&#x8868;</strong> &#x7EDF;&#x4E00;&#x8BB0;&#x5F55;&#x6240;&#x6709;&#x7684; <strong>&#x540D;&#x7247;&#x5B57;&#x5178;</strong></li>
+</ul>
+<p><img src="../assets/001_&#x540D;&#x7247;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x5168;&#x5C40;&#x5217;&#x8868;.png" alt=""></p>
+<h4 id="&#x5B9A;&#x4E49;&#x540D;&#x7247;&#x5217;&#x8868;&#x53D8;&#x91CF;">&#x5B9A;&#x4E49;&#x540D;&#x7247;&#x5217;&#x8868;&#x53D8;&#x91CF;</h4>
+<p>&#x5728; <code>cards_tools</code> &#x6587;&#x4EF6;&#x7684;&#x9876;&#x90E8;&#x589E;&#x52A0;&#x4E00;&#x4E2A; <strong>&#x5217;&#x8868;&#x53D8;&#x91CF;</strong></p>
+<pre><code># &#x6240;&#x6709;&#x540D;&#x7247;&#x8BB0;&#x5F55;&#x7684;&#x5217;&#x8868;
+card_list = []
+</code></pre><p><strong>&#x6CE8;&#x610F;</strong></p>
+<ul>
+<li>&#x6240;&#x6709;&#x540D;&#x7247;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x5E94;&#x8BE5; <strong>&#x5B9A;&#x4E49;&#x5728;&#x7A0B;&#x5E8F;&#x7684;&#x9876;&#x90E8;</strong></li>
+<li><strong>&#x7A0B;&#x5E8F;&#x521A;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x6570;&#x636E;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x662F; <strong>&#x7A7A;&#x5217;&#x8868;</strong></li>
+</ul>
+<h2 id="03-&#x65B0;&#x589E;&#x540D;&#x7247;">03. &#x65B0;&#x589E;&#x540D;&#x7247;</h2>
+<h3 id="31-&#x529F;&#x80FD;&#x5206;&#x6790;">3.1 &#x529F;&#x80FD;&#x5206;&#x6790;</h3>
+<ol>
+<li>&#x63D0;&#x793A;&#x7528;&#x6237;&#x4F9D;&#x6B21;&#x8F93;&#x5165;&#x540D;&#x7247;&#x4FE1;&#x606F;</li>
+<li>&#x5C06;&#x540D;&#x7247;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x5178;</li>
+<li>&#x5C06;&#x5B57;&#x5178;&#x6DFB;&#x52A0;&#x5230;&#x540D;&#x7247;&#x5217;&#x8868;</li>
+<li>&#x63D0;&#x793A;&#x540D;&#x7247;&#x6DFB;&#x52A0;&#x5B8C;&#x6210;</li>
+</ol>
+<h3 id="32-&#x5B9E;&#x73B0;-newcard-&#x65B9;&#x6CD5;">3.2 &#x5B9E;&#x73B0; new_card &#x65B9;&#x6CD5;</h3>
+<p>&#x6839;&#x636E;&#x6B65;&#x9AA4;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">new_card</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x65B0;&#x5EFA;&#x540D;&#x7247;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x65B0;&#x5EFA;&#x540D;&#x7247;&quot;</span>)
+
+    <span class="hljs-comment"># 1. &#x63D0;&#x793A;&#x7528;&#x6237;&#x8F93;&#x5165;&#x540D;&#x7247;&#x4FE1;&#x606F;</span>
+    name = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x59D3;&#x540D;&#xFF1A;&quot;</span>)
+    phone = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7535;&#x8BDD;&#xFF1A;&quot;</span>)
+    qq = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165; QQ &#x53F7;&#x7801;&#xFF1A;&quot;</span>)
+    email = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x90AE;&#x7BB1;&#xFF1A;&quot;</span>)
+
+    <span class="hljs-comment"># 2. &#x5C06;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x5178;</span>
+    card_dict = {<span class="hljs-string">&quot;name&quot;</span>: name,
+                 <span class="hljs-string">&quot;phone&quot;</span>: phone,
+                 <span class="hljs-string">&quot;qq&quot;</span>: qq,
+                 <span class="hljs-string">&quot;email&quot;</span>: email}
+
+    <span class="hljs-comment"># 3. &#x5C06;&#x7528;&#x6237;&#x5B57;&#x5178;&#x6DFB;&#x52A0;&#x5230;&#x540D;&#x7247;&#x5217;&#x8868;</span>
+    card_list.append(card_dict)
+
+    print(card_list)
+
+    <span class="hljs-comment"># 4. &#x63D0;&#x793A;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x4FE1;&#x606F;</span>
+    print(<span class="hljs-string">&quot;&#x6210;&#x529F;&#x6DFB;&#x52A0; %s &#x7684;&#x540D;&#x7247;&quot;</span> % card_dict[<span class="hljs-string">&quot;name&quot;</span>])
+</code></pre>
+<blockquote>
+<p>&#x6280;&#x5DE7;&#xFF1A;&#x5728; <code>PyCharm</code> &#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>SHIFT + F6</code> &#x7EDF;&#x4E00;&#x4FEE;&#x6539;&#x53D8;&#x91CF;&#x540D;</p>
+</blockquote>
+<h2 id="04-&#x663E;&#x793A;&#x6240;&#x6709;&#x540D;&#x7247;">04. &#x663E;&#x793A;&#x6240;&#x6709;&#x540D;&#x7247;</h2>
+<h3 id="41-&#x529F;&#x80FD;&#x5206;&#x6790;">4.1 &#x529F;&#x80FD;&#x5206;&#x6790;</h3>
+<ul>
+<li>&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x540D;&#x7247;&#x5217;&#x8868;&#xFF0C;&#x987A;&#x5E8F;&#x663E;&#x793A;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x7684;&#x4FE1;&#x606F;</li>
+</ul>
+<h3 id="42-&#x57FA;&#x7840;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">4.2 &#x57FA;&#x7840;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_all</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x663E;&#x793A;&#x5168;&#x90E8;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x663E;&#x793A;&#x5168;&#x90E8;&quot;</span>)
+
+    <span class="hljs-keyword">for</span> card_dict <span class="hljs-keyword">in</span> card_list:
+
+        print(card_dict)
+</code></pre>
+<ul>
+<li>&#x663E;&#x793A;&#x6548;&#x679C;&#x4E0D;&#x597D;&#xFF01;</li>
+</ul>
+<h3 id="43-&#x589E;&#x52A0;&#x6807;&#x9898;&#x548C;&#x4F7F;&#x7528;-t-&#x663E;&#x793A;">4.3 &#x589E;&#x52A0;&#x6807;&#x9898;&#x548C;&#x4F7F;&#x7528; \t &#x663E;&#x793A;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_all</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x663E;&#x793A;&#x5168;&#x90E8;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x663E;&#x793A;&#x5168;&#x90E8;&quot;</span>)
+
+    <span class="hljs-comment"># &#x6253;&#x5370;&#x8868;&#x5934;</span>
+    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> [<span class="hljs-string">&quot;&#x59D3;&#x540D;&quot;</span>, <span class="hljs-string">&quot;&#x7535;&#x8BDD;&quot;</span>, <span class="hljs-string">&quot;QQ&quot;</span>, <span class="hljs-string">&quot;&#x90AE;&#x7BB1;&quot;</span>]:
+        print(name, end=<span class="hljs-string">&quot;\t\t&quot;</span>)
+
+    print(<span class="hljs-string">&quot;&quot;</span>)
+
+    <span class="hljs-comment"># &#x6253;&#x5370;&#x5206;&#x9694;&#x7EBF;</span>
+    print(<span class="hljs-string">&quot;=&quot;</span> * <span class="hljs-number">50</span>)
+
+    <span class="hljs-keyword">for</span> card_dict <span class="hljs-keyword">in</span> card_list:
+
+        print(<span class="hljs-string">&quot;%s\t\t%s\t\t%s\t\t%s&quot;</span> % (card_dict[<span class="hljs-string">&quot;name&quot;</span>],
+                                        card_dict[<span class="hljs-string">&quot;phone&quot;</span>],
+                                        card_dict[<span class="hljs-string">&quot;qq&quot;</span>],
+                                        card_dict[<span class="hljs-string">&quot;email&quot;</span>]))
+</code></pre>
+<h3 id="44-&#x589E;&#x52A0;&#x6CA1;&#x6709;&#x540D;&#x7247;&#x8BB0;&#x5F55;&#x5224;&#x65AD;">4.4 &#x589E;&#x52A0;&#x6CA1;&#x6709;&#x540D;&#x7247;&#x8BB0;&#x5F55;&#x5224;&#x65AD;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_all</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x663E;&#x793A;&#x5168;&#x90E8;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x663E;&#x793A;&#x5168;&#x90E8;&quot;</span>)
+
+    <span class="hljs-comment"># 1. &#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x540D;&#x7247;&#x8BB0;&#x5F55;</span>
+    <span class="hljs-keyword">if</span> len(card_list) == <span class="hljs-number">0</span>:
+        print(<span class="hljs-string">&quot;&#x63D0;&#x793A;&#xFF1A;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x540D;&#x7247;&#x8BB0;&#x5F55;&quot;</span>)
+
+        <span class="hljs-keyword">return</span>
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;</strong></p>
+<ul>
+<li>&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528; <code>return</code> &#x8868;&#x793A;&#x8FD4;&#x56DE;</li>
+<li>&#x5982;&#x679C;&#x5728; <code>return</code> &#x540E;&#x6CA1;&#x6709;&#x8DDF;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#xFF0C;&#x53EA;&#x662F;&#x8868;&#x793A;&#x8BE5;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5230;&#x6B64;&#x5C31;&#x4E0D;&#x518D;&#x6267;&#x884C;&#x540E;&#x7EED;&#x7684;&#x4EE3;&#x7801;</li>
+</ul>
+<h2 id="05-&#x67E5;&#x8BE2;&#x540D;&#x7247;">05. &#x67E5;&#x8BE2;&#x540D;&#x7247;</h2>
+<h3 id="51-&#x529F;&#x80FD;&#x5206;&#x6790;">5.1 &#x529F;&#x80FD;&#x5206;&#x6790;</h3>
+<ol>
+<li>&#x63D0;&#x793A;&#x7528;&#x6237;&#x8981;&#x641C;&#x7D22;&#x7684;&#x59D3;&#x540D;</li>
+<li>&#x6839;&#x636E;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x59D3;&#x540D;&#x904D;&#x5386;&#x5217;&#x8868;</li>
+<li>&#x641C;&#x7D22;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x540D;&#x7247;&#x540E;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x540E;&#x7EED;&#x7684;&#x64CD;&#x4F5C;</li>
+</ol>
+<h3 id="52-&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">5.2 &#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h3>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x529F;&#x80FD;&#x5B9E;&#x73B0;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">search_card</span><span class="hljs-params">()</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x641C;&#x7D22;&#x540D;&#x7247;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">50</span>)
+    print(<span class="hljs-string">&quot;&#x529F;&#x80FD;&#xFF1A;&#x641C;&#x7D22;&#x540D;&#x7247;&quot;</span>)
+
+    <span class="hljs-comment"># 1. &#x63D0;&#x793A;&#x8981;&#x641C;&#x7D22;&#x7684;&#x59D3;&#x540D;</span>
+    find_name = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x8981;&#x641C;&#x7D22;&#x7684;&#x59D3;&#x540D;&#xFF1A;&quot;</span>)
+
+    <span class="hljs-comment"># 2. &#x904D;&#x5386;&#x5B57;&#x5178;</span>
+    <span class="hljs-keyword">for</span> card_dict <span class="hljs-keyword">in</span> card_list:
+
+        <span class="hljs-keyword">if</span> card_dict[<span class="hljs-string">&quot;name&quot;</span>] == find_name:
+
+            print(<span class="hljs-string">&quot;&#x59D3;&#x540D;\t\t\t&#x7535;&#x8BDD;\t\t\tQQ\t\t\t&#x90AE;&#x7BB1;&quot;</span>)
+            print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">40</span>)
+
+            print(<span class="hljs-string">&quot;%s\t\t\t%s\t\t\t%s\t\t\t%s&quot;</span> % (
+                card_dict[<span class="hljs-string">&quot;name&quot;</span>],
+                card_dict[<span class="hljs-string">&quot;phone&quot;</span>],
+                card_dict[<span class="hljs-string">&quot;qq&quot;</span>],
+                card_dict[<span class="hljs-string">&quot;email&quot;</span>]))
+
+            print(<span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-number">40</span>)
+
+            <span class="hljs-comment"># TODO(&#x5C0F;&#x660E;) &#x9488;&#x5BF9;&#x627E;&#x5230;&#x7684;&#x5B57;&#x5178;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#xFF1A;&#x4FEE;&#x6539;/&#x5220;&#x9664;</span>
+
+            <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x627E;&#x5230; %s&quot;</span> % find_name)
+</code></pre>
+<ul>
+<li>&#x589E;&#x52A0;&#x540D;&#x7247;&#x64CD;&#x4F5C;&#x51FD;&#x6570;&#xFF1A;<strong>&#x4FEE;&#x6539;/&#x5220;&#x9664;/&#x8FD4;&#x56DE;&#x4E3B;&#x83DC;&#x5355;</strong></li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deal_card</span><span class="hljs-params">(find_dict)</span>:</span>
+
+    <span class="hljs-string">&quot;&quot;&quot;&#x64CD;&#x4F5C;&#x641C;&#x7D22;&#x5230;&#x7684;&#x540D;&#x7247;&#x5B57;&#x5178;
+
+    :param find_dict:&#x627E;&#x5230;&#x7684;&#x540D;&#x7247;&#x5B57;&#x5178;
+    &quot;&quot;&quot;</span>
+    print(find_dict)
+
+    action_str = input(<span class="hljs-string">&quot;&#x8BF7;&#x9009;&#x62E9;&#x8981;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C; &quot;</span>
+                       <span class="hljs-string">&quot;[1] &#x4FEE;&#x6539; [2] &#x5220;&#x9664; [0] &#x8FD4;&#x56DE;&#x4E0A;&#x7EA7;&#x83DC;&#x5355;&quot;</span>)
+
+    <span class="hljs-keyword">if</span> action == <span class="hljs-string">&quot;1&quot;</span>:
+        print(<span class="hljs-string">&quot;&#x4FEE;&#x6539;&quot;</span>)
+    <span class="hljs-keyword">elif</span> action == <span class="hljs-string">&quot;2&quot;</span>:
+        print(<span class="hljs-string">&quot;&#x5220;&#x9664;&quot;</span>)
+</code></pre>
+<h2 id="06-&#x4FEE;&#x6539;&#x548C;&#x5220;&#x9664;">06. &#x4FEE;&#x6539;&#x548C;&#x5220;&#x9664;</h2>
+<h3 id="61-&#x67E5;&#x8BE2;&#x6210;&#x529F;&#x540E;&#x5220;&#x9664;&#x540D;&#x7247;">6.1 &#x67E5;&#x8BE2;&#x6210;&#x529F;&#x540E;&#x5220;&#x9664;&#x540D;&#x7247;</h3>
+<ul>
+<li>&#x7531;&#x4E8E;&#x627E;&#x5230;&#x7684;&#x5B57;&#x5178;&#x8BB0;&#x5F55;&#x5DF2;&#x7ECF;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x4FDD;&#x5B58;</li>
+<li>&#x8981;&#x5220;&#x9664;&#x540D;&#x7247;&#x8BB0;&#x5F55;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;&#x5217;&#x8868;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x5178;&#x5220;&#x9664;&#x5373;&#x53EF;</li>
+</ul>
+<pre><code class="lang-python">    <span class="hljs-keyword">elif</span> action == <span class="hljs-string">&quot;2&quot;</span>:
+        card_list.remove(find_dict)
+
+        print(<span class="hljs-string">&quot;&#x5220;&#x9664;&#x6210;&#x529F;&quot;</span>)
+</code></pre>
+<h3 id="62-&#x4FEE;&#x6539;&#x540D;&#x7247;">6.2 &#x4FEE;&#x6539;&#x540D;&#x7247;</h3>
+<ul>
+<li>&#x7531;&#x4E8E;&#x627E;&#x5230;&#x7684;&#x5B57;&#x5178;&#x8BB0;&#x5F55;&#x5DF2;&#x7ECF;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x4FDD;&#x5B58;</li>
+<li>&#x8981;&#x4FEE;&#x6539;&#x540D;&#x7247;&#x8BB0;&#x5F55;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;&#x5217;&#x8868;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x5178;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x636E;&#x4FEE;&#x6539;&#x5373;&#x53EF;</li>
+</ul>
+<pre><code class="lang-python">    <span class="hljs-keyword">if</span> action == <span class="hljs-string">&quot;1&quot;</span>:
+
+        find_dict[<span class="hljs-string">&quot;name&quot;</span>] = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x59D3;&#x540D;&#xFF1A;&quot;</span>)
+        find_dict[<span class="hljs-string">&quot;phone&quot;</span>] = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x7535;&#x8BDD;&#xFF1A;&quot;</span>)
+        find_dict[<span class="hljs-string">&quot;qq&quot;</span>] = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;QQ&#xFF1A;&quot;</span>)
+        find_dict[<span class="hljs-string">&quot;email&quot;</span>] = input(<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x90AE;&#x4EF6;&#xFF1A;&quot;</span>)
+
+        print(<span class="hljs-string">&quot;%s &#x7684;&#x540D;&#x7247;&#x4FEE;&#x6539;&#x6210;&#x529F;&quot;</span> % find_dict[<span class="hljs-string">&quot;name&quot;</span>])
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../python6/模块.html" class="navigation navigation-prev " aria-label="Previous page: 模块的基本使用"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../python6/set、list、tuple.html" class="navigation navigation-next " aria-label="Next page: set、list、tuple"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python基础语言 -->
+</html>

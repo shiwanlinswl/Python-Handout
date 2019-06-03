@@ -1,0 +1,2124 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>框架完善--日志模块使用 | 爬虫课程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-prism/prism-solarizedlight.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../爬虫框架开发/4.框架功能完善/2.框架完善--配置文件实现.html" />
+    
+    
+    <link rel="prev" href="../../爬虫框架开发/4.框架功能完善/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.3.1"
+        data-chapter-title="框架完善--日志模块使用"
+        data-filepath="爬虫框架开发/4.框架功能完善/1.框架完善--日志模块使用.md"
+        data-basepath="../.."
+        data-revision="Tue Jul 03 2018 09:49:23 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="爬虫入门/index.html">
+            
+                
+                    <a href="../../爬虫入门/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        爬虫入门
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="爬虫入门/1.爬虫的基础知识/index.html">
+            
+                
+                    <a href="../../爬虫入门/1.爬虫的基础知识/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫的基础知识
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="爬虫入门/1.爬虫的基础知识/1.爬虫的基础概念.html">
+            
+                
+                    <a href="../../爬虫入门/1.爬虫的基础知识/1.爬虫的基础概念.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        爬虫的定义和使用场景
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="爬虫入门/1.爬虫的基础知识/2.爬虫的分类和爬虫流程.html">
+            
+                
+                    <a href="../../爬虫入门/1.爬虫的基础知识/2.爬虫的分类和爬虫流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        爬虫的分类和爬虫的流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="爬虫入门/1.爬虫的基础知识/3.复习http和https.html">
+            
+                
+                    <a href="../../爬虫入门/1.爬虫的基础知识/3.复习http和https.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.3.</b>
+                        
+                        http和https的复习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="爬虫入门/1.爬虫的基础知识/4.字符串相关的复习.html">
+            
+                
+                    <a href="../../爬虫入门/1.爬虫的基础知识/4.字符串相关的复习.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.4.</b>
+                        
+                        字符串相关的复习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="爬虫入门/1.爬虫的基础知识/5.小结.html">
+            
+                
+                    <a href="../../爬虫入门/1.爬虫的基础知识/5.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.5.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="爬虫入门/2.requests模块的使用/index.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        请求的发送方法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="爬虫入门/2.requests模块的使用/1.requests模块的基本使用.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/1.requests模块的基本使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        requests模块的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="爬虫入门/2.requests模块的使用/2.requests模块的深入使用.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/2.requests模块的深入使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        requests模块的深入使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="爬虫入门/2.requests模块的使用/3.requests模块处理cookie.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/3.requests模块处理cookie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.3.</b>
+                        
+                        requests模块处理cookie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="爬虫入门/2.requests模块的使用/4.requests模块的其他方法.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/4.requests模块的其他方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.4.</b>
+                        
+                        requests的其他方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="爬虫入门/2.requests模块的使用/5.urllib的介绍.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/5.urllib的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.5.</b>
+                        
+                        urllib的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="爬虫入门/2.requests模块的使用/6小结.html">
+            
+                
+                    <a href="../../爬虫入门/2.requests模块的使用/6小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.6.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="爬虫入门/3.数据提取方法/index.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        数据提取方法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="爬虫入门/3.数据提取方法/1.数据提取的概念和数据分类.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/1.数据提取的概念和数据分类.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        数据提取的概念和数据分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="爬虫入门/3.数据提取方法/2.json字符串的数据提取.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/2.json字符串的数据提取.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        数据提取之json
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="爬虫入门/3.数据提取方法/3.数据提取之正则.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/3.数据提取之正则.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        数据提取之正则
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="爬虫入门/3.数据提取方法/4.xpath和lxml类库.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/4.xpath和lxml类库.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        数据提取之xpath
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="爬虫入门/3.数据提取方法/5.lxml模块的学习.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/5.lxml模块的学习.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        数据提取之lxml
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="爬虫入门/3.数据提取方法/6.beautifulsoup的学习.html">
+            
+                
+                    <a href="../../爬虫入门/3.数据提取方法/6.beautifulsoup的学习.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.6.</b>
+                        
+                        数据提取之beautifulsoup
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="爬虫提高/index.html">
+            
+                
+                    <a href="../../爬虫提高/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        爬虫提高
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="爬虫提高/1.高性能爬虫/index.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        高性能爬虫
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="爬虫提高/1.高性能爬虫/1.单线程爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/1.单线程爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.1.</b>
+                        
+                        单线程爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="爬虫提高/1.高性能爬虫/2.多线程爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/2.多线程爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.2.</b>
+                        
+                        多线程爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="爬虫提高/1.高性能爬虫/3.多进程爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/3.多进程爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.3.</b>
+                        
+                        多进程爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="爬虫提高/1.高性能爬虫/4.线程池爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/4.线程池爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.4.</b>
+                        
+                        线程池爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="爬虫提高/1.高性能爬虫/5.协程池爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/5.协程池爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.5.</b>
+                        
+                        协程池爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="爬虫提高/1.高性能爬虫/6.小结.html">
+            
+                
+                    <a href="../../爬虫提高/1.高性能爬虫/6.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.6.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="爬虫提高/2.selenium/index.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        selenium
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="爬虫提高/2.selenium/1.无头浏览器的介绍.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/1.无头浏览器的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        无头浏览器的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="爬虫提高/2.selenium/2.selenium的基本使用.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/2.selenium的基本使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        selenium的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="爬虫提高/2.selenium/3.元素定位的方法.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/3.元素定位的方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.3.</b>
+                        
+                        selenium元素定位的方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="爬虫提高/2.selenium/4.selenium的其他方法.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/4.selenium的其他方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.4.</b>
+                        
+                        selenium的其他方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="爬虫提高/2.selenium/5.selenium案例.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/5.selenium案例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.5.</b>
+                        
+                        selenium案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="爬虫提高/2.selenium/6.小结.html">
+            
+                
+                    <a href="../../爬虫提高/2.selenium/6.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.6.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="爬虫提高/3.反扒以及解决方案/index.html">
+            
+                
+                    <a href="../../爬虫提高/3.反扒以及解决方案/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        反扒以及解决方案
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="爬虫提高/3.反扒以及解决方案/1.常见的反扒手段和解决方法.html">
+            
+                
+                    <a href="../../爬虫提高/3.反扒以及解决方案/1.常见的反扒手段和解决方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        常见反扒手段
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="爬虫提高/3.反扒以及解决方案/2.打码平台的使用.html">
+            
+                
+                    <a href="../../爬虫提高/3.反扒以及解决方案/2.打码平台的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        打码平台的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="爬虫提高/3.反扒以及解决方案/3.chrome在爬虫中的使用.html">
+            
+                
+                    <a href="../../爬虫提高/3.反扒以及解决方案/3.chrome在爬虫中的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        chrome在爬虫中的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="爬虫提高/3.反扒以及解决方案/4.JS的解析.html">
+            
+                
+                    <a href="../../爬虫提高/3.反扒以及解决方案/4.JS的解析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.4.</b>
+                        
+                        JS的解析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.5" data-path="爬虫提高/3.反扒以及解决方案/5.小结.html">
+            
+                
+                    <a href="../../爬虫提高/3.反扒以及解决方案/5.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.5.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="爬虫提高/4.MONGODB数据库/index.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        MONGODB数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="爬虫提高/4.MONGODB数据库/1.mongodb的介绍和安装.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/1.mongodb的介绍和安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        mongodb的介绍和安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="爬虫提高/4.MONGODB数据库/2.mongodb的权限管理.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/2.mongodb的权限管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        mongodb的权限管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="爬虫提高/4.MONGODB数据库/3.mongodb的基本使用.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/3.mongodb的基本使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.3.</b>
+                        
+                        mongodb的入门使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.4" data-path="爬虫提高/4.MONGODB数据库/4.mongodb的聚合操作.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/4.mongodb的聚合操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.4.</b>
+                        
+                        mongodb的聚合操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.5" data-path="爬虫提高/4.MONGODB数据库/5.mongodb的索引.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/5.mongodb的索引.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.5.</b>
+                        
+                        mongodb的索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.6" data-path="爬虫提高/4.MONGODB数据库/6.mongodb的备份恢复与导入导出.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/6.mongodb的备份恢复与导入导出.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.6.</b>
+                        
+                        mongodb的备份恢复与导入导出
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.7" data-path="爬虫提高/4.MONGODB数据库/7.mongodb和python的交互.html">
+            
+                
+                    <a href="../../爬虫提高/4.MONGODB数据库/7.mongodb和python的交互.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.7.</b>
+                        
+                        mongodb和python交互
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="爬虫提高/5.scrapy/index.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        scrapy框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="爬虫提高/5.scrapy/1.scrapy的基础概念和流程.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/1.scrapy的基础概念和流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.1.</b>
+                        
+                        scrapy的基础概念和流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="爬虫提高/5.scrapy/2.scrapy的入门使用.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/2.scrapy的入门使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.2.</b>
+                        
+                        scrapy的入门使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="爬虫提高/5.scrapy/3.scrapy发送翻页请求.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/3.scrapy发送翻页请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.3.</b>
+                        
+                        scrapy发送翻页请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="爬虫提高/5.scrapy/4.scrapy的深入使用.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/4.scrapy的深入使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.4.</b>
+                        
+                        scrapy的深入使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="爬虫提高/5.scrapy/5.crawlspider类的使用.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/5.crawlspider类的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.5.</b>
+                        
+                        crawlspider类的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="爬虫提高/5.scrapy/6.scrapy中间件.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/6.scrapy中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.6.</b>
+                        
+                        scarpy中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="爬虫提高/5.scrapy/7.scrapy模拟登陆.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/7.scrapy模拟登陆.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.7.</b>
+                        
+                        scrapy模拟登陆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="爬虫提高/5.scrapy/8.scrapyd.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/8.scrapyd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.8.</b>
+                        
+                        scrapyd
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.9" data-path="爬虫提高/5.scrapy/9.小结.html">
+            
+                
+                    <a href="../../爬虫提高/5.scrapy/9.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.9.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="爬虫提高/6.scrapy_redis/index.html">
+            
+                
+                    <a href="../../爬虫提高/6.scrapy_redis/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        scrapy_redis
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="爬虫提高/6.scrapy_redis/1.scrapy_redis分布式原理.html">
+            
+                
+                    <a href="../../爬虫提高/6.scrapy_redis/1.scrapy_redis分布式原理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.1.</b>
+                        
+                        scrapy_redis分布式原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="爬虫提高/6.scrapy_redis/2.scrapy_redis实现增量式爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/6.scrapy_redis/2.scrapy_redis实现增量式爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.2.</b>
+                        
+                        scrapy_redis实现增量式爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.3" data-path="爬虫提高/6.scrapy_redis/3.scrapy_redis实现分布式爬虫.html">
+            
+                
+                    <a href="../../爬虫提高/6.scrapy_redis/3.scrapy_redis实现分布式爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.3.</b>
+                        
+                        scrapy_redis实现分布式爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.4" data-path="爬虫提高/6.scrapy_redis/4.小结.html">
+            
+                
+                    <a href="../../爬虫提高/6.scrapy_redis/4.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.4.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="爬虫提高/7.爬虫的部署/index.html">
+            
+                
+                    <a href="../../爬虫提高/7.爬虫的部署/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        爬虫的部署
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.7.1" data-path="爬虫提高/7.爬虫的部署/1.scrapyd的使用.html">
+            
+                
+                    <a href="../../爬虫提高/7.爬虫的部署/1.scrapyd的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.1.</b>
+                        
+                        scrapyd的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.2" data-path="爬虫提高/7.爬虫的部署/2.pycharm发布代码.html">
+            
+                
+                    <a href="../../爬虫提高/7.爬虫的部署/2.pycharm发布代码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.2.</b>
+                        
+                        pycharm发布代码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.3" data-path="爬虫提高/7.爬虫的部署/3.crontab实现定时任务.html">
+            
+                
+                    <a href="../../爬虫提高/7.爬虫的部署/3.crontab实现定时任务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.3.</b>
+                        
+                        crontab实现定时任务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7.4" data-path="爬虫提高/7.爬虫的部署/4.小结.html">
+            
+                
+                    <a href="../../爬虫提高/7.爬虫的部署/4.小结.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.4.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="爬虫框架开发/index.html">
+            
+                
+                    <a href="../../爬虫框架开发/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        爬虫框架开发
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="爬虫框架开发/1.爬虫框架开发分析/index.html">
+            
+                
+                    <a href="../../爬虫框架开发/1.爬虫框架开发分析/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        爬虫框架开发分析
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="爬虫框架开发/1.爬虫框架开发分析/1.了解框架.html">
+            
+                
+                    <a href="../../爬虫框架开发/1.爬虫框架开发分析/1.了解框架.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        了解框架
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="爬虫框架开发/1.爬虫框架开发分析/2.框架设计思路分析.html">
+            
+                
+                    <a href="../../爬虫框架开发/1.爬虫框架开发分析/2.框架设计思路分析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        框架设计思路分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="爬虫框架开发/1.爬虫框架开发分析/3.框架代码雏形结构.html">
+            
+                
+                    <a href="../../爬虫框架开发/1.爬虫框架开发分析/3.框架代码雏形结构.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.3.</b>
+                        
+                        雏形代码结构
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="爬虫框架开发/2.框架雏形实现/index.html">
+            
+                
+                    <a href="../../爬虫框架开发/2.框架雏形实现/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        框架雏形实现
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="爬虫框架开发/2.框架雏形实现/1.框架雏形--http模块和item模块.html">
+            
+                
+                    <a href="../../爬虫框架开发/2.框架雏形实现/1.框架雏形--http模块和item模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        框架雏形--http模块和item模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="爬虫框架开发/2.框架雏形实现/2.框架雏形--核心模块.html">
+            
+                
+                    <a href="../../爬虫框架开发/2.框架雏形实现/2.框架雏形--核心模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        框架雏形--核心模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="爬虫框架开发/2.框架雏形实现/3.框架安装.html">
+            
+                
+                    <a href="../../爬虫框架开发/2.框架雏形实现/3.框架安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.3.</b>
+                        
+                        框架安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="爬虫框架开发/2.框架雏形实现/4.框架运行--main.py.html">
+            
+                
+                    <a href="../../爬虫框架开发/2.框架雏形实现/4.框架运行--main.py.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.4.</b>
+                        
+                        框架运行--main.py
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="爬虫框架开发/2.框架雏形实现/5.框架雏形--中间件模块.html">
+            
+                
+                    <a href="../../爬虫框架开发/2.框架雏形实现/5.框架雏形--中间件模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.5.</b>
+                        
+                        框架雏形--中间件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="爬虫框架开发/4.框架功能完善/index.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        框架功能完善
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.3.1" data-path="爬虫框架开发/4.框架功能完善/1.框架完善--日志模块使用.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/1.框架完善--日志模块使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        框架完善--日志模块使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="爬虫框架开发/4.框架功能完善/2.框架完善--配置文件实现.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/2.框架完善--配置文件实现.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        框架完善--配置文件实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="爬虫框架开发/4.框架功能完善/3.框架完善--多爬虫实现之一--多请求.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/3.框架完善--多爬虫实现之一--多请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        框架完善--多爬虫实现之一--多请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="爬虫框架开发/4.框架功能完善/4.框架完善--多爬虫实现之二--多个解析函数.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/4.框架完善--多爬虫实现之二--多个解析函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        框架完善--多爬虫实现之二--多个解析函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="爬虫框架开发/4.框架功能完善/5.框架完善--多爬虫实现之三--多爬虫文件.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/5.框架完善--多爬虫实现之三--多爬虫文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.5.</b>
+                        
+                        框架完善--多爬虫实现之三--多爬虫文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="爬虫框架开发/4.框架功能完善/6.框架完善--实现多个管道.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/6.框架完善--实现多个管道.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.6.</b>
+                        
+                        框架完善--实现多个管道
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="爬虫框架开发/4.框架功能完善/7.框架完善--实现多个中间件.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/7.框架完善--实现多个中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.7.</b>
+                        
+                        框架完善--实现多个中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.8" data-path="爬虫框架开发/4.框架功能完善/8.框架完善--实现动态模块导入.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/8.框架完善--实现动态模块导入.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.8.</b>
+                        
+                        框架完善--实现动态模块导入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.9" data-path="爬虫框架开发/4.框架功能完善/9.框架完善--实现请求去重.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/9.框架完善--实现请求去重.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.9.</b>
+                        
+                        框架完善--实现请求去重
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.10" data-path="爬虫框架开发/4.框架功能完善/10.框架完善--使用线程池实现异步以及并发控制.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/10.框架完善--使用线程池实现异步以及并发控制.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.10.</b>
+                        
+                        框架完善--使用线程池实现异步以及并发控制
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.11" data-path="爬虫框架开发/4.框架功能完善/11.框架完善--使用协程池实现异步以及并发控制.html">
+            
+                
+                    <a href="../../爬虫框架开发/4.框架功能完善/11.框架完善--使用协程池实现异步以及并发控制.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.11.</b>
+                        
+                        框架完善--使用协程池实现异步以及并发控制
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="爬虫框架开发/5.框架功能升级/index.html">
+            
+                
+                    <a href="../../爬虫框架开发/5.框架功能升级/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        框架功能升级
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="爬虫框架开发/5.框架功能升级/1.框架升级--分布式爬虫设计原理及其实现.html">
+            
+                
+                    <a href="../../爬虫框架开发/5.框架功能升级/1.框架升级--分布式爬虫设计原理及其实现.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        框架升级--分布式爬虫设计原理及其实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="爬虫框架开发/5.框架功能升级/2.框架升级--增量爬虫设计原理及其实现.html">
+            
+                
+                    <a href="../../爬虫框架开发/5.框架功能升级/2.框架升级--增量爬虫设计原理及其实现.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        框架升级--增量爬虫设计原理及其实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="爬虫框架开发/5.框架功能升级/3.框架升级--断点续爬设计原理及其实现.html">
+            
+                
+                    <a href="../../爬虫框架开发/5.框架功能升级/3.框架升级--断点续爬设计原理及其实现.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.3.</b>
+                        
+                        框架升级--断点续爬设计原理及其实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="爬虫框架开发/5.框架功能升级/4.框架可以改进的内容.html">
+            
+                
+                    <a href="../../爬虫框架开发/5.框架功能升级/4.框架可以改进的内容.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.4.</b>
+                        
+                        框架升级--框架可以改进的内容
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="爬虫框架开发/6.项目实战/index.html">
+            
+                
+                    <a href="../../爬虫框架开发/6.项目实战/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        项目实战
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="扩展阅读/index.html">
+            
+                
+                    <a href="../../扩展阅读/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        扩展阅读
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="扩展阅读/ascii和unicode以及utf-8.html">
+            
+                
+                    <a href="../../扩展阅读/ascii和unicode以及utf-8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        ascii、unicode和utf-8的起源
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="扩展阅读/charles使用指南.html">
+            
+                
+                    <a href="../../扩展阅读/charles使用指南.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        charles使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="扩展阅读/urllib中Handler处理器和自定义Opener.html">
+            
+                
+                    <a href="../../扩展阅读/urllib中Handler处理器和自定义Opener.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        urlib的扩展
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="扩展阅读/redis-manger-desktop.html">
+            
+                
+                    <a href="../../扩展阅读/redis-manger-desktop.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        redis-desktop-manger的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="扩展阅读/代理ip检测.html">
+            
+                
+                    <a href="../../扩展阅读/代理ip检测.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        代理ip检测
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="扩展阅读/selenium深入拓展.html">
+            
+                
+                    <a href="../../扩展阅读/selenium深入拓展.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        selenium深入拓展
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="扩展阅读/docker简单使用.html">
+            
+                
+                    <a href="../../扩展阅读/docker简单使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        docker在爬虫中的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="扩展阅读/appium介绍.html">
+            
+                
+                    <a href="../../扩展阅读/appium介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        appium介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="扩展阅读/pywin32介绍.html">
+            
+                
+                    <a href="../../扩展阅读/pywin32介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        pywin32介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="扩展阅读/百度翻译sign值获取.html">
+            
+                
+                    <a href="../../扩展阅读/百度翻译sign值获取.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        百度翻译获取sign值
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >爬虫课程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x6846;&#x67B6;&#x5B8C;&#x5584;--&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;">&#x6846;&#x67B6;&#x5B8C;&#x5584; -- &#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;</h2>
+<h5 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;">&#x5B66;&#x4E60;&#x76EE;&#x6807;</h5>
+<ol>
+<li>&#x638C;&#x63E1;logging&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;</li>
+<li>&#x638C;&#x63E1;&#x5728;&#x6846;&#x67B6;&#x4E2D;&#x4F7F;&#x7528;&#x65E5;&#x5FD7;</li>
+</ol>
+<h3 id="1-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528;&#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x529F;&#x80FD;">1. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528;&#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x529F;&#x80FD;</h3>
+<ol>
+<li>&#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x7684;&#x5BF9;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;</li>
+<li>&#x80FD;&#x591F;&#x8BB0;&#x5F55;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x5305;&#x62EC;&#x9519;&#x8BEF;</li>
+</ol>
+<h3 id="2-&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x7B80;&#x5355;&#x4F7F;&#x7528;">2. &#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x7B80;&#x5355;&#x4F7F;&#x7528;</h3>
+<h5 id="&#x65E5;&#x5FD7;&#x7684;&#x7B49;&#x7EA7;">&#x65E5;&#x5FD7;&#x7684;&#x7B49;&#x7EA7;</h5>
+<pre><code class="lang-python"><span class="token keyword">import</span> logging
+<span class="token comment" spellcheck="true"># &#x65E5;&#x5FD7;&#x7684;&#x4E94;&#x4E2A;&#x7B49;&#x7EA7;&#xFF0C;&#x7B49;&#x7EA7;&#x4F9D;&#x6B21;&#x9012;&#x589E;</span>
+<span class="token comment" spellcheck="true"># &#x9ED8;&#x8BA4;&#x662F;WARNING&#x7B49;&#x7EA7;</span>
+logging<span class="token punctuation">.</span>DEBUG
+logging<span class="token punctuation">.</span>INFO
+logging<span class="token punctuation">.</span>WARNING
+logging<span class="token punctuation">.</span>ERROR
+logging<span class="token punctuation">.</span>CRITICAL
+<span class="token comment" spellcheck="true"># &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x7B49;&#x7EA7;</span>
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>level<span class="token operator">=</span>logging<span class="token punctuation">.</span>INFO<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># &#x4F7F;&#x7528;</span>
+logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">&apos;DEBUG&apos;</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">&apos;INFO&apos;</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span><span class="token string">&apos;WARNING&apos;</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">&apos;ERROR&apos;</span><span class="token punctuation">)</span>
+logging<span class="token punctuation">.</span>critical<span class="token punctuation">(</span><span class="token string">&apos;CRITICAL&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<h5 id="&#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x6355;&#x83B7;&#x5F02;&#x5E38;">&#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x6355;&#x83B7;&#x5F02;&#x5E38;</h5>
+<p>&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x5230;&#x65E5;&#x5FD7;&#x3002;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x624D;&#x80FD;&#x8BB0;&#x5F55;&#x4E0B;&#x5B8C;&#x6574;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-Python">try:
+    raise Exception(&quot;&#x5F02;&#x5E38;&quot;)
+except Exception as e:
+    logging.exception(e)
+</code></pre>
+<h5 id="&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;">&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;</h5>
+<p>&#x5BF9;&#x4E8E;&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x5305;&#x62EC;&#x8F93;&#x51FA;&#x7684;<code>&#x5185;&#x5BB9;&#x683C;&#x5F0F;</code>&#x548C;<code>&#x65F6;&#x95F4;&#x683C;&#x5F0F;</code></p>
+<p>format&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code class="lang-txt">
+      %(name)s  Logger&#x7684;&#x540D;&#x5B57;
+      %(levelno)s &#x6570;&#x5B57;&#x5F62;&#x5F0F;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;
+      %(levelname)s &#x6587;&#x672C;&#x5F62;&#x5F0F;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;
+      %(pathname)s &#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x6A21;&#x5757;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x540D;&#xFF0C;&#x53EF;&#x80FD;&#x6CA1;&#x6709;
+      %(filename)s &#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x6A21;&#x5757;&#x7684;&#x6587;&#x4EF6;&#x540D;
+      %(module)s &#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x6A21;&#x5757;&#x540D;
+      %(funcName)s &#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;&#x540D;
+      %(lineno)d &#x8C03;&#x7528;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x53E5;&#x6240;&#x5728;&#x7684;&#x4EE3;&#x7801;&#x884C;
+      %(created)f &#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x7528;UNIX&#x6807;&#x51C6;&#x7684;&#x8868;&#x793A;&#x65F6;&#x95F4;&#x7684;&#x6D6E; &#x70B9;&#x6570;&#x8868;&#x793A;
+      %(relativeCreated)d &#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x65F6;&#x7684;&#xFF0C;&#x81EA;Logger&#x521B;&#x5EFA;&#x4EE5; &#x6765;&#x7684;&#x6BEB;&#x79D2;&#x6570;
+      %(asctime)s &#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x683C;&#x5F0F;&#x662F; &#x201C;2003-07-08 16:49:45,896&#x201D;&#x3002;&#x9017;&#x53F7;&#x540E;&#x9762;&#x7684;&#x662F;&#x6BEB;&#x79D2;
+      %(thread)d &#x7EBF;&#x7A0B;ID&#x3002;&#x53EF;&#x80FD;&#x6CA1;&#x6709;
+      %(threadName)s &#x7EBF;&#x7A0B;&#x540D;&#x3002;&#x53EF;&#x80FD;&#x6CA1;&#x6709;
+      %(process)d &#x8FDB;&#x7A0B;ID&#x3002;&#x53EF;&#x80FD;&#x6CA1;&#x6709;
+      %(message)s &#x7528;&#x6237;&#x8F93;&#x51FA;&#x7684;&#x6D88;&#x606F;
+</code></pre>
+<ul>
+<li>datefmt&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</li>
+</ul>
+<pre><code>%y &#x4E24;&#x4F4D;&#x6570;&#x7684;&#x5E74;&#x4EFD;&#x8868;&#x793A;&#xFF08;00-99&#xFF09;
+%Y &#x56DB;&#x4F4D;&#x6570;&#x7684;&#x5E74;&#x4EFD;&#x8868;&#x793A;&#xFF08;000-9999&#xFF09;
+%m &#x6708;&#x4EFD;&#xFF08;01-12&#xFF09;
+%d &#x6708;&#x5185;&#x4E2D;&#x7684;&#x4E00;&#x5929;&#xFF08;0-31&#xFF09;
+%H 24&#x5C0F;&#x65F6;&#x5236;&#x5C0F;&#x65F6;&#x6570;&#xFF08;0-23&#xFF09;
+%I 12&#x5C0F;&#x65F6;&#x5236;&#x5C0F;&#x65F6;&#x6570;&#xFF08;01-12&#xFF09;
+%M &#x5206;&#x949F;&#x6570;&#xFF08;00=59&#xFF09;
+%S &#x79D2;&#xFF08;00-59&#xFF09;
+%a &#x672C;&#x5730;&#x7B80;&#x5316;&#x661F;&#x671F;&#x540D;&#x79F0;
+%A &#x672C;&#x5730;&#x5B8C;&#x6574;&#x661F;&#x671F;&#x540D;&#x79F0;
+%b &#x672C;&#x5730;&#x7B80;&#x5316;&#x7684;&#x6708;&#x4EFD;&#x540D;&#x79F0;
+%B &#x672C;&#x5730;&#x5B8C;&#x6574;&#x7684;&#x6708;&#x4EFD;&#x540D;&#x79F0;
+%c &#x672C;&#x5730;&#x76F8;&#x5E94;&#x7684;&#x65E5;&#x671F;&#x8868;&#x793A;&#x548C;&#x65F6;&#x95F4;&#x8868;&#x793A;
+%j &#x5E74;&#x5185;&#x7684;&#x4E00;&#x5929;&#xFF08;001-366&#xFF09;
+%p &#x672C;&#x5730;A.M.&#x6216;P.M.&#x7684;&#x7B49;&#x4EF7;&#x7B26;
+%U &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x661F;&#x671F;&#x6570;&#xFF08;00-53&#xFF09;&#x661F;&#x671F;&#x5929;&#x4E3A;&#x661F;&#x671F;&#x7684;&#x5F00;&#x59CB;
+%w &#x661F;&#x671F;&#xFF08;0-6&#xFF09;&#xFF0C;&#x661F;&#x671F;&#x5929;&#x4E3A;&#x661F;&#x671F;&#x7684;&#x5F00;&#x59CB;
+%W &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x661F;&#x671F;&#x6570;&#xFF08;00-53&#xFF09;&#x661F;&#x671F;&#x4E00;&#x4E3A;&#x661F;&#x671F;&#x7684;&#x5F00;&#x59CB;
+%x &#x672C;&#x5730;&#x76F8;&#x5E94;&#x7684;&#x65E5;&#x671F;&#x8868;&#x793A;
+%X &#x672C;&#x5730;&#x76F8;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x8868;&#x793A;
+%Z &#x5F53;&#x524D;&#x65F6;&#x533A;&#x7684;&#x540D;&#x79F0;
+%% %&#x53F7;&#x672C;&#x8EAB;
+</code></pre><h3 id="3-&#x5229;&#x7528;logger&#x5C01;&#x88C5;&#x65E5;&#x5FD7;&#x6A21;&#x5757;">3. &#x5229;&#x7528;logger&#x5C01;&#x88C5;&#x65E5;&#x5FD7;&#x6A21;&#x5757;</h3>
+<p>&#x5728;scrapy_plus&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x7ACB;utils&#x5305; (utility&#xFF1A;&#x5DE5;&#x5177;)&#xFF0C;&#x4E13;&#x95E8;&#x653E;&#x7F6E;&#x5DE5;&#x5177;&#x7C7B;&#x578B;&#x6A21;&#x5757;&#xFF0C;&#x5982;&#x65E5;&#x5FD7;&#x6A21;&#x5757;<code>log.py</code></p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5185;&#x5BB9;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x4E60;&#x65E5;&#x5FD7;&#x5185;&#x5BB9;&#x7684;&#x8F93;&#x51FA;</p>
+<pre><code class="lang-Python"># scrapy_plus/utils/log.py
+import sys
+import logging
+
+# &#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;
+DEFAULT_LOG_LEVEL = logging.INFO    # &#x9ED8;&#x8BA4;&#x7B49;&#x7EA7;
+DEFAULT_LOG_FMT = &apos;%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s: %(message)s&apos;   # &#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;
+DEFUALT_LOG_DATEFMT = &apos;%Y-%m-%d %H:%M:%S&apos;  # &#x9ED8;&#x8BA4;&#x65F6;&#x95F4;&#x683C;&#x5F0F;
+DEFAULT_LOG_FILENAME = &apos;log.log&apos;    # &#x9ED8;&#x8BA4;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x540D;&#x79F0;
+
+
+class Logger(object):
+
+    def __init__(self):
+        # 1. &#x83B7;&#x53D6;&#x4E00;&#x4E2A;logger&#x5BF9;&#x8C61;
+        self._logger = logging.getLogger()
+        # 2. &#x8BBE;&#x7F6E;format&#x5BF9;&#x8C61;
+        self.formatter = logging.Formatter(fmt=DEFAULT_LOG_FMT,datefmt=DEFUALT_LOG_DATEFMT)
+        # 3. &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;
+        # 3.1 &#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x65E5;&#x5FD7;&#x6A21;&#x5F0F;
+        self._logger.addHandler(self._get_file_handler(DEFAULT_LOG_FILENAME))
+        # 3.2 &#x8BBE;&#x7F6E;&#x7EC8;&#x7AEF;&#x65E5;&#x5FD7;&#x6A21;&#x5F0F;
+        self._logger.addHandler(self._get_console_handler())
+        # 4. &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x7B49;&#x7EA7;
+        self._logger.setLevel(DEFAULT_LOG_LEVEL)
+
+    def _get_file_handler(self, filename):
+        &apos;&apos;&apos;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x65E5;&#x5FD7;handler&apos;&apos;&apos;
+        # 1. &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x65E5;&#x5FD7;handler
+        filehandler = logging.FileHandler(filename=filename,encoding=&quot;utf-8&quot;)
+        # 2. &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;
+        filehandler.setFormatter(self.formatter)
+        # 3. &#x8FD4;&#x56DE;
+        return filehandler
+
+    def _get_console_handler(self):
+        &apos;&apos;&apos;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x5230;&#x7EC8;&#x7AEF;&#x65E5;&#x5FD7;handler&apos;&apos;&apos;
+        # 1. &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x8F93;&#x51FA;&#x5230;&#x7EC8;&#x7AEF;&#x65E5;&#x5FD7;handler
+        console_handler = logging.StreamHandler(sys.stdout)
+        # 2. &#x8BBE;&#x7F6E;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;
+        console_handler.setFormatter(self.formatter)
+        # 3. &#x8FD4;&#x56DE;handler
+        return console_handler
+
+    @property
+    def logger(self):
+        return self._logger
+
+# &#x521D;&#x59CB;&#x5316;&#x5E76;&#x914D;&#x4E00;&#x4E2A;logger&#x5BF9;&#x8C61;&#xFF0C;&#x8FBE;&#x5230;&#x5355;&#x4F8B;&#x7684;
+# &#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x5BFC;&#x5165;logger&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+logger = Logger().logger
+</code></pre>
+<h5 id="&#x6CE8;&#x610F;&#x83B7;&#x53D6;logger&#xFF0C;&#x5728;&#x6846;&#x67B6;&#x7684;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5BFC;&#x5165;logger&#x4F7F;&#x7528;">&#x6CE8;&#x610F;:&#x83B7;&#x53D6;logger&#xFF0C;&#x5728;&#x6846;&#x67B6;&#x7684;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5BFC;&#x5165;logger&#x4F7F;&#x7528;</h5>
+<h2 id="4-&#x5728;&#x6846;&#x67B6;&#x4E2D;&#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x6A21;&#x5757;">4. &#x5728;&#x6846;&#x67B6;&#x4E2D;&#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x6A21;&#x5757;</h2>
+<h5 id="&#x601D;&#x8DEF;&#x5206;&#x6790;">&#x601D;&#x8DEF;&#x5206;&#x6790;</h5>
+<ol>
+<li>&#x5BFC;&#x5165;logger</li>
+<li>&#x901A;&#x8FC7;logger.info&#x7B49;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;</li>
+</ol>
+<h5 id="&#x5177;&#x4F53;&#x5B9E;&#x73B0;">&#x5177;&#x4F53;&#x5B9E;&#x73B0;</h5>
+<pre><code class="lang-Python"># scrapy_plus/core/engine.py
+from datetime import datetime
+
+from scrapy_plus.http.request import Request    # &#x5BFC;&#x5165;Request&#x5BF9;&#x8C61;
+from scrapy_plus.middlewares.spider_middlewares import SpiderMiddleware
+from scrapy_plus.middlewares.downloader_middlewares import DownloaderMiddleware
+from scrapy_plus.utils.log import logger    # &#x5BFC;&#x5165;logger
+
+from .spider import Spider
+from .scheduler import Scheduler
+from .downloader import Downloader
+from .pipeline import Pipeline
+
+
+class Engine(object):
+
+    ......
+
+    def start(self):
+        &apos;&apos;&apos;&#x542F;&#x52A8;&#x6574;&#x4E2A;&#x5F15;&#x64CE;&apos;&apos;&apos;
+        start = datetime.now()  # &#x8D77;&#x59CB;&#x65F6;&#x95F4;
+        logger.info(&quot;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#xFF1A;%s&quot; % start)  # &#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x8D77;&#x59CB;&#x8FD0;&#x884C;&#x65F6;&#x95F4;
+        self._start_engine()
+        stop = datetime.now()  # &#x7ED3;&#x675F;&#x65F6;&#x95F4;
+        logger.info(&quot;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#xFF1A;%s&quot; % stop)  # &#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7ED3;&#x675F;&#x8FD0;&#x884C;&#x65F6;&#x95F4;
+        logger.info(&quot;&#x8017;&#x65F6;&#xFF1A;%.2f&quot; % (stop - start).total_seconds())  # &#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x8FD0;&#x884C;&#x8017;&#x65F6;
+
+......
+</code></pre>
+<h3 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h3>
+<ol>
+<li>&#x5728;&#x4EE3;&#x7801;&#x3001;&#x6846;&#x67B6;&#x4E2D;&#x4F7F;&#x7528;logging&#x6A21;&#x5757;&#xFF0C;&#x80FD;&#x591F;&#x6E05;&#x6670;&#x7684;&#x8BB0;&#x5F55;&#x8F93;&#x51FA;&#x7684;&#x5185;&#x5BB9;</li>
+<li>&#x628A;&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x5747;&#x53EF;&#x4F7F;&#x7528;</li>
+<li>logging.StreamHandler&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x5728;&#x7EC8;&#x7AEF;&#x5C55;&#x793A;&#x65E5;&#x5FD7;</li>
+<li>logging.FileHandler&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x65E5;&#x5FD7;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x4E2D;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../爬虫框架开发/4.框架功能完善/index.html" class="navigation navigation-prev " aria-label="Previous page: 框架功能完善"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../爬虫框架开发/4.框架功能完善/2.框架完善--配置文件实现.html" class="navigation navigation-next " aria-label="Next page: 框架完善--配置文件实现"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"expandable-chapters-small":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"emphasize":{},"book-summary-scroll-position-saver":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

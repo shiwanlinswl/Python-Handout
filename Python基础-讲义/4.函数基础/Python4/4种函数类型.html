@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" >
+    <!-- Start book Python基础语言 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>4种函数类型 | Python基础语言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../Python4/函数的嵌套调用.html" />
+    
+    
+    <link rel="prev" href="../Python4/函数的返回值.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="0.5"
+        data-chapter-title="4种函数类型"
+        data-filepath="Python4/4种函数类型.md"
+        data-basepath=".."
+        data-revision="Sun Mar 04 2018 00:21:39 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        4.函数基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="Python4/函数的基本使用.html">
+            
+                
+                    <a href="../Python4/函数的基本使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        函数的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="Python4/函数细节.html">
+            
+                
+                    <a href="../Python4/函数细节.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        函数执行过程、文档注释
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="Python4/函数的参数.html">
+            
+                
+                    <a href="../Python4/函数的参数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        函数参数(一)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.4" data-path="Python4/函数的返回值.html">
+            
+                
+                    <a href="../Python4/函数的返回值.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.4.</b>
+                        
+                        函数返回值(一)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="0.5" data-path="Python4/4种函数类型.html">
+            
+                
+                    <a href="../Python4/4种函数类型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.5.</b>
+                        
+                        4种函数类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.6" data-path="Python4/函数的嵌套调用.html">
+            
+                
+                    <a href="../Python4/函数的嵌套调用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.6.</b>
+                        
+                        函数的嵌套调用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本書使用 GitBook 釋出
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python基础语言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="05-4&#x79CD;&#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;">05. 4&#x79CD;&#x51FD;&#x6570;&#x7684;&#x7C7B;&#x578B;</h2>
+<p>&#x51FD;&#x6570;&#x6839;&#x636E;&#x6709;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x7EC4;&#x5408;&#xFF0C;&#x4E00;&#x5171;&#x6709;4&#x79CD;</p>
+<ul>
+<li>&#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;</li>
+<li>&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<h3 id="51-&#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">5.1 &#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_menu</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x6253;&#x5370;&#x83DC;&#x5355;&quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&apos;--------------------------&apos;</span>)
+    print(<span class="hljs-string">&apos;      xx&#x6DAE;&#x6DAE;&#x9505; &#x70B9;&#x83DC;&#x7CFB;&#x7EDF;&apos;</span>)
+    print(<span class="hljs-string">&apos;&apos;</span>)
+    print(<span class="hljs-string">&apos;  1.  &#x7F8A;&#x8089;&#x6DAE;&#x6DAE;&#x9505;&apos;</span>)
+    print(<span class="hljs-string">&apos;  2.  &#x725B;&#x8089;&#x6DAE;&#x6DAE;&#x9505;&apos;</span>)
+    print(<span class="hljs-string">&apos;  3.  &#x732A;&#x8089;&#x6DAE;&#x6DAE;&#x9505;&apos;</span>)
+    print(<span class="hljs-string">&apos;--------------------------&apos;</span>)
+</code></pre>
+<h3 id="52-&#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">5.2 &#x65E0;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_pi</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x83B7;&#x53D6;&#x5706;&#x5468;&#x7387;
+    :return:&#x3000;&#x5706;&#x5468;&#x7387;,&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x4FDD;&#x7559;&#xFF19;&#x4F4D; 
+    &quot;&quot;&quot;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">3.141592654</span>
+
+pi = get_pi()
+print(<span class="hljs-string">&apos;&#x5706;&#x5468;&#x7387;&#x4E3A;:%.9f&apos;</span> % pi)
+</code></pre>
+<h3 id="53-&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">5.3 &#x6709;&#x53C2;&#x6570;&#xFF0C;&#x65E0;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_star</span><span class="hljs-params">(num)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x6253;&#x5370;&#x661F;&#x661F;
+    :param num: &#x661F;&#x661F;&#x6570;&#x91CF;
+    &quot;&quot;&quot;</span>
+    print(<span class="hljs-string">&quot;*&quot;</span> * num)
+
+print_star(<span class="hljs-number">5</span>)
+</code></pre>
+<h3 id="54-&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">5.4 &#x6709;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func_sum</span><span class="hljs-params">(num)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    0-n&#x7D2F;&#x52A0;&#x6C42;&#x548C;
+    :param num: &#x7D2F;&#x52A0;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6570;
+    :return: &#x7D2F;&#x52A0;&#x7684;&#x548C;
+    &quot;&quot;&quot;</span>
+    result = <span class="hljs-number">0</span>
+    i = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> i &lt; =num:
+        result = result + i
+        i += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> result
+
+result = func_sum(<span class="hljs-number">100</span>)
+print(<span class="hljs-string">&apos;1~100 &#x7684;&#x7D2F;&#x52A0;&#x548C;&#x4E3A;:%d&apos;</span> % result)
+</code></pre>
+<h3 id="&#x5C0F;&#x603B;&#x7ED3;"><5>&#x5C0F;&#x603B;&#x7ED3;</5></h3>
+<ul>
+<li>&#x51FD;&#x6570;&#x6839;&#x636E;&#x6709;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x7EC4;&#x5408;</li>
+<li>&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x662F; <strong>&#x6839;&#x636E;&#x5B9E;&#x9645;&#x7684;&#x529F;&#x80FD;&#x9700;&#x6C42;&#x6765;&#x8BBE;&#x8BA1;</strong> &#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x540C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x7F16;&#x5199;&#x7684;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x5404;&#x4E0D;&#x76F8;&#x540C;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Python4/函数的返回值.html" class="navigation navigation-prev " aria-label="Previous page: 函数返回值(一)"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Python4/函数的嵌套调用.html" class="navigation navigation-next " aria-label="Next page: 函数的嵌套调用"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontsettings":{"family":"sans","size":2,"theme":"white"},"toggle-chapters":{},"splitter":{},"emphasize":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python基础语言 -->
+</html>
