@@ -1,0 +1,2044 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Python数据分析课程讲义 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>启动MongoDB | Python数据分析课程讲义</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="BigCat">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../file/MongoDB/2_1.html" />
+    
+    
+    <link rel="prev" href="../../file/MongoDB/1.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="7.2"
+        data-chapter-title="启动MongoDB"
+        data-filepath="file/MongoDB/2.md"
+        data-basepath="../.."
+        data-revision="Wed May 17 2017 08:50:50 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        传智播客Python学科数据库课程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="file/MySQL1/1.html">
+            
+                
+                    <a href="../../file/MySQL1/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        MySQL基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="file/MySQL1/2.html">
+            
+                
+                    <a href="../../file/MySQL1/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        MySQL的安装与使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="file/MySQL1/3.html">
+            
+                
+                    <a href="../../file/MySQL1/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        数据库设计模型与范式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="file/MySQL1/4.html">
+            
+                
+                    <a href="../../file/MySQL1/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        MySQL的数据类型和约束
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="file/MySQL1/5.html">
+            
+                
+                    <a href="../../file/MySQL1/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Navicat操作演示
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="file/MySQL1/5_1.html">
+            
+                
+                    <a href="../../file/MySQL1/5_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.1.</b>
+                        
+                        数据库操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="file/MySQL1/5_2.html">
+            
+                
+                    <a href="../../file/MySQL1/5_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.2.</b>
+                        
+                        数据表操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="file/MySQL1/5_3.html">
+            
+                
+                    <a href="../../file/MySQL1/5_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.3.</b>
+                        
+                        数据操作
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="file/MySQL1/6.html">
+            
+                
+                    <a href="../../file/MySQL1/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        命令脚本操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="file/MySQL1/6_1.html">
+            
+                
+                    <a href="../../file/MySQL1/6_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.1.</b>
+                        
+                        数据库操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="file/MySQL1/6_2.html">
+            
+                
+                    <a href="../../file/MySQL1/6_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.2.</b>
+                        
+                        数据表操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="file/MySQL1/6_3.html">
+            
+                
+                    <a href="../../file/MySQL1/6_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.3.</b>
+                        
+                        数据crud
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="file/MySQL1/6_4.html">
+            
+                
+                    <a href="../../file/MySQL1/6_4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.4.</b>
+                        
+                        备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="file/MySQL1/7.html">
+            
+                
+                    <a href="../../file/MySQL1/7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        练习
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="file/MySQL1/8.html">
+            
+                
+                    <a href="../../file/MySQL1/8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="file/MySQL5/1.html">
+            
+                
+                    <a href="../../file/MySQL5/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        MySQL内置函数
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="file/MySQL5/2.html">
+            
+                
+                    <a href="../../file/MySQL5/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        字符串函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="file/MySQL5/3.html">
+            
+                
+                    <a href="../../file/MySQL5/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        数学函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="file/MySQL5/4.html">
+            
+                
+                    <a href="../../file/MySQL5/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        日期时间函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="file/MySQL5/5.html">
+            
+                
+                    <a href="../../file/MySQL5/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        类型转换函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="file/MySQL5/6.html">
+            
+                
+                    <a href="../../file/MySQL5/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        流程控制函数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="file/MySQL2/1.html">
+            
+                
+                    <a href="../../file/MySQL2/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        MySQL查询
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="file/MySQL2/2.html">
+            
+                
+                    <a href="../../file/MySQL2/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        条件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="file/MySQL2/3.html">
+            
+                
+                    <a href="../../file/MySQL2/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        聚合函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="file/MySQL2/4.html">
+            
+                
+                    <a href="../../file/MySQL2/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        分组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="file/MySQL2/5.html">
+            
+                
+                    <a href="../../file/MySQL2/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        排序
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="file/MySQL2/6.html">
+            
+                
+                    <a href="../../file/MySQL2/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        分页
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="file/MySQL2/7.html">
+            
+                
+                    <a href="../../file/MySQL2/7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        多表连接查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="file/MySQL2/8.html">
+            
+                
+                    <a href="../../file/MySQL2/8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        自关联
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="file/MySQL2/9.html">
+            
+                
+                    <a href="../../file/MySQL2/9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        子查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="file/MySQL2/10.html">
+            
+                
+                    <a href="../../file/MySQL2/10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="file/MySQL3/1.html">
+            
+                
+                    <a href="../../file/MySQL3/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        MySQL扩展
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="file/MySQL3/2.html">
+            
+                
+                    <a href="../../file/MySQL3/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        账户管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="file/MySQL3/3.html">
+            
+                
+                    <a href="../../file/MySQL3/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        存储过程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="file/MySQL3/4.html">
+            
+                
+                    <a href="../../file/MySQL3/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        存储函数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="file/MySQL3/5.html">
+            
+                
+                    <a href="../../file/MySQL3/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        视图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="file/MySQL3/6.html">
+            
+                
+                    <a href="../../file/MySQL3/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="file/MySQL3/7.html">
+            
+                
+                    <a href="../../file/MySQL3/7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="file/MySQL3/8.html">
+            
+                
+                    <a href="../../file/MySQL3/8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        实例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="file/MySQL3/9.html">
+            
+                
+                    <a href="../../file/MySQL3/9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="file/MySQL4/1.html">
+            
+                
+                    <a href="../../file/MySQL4/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        MySQL与python交互
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="file/MySQL4/2.html">
+            
+                
+                    <a href="../../file/MySQL4/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        增加
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="file/MySQL4/3.html">
+            
+                
+                    <a href="../../file/MySQL4/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        修改
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="file/MySQL4/4.html">
+            
+                
+                    <a href="../../file/MySQL4/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        删除
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="file/MySQL4/5.html">
+            
+                
+                    <a href="../../file/MySQL4/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="file/MySQL4/6.html">
+            
+                
+                    <a href="../../file/MySQL4/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        参数化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="file/MySQL4/7.html">
+            
+                
+                    <a href="../../file/MySQL4/7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        实例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="file/MySQL4/8.html">
+            
+                
+                    <a href="../../file/MySQL4/8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="file/Redis/index.html">
+            
+                
+                    <a href="../../file/Redis/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Redis
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="file/Redis/1.html">
+            
+                
+                    <a href="../../file/Redis/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Redis的安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="file/Redis/2.html">
+            
+                
+                    <a href="../../file/Redis/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Redis的配置文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="file/Redis/3.html">
+            
+                
+                    <a href="../../file/Redis/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        服务器与客户端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="file/Redis/4.html">
+            
+                
+                    <a href="../../file/Redis/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Redis数据类型与操作
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="file/Redis/4_1.html">
+            
+                
+                    <a href="../../file/Redis/4_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.1.</b>
+                        
+                        string
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.2" data-path="file/Redis/4_2.html">
+            
+                
+                    <a href="../../file/Redis/4_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.2.</b>
+                        
+                        键命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.3" data-path="file/Redis/4_3.html">
+            
+                
+                    <a href="../../file/Redis/4_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.3.</b>
+                        
+                        hash
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.4" data-path="file/Redis/4_4.html">
+            
+                
+                    <a href="../../file/Redis/4_4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.4.</b>
+                        
+                        list
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.5" data-path="file/Redis/4_5.html">
+            
+                
+                    <a href="../../file/Redis/4_5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.5.</b>
+                        
+                        set
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4.6" data-path="file/Redis/4_6.html">
+            
+                
+                    <a href="../../file/Redis/4_6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.6.</b>
+                        
+                        zset
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="file/Redis/pub_sub.html">
+            
+                
+                    <a href="../../file/Redis/pub_sub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Redis的订阅和发布模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="file/Redis/shiwu.html">
+            
+                
+                    <a href="../../file/Redis/shiwu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        Redis的事务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="file/Redis/bak_restore.html">
+            
+                
+                    <a href="../../file/Redis/bak_restore.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        Redis的数据备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="file/Redis/xingneng.html">
+            
+                
+                    <a href="../../file/Redis/xingneng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        Redis的性能测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="file/Redis/5.html">
+            
+                
+                    <a href="../../file/Redis/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        Redis与Python交互
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.9.1" data-path="file/Redis/5_1.html">
+            
+                
+                    <a href="../../file/Redis/5_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.1.</b>
+                        
+                        StrictRedis调用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.2" data-path="file/Redis/5_2.html">
+            
+                
+                    <a href="../../file/Redis/5_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.2.</b>
+                        
+                        StrictPipeline调用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9.3" data-path="file/Redis/5_3.html">
+            
+                
+                    <a href="../../file/Redis/5_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.3.</b>
+                        
+                        多种数据类型使用场景
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.10" data-path="file/Redis/6.html">
+            
+                
+                    <a href="../../file/Redis/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.10.</b>
+                        
+                        搭建主从
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.11" data-path="file/Redis/7.html">
+            
+                
+                    <a href="../../file/Redis/7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.11.</b>
+                        
+                        搭建集群
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.12" data-path="file/Redis/8.html">
+            
+                
+                    <a href="../../file/Redis/8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.12.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="file/MongoDB/index.html">
+            
+                
+                    <a href="../../file/MongoDB/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        MongoDB
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="file/MongoDB/1.html">
+            
+                
+                    <a href="../../file/MongoDB/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        MongoDB的安装与使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.2" data-path="file/MongoDB/2.html">
+            
+                
+                    <a href="../../file/MongoDB/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        启动MongoDB
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.2.1" data-path="file/MongoDB/2_1.html">
+            
+                
+                    <a href="../../file/MongoDB/2_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.1.</b>
+                        
+                        数据库操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.2" data-path="file/MongoDB/2_2.html">
+            
+                
+                    <a href="../../file/MongoDB/2_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.2.</b>
+                        
+                        集合操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.3" data-path="file/MongoDB/2_3.html">
+            
+                
+                    <a href="../../file/MongoDB/2_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.3.</b>
+                        
+                        数据类型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2.4" data-path="file/MongoDB/2_4.html">
+            
+                
+                    <a href="../../file/MongoDB/2_4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.4.</b>
+                        
+                        数据增删改
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="file/MongoDB/3.html">
+            
+                
+                    <a href="../../file/MongoDB/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        数据查询
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.3.1" data-path="file/MongoDB/3_1.html">
+            
+                
+                    <a href="../../file/MongoDB/3_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.1.</b>
+                        
+                        Limit与Skip
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.2" data-path="file/MongoDB/3_2.html">
+            
+                
+                    <a href="../../file/MongoDB/3_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.2.</b>
+                        
+                        投影
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.3" data-path="file/MongoDB/3_3.html">
+            
+                
+                    <a href="../../file/MongoDB/3_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.3.</b>
+                        
+                        排序
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.4" data-path="file/MongoDB/3_4.html">
+            
+                
+                    <a href="../../file/MongoDB/3_4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.4.</b>
+                        
+                        统计个数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3.5" data-path="file/MongoDB/3_5.html">
+            
+                
+                    <a href="../../file/MongoDB/3_5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.5.</b>
+                        
+                        消除重复
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="file/MongoDB/4.html">
+            
+                
+                    <a href="../../file/MongoDB/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        聚合
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.4.1" data-path="file/MongoDB/4_1.html">
+            
+                
+                    <a href="../../file/MongoDB/4_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.1.</b>
+                        
+                        $group
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.2" data-path="file/MongoDB/4_2.html">
+            
+                
+                    <a href="../../file/MongoDB/4_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.2.</b>
+                        
+                        $match
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.3" data-path="file/MongoDB/4_3.html">
+            
+                
+                    <a href="../../file/MongoDB/4_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.3.</b>
+                        
+                        $project
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.4" data-path="file/MongoDB/4_4.html">
+            
+                
+                    <a href="../../file/MongoDB/4_4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.4.</b>
+                        
+                        $sort
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.5" data-path="file/MongoDB/4_5.html">
+            
+                
+                    <a href="../../file/MongoDB/4_5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.5.</b>
+                        
+                        $limit、$skip
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4.6" data-path="file/MongoDB/4_6.html">
+            
+                
+                    <a href="../../file/MongoDB/4_6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.6.</b>
+                        
+                        $unwind
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="file/MongoDB/5.html">
+            
+                
+                    <a href="../../file/MongoDB/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="file/MongoDB/6.html">
+            
+                
+                    <a href="../../file/MongoDB/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        备份与恢复
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="file/MongoDB/7.html">
+            
+                
+                    <a href="../../file/MongoDB/7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        与python交互
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.7.1" data-path="file/MongoDB/7_1.html">
+            
+                
+                    <a href="../../file/MongoDB/7_1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.1.</b>
+                        
+                        增加
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.2" data-path="file/MongoDB/7_2.html">
+            
+                
+                    <a href="../../file/MongoDB/7_2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.2.</b>
+                        
+                        查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.3" data-path="file/MongoDB/7_3.html">
+            
+                
+                    <a href="../../file/MongoDB/7_3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.3.</b>
+                        
+                        修改
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7.4" data-path="file/MongoDB/7_4.html">
+            
+                
+                    <a href="../../file/MongoDB/7_4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.4.</b>
+                        
+                        删除
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="file/MongoDB/8.html">
+            
+                
+                    <a href="../../file/MongoDB/8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="file/Demo/index.html">
+            
+                
+                    <a href="../../file/Demo/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        实例：用户登录注册
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="file/Demo/1.html">
+            
+                
+                    <a href="../../file/Demo/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        MySQL数据表设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="file/Demo/2.html">
+            
+                
+                    <a href="../../file/Demo/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        注册
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="file/Demo/3.html">
+            
+                
+                    <a href="../../file/Demo/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="file/Demo/4.html">
+            
+                
+                    <a href="../../file/Demo/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        加入MongoDB
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="file/Demo/5.html">
+            
+                
+                    <a href="../../file/Demo/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        加入Redis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="file/Demo/6.html">
+            
+                
+                    <a href="../../file/Demo/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        总结与作业
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Python数据分析课程讲义</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="mongod&#xFF1A;">mongod&#xFF1A;</h2>
+<blockquote>
+<p>mongo &#x662F;&#x542F;&#x52A8;MongoDB shell&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x547D;&#x4EE4;</p>
+<p>mongod &#x662F;&#x542F;&#x52A8;MongoDB&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x4E3B;&#x8981;&#x63D0;&#x4F9B;&#x4E86;&#x4E09;&#x79CD;&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#xFF1A;</p>
+</blockquote>
+<h3 id="1-&#x547D;&#x4EE4;&#x884C;&#x65B9;&#x5F0F;&#x76F4;&#x63A5;&#x542F;&#x52A8;">1. &#x547D;&#x4EE4;&#x884C;&#x65B9;&#x5F0F;&#x76F4;&#x63A5;&#x542F;&#x52A8;</h3>
+<p>MongoDB&#x9ED8;&#x8BA4;&#x7684;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x4E3A;<code>/data/db</code>&#xFF08;&#x9700;&#x8981;&#x4E8B;&#x5148;&#x521B;&#x5EFA;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;27017&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6210;&#x4E0D;&#x540C;&#x76EE;&#x5F55;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x76F4;&#x63A5;&#x542F;&#x52A8;mongod&#xFF0C;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x76EE;&#x5728; /data/db</span>
+python@ubuntu:~$ sudo mongod
+
+<span class="hljs-comment"># &#x542F;&#x52A8;mongod&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x76EE;&#x5F55;&#xFF08;&#x76EE;&#x5F55;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#xFF0C;&#x4E14;&#x6709;&#x8BFB;&#x5199;&#x6743;&#x9650;&#xFF09;</span>
+python@ubuntu:~$ sudo mongod --dbpath=/xxxxx/xxxxx
+</code></pre>
+<h3 id="2-&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#x542F;&#x52A8;">2. &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#x542F;&#x52A8;</h3>
+<p>&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x4E0A;<code>-f</code>&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x6307;&#x5411;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E3A;<code>/etc/mongodb.cnf</code>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E76;&#x6307;&#x5B9A;&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># &#x542F;&#x52A8;mongod&#xFF0C;&#x5E76;&#x6309;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6267;&#x884C;</span>
+python@ubuntu:~$ sudo mongod <span class="hljs-operator">-f</span> /etc/mongodb.cnf
+</code></pre>
+<h3 id="3-&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;&#x542F;&#x52A8;">3. &#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;&#x542F;&#x52A8;</h3>
+<h5 id="&#x542F;&#x52A8;">- &#x542F;&#x52A8;</h5>
+<p>MongoDB&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#x65B9;&#x5F0F;&#x542F;&#x52A8;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x52A0;&#x4E0A;&#x2014;fork&#x53C2;&#x6570;&#x5373;&#x53EF;&#x3002;&#x4F46;&#x662F;&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x7528;&#x5230;&#x4E86;<code>--fork</code>&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x542F;&#x7528;<code>--logpath</code>&#x53C2;&#x6570;&#x6765;&#x6307;&#x5B9A;log&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x662F;&#x5F3A;&#x5236;&#x7684;&#x3002;</p>
+<pre><code class="lang-sql">python@ubuntu:~$ sudo mongod <span class="hljs-comment">--logpath=/data/db/mongodb.log --fork</span>
+
+about to fork child process, waiting until server is ready for connections.
+forked process: xxxxx
+child process started successfully, parent exiting
+</code></pre>
+<h5 id="&#x5173;&#x95ED;">- &#x5173;&#x95ED;</h5>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;<code>--fork</code>&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;mongdb&#x670D;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8981;&#x901A;&#x8FC7;&#x672C;&#x673A;admin&#x6570;&#x636E;&#x5E93;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;shutdownServer()&#x6D88;&#x606F;&#x6765;&#x5173;&#x95ED;&#x3002;</p>
+<pre><code class="lang-r">python@ubuntu:~$ mongo
+MongoDB shell version: <span class="hljs-number">3.2</span><span class="hljs-number">.8</span>
+connecting to: test
+
+&gt; use admin
+switched to db admin
+
+&gt; db.shutdownServer()
+server should be down...
+<span class="hljs-number">2017</span>-<span class="hljs-number">05</span>-16T22:<span class="hljs-number">34</span>:<span class="hljs-number">22.923</span>+<span class="hljs-number">0800</span> I NETWORK  [thread1] trying reconnect to <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">27017</span> (<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>) failed
+<span class="hljs-number">2017</span>-<span class="hljs-number">05</span>-16T22:<span class="hljs-number">34</span>:<span class="hljs-number">22.923</span>+<span class="hljs-number">0800</span> W NETWORK  [thread1] Failed to connect to <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">27017</span>, reason: errno:<span class="hljs-number">111</span> Connection refused
+<span class="hljs-number">2017</span>-<span class="hljs-number">05</span>-16T22:<span class="hljs-number">34</span>:<span class="hljs-number">22.923</span>+<span class="hljs-number">0800</span> I NETWORK  [thread1] reconnect <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">27017</span> (<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>) failed failed 
+&gt;
+</code></pre>
+<h3 id="3-&#x542F;&#x7528;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x542F;&#x52A8;">3. &#x542F;&#x7528;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x542F;&#x52A8;</h3>
+<p>&#x5982;&#x679C;&#x4E4B;&#x524D;&#x672A;&#x5B9A;&#x4E49;&#x8FC7;&#x7528;&#x6237;&#xFF0C;&#x6240;&#x4EE5;mongod&#x5C06;&#x5141;&#x8BB8;&#x672C;&#x5730;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x5C06;&#x4F7F;&#x7528;&#x672C;&#x5730;root&#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;<code>--auth</code>&#x53C2;&#x6570;&#x542F;&#x52A8;&#xFF0C;&#x5C06;&#x542F;&#x7528;MongoDB&#x6388;&#x6743;&#x8BA4;&#x8BC1;&#xFF0C;&#x5373;&#x542F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x6743;&#x9650;&#x3002;</p>
+<blockquote>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>mongod.conf</code>&#x4E2D;&#x52A0;&#x5165;<code>auth = true</code>&#x6309;&#x7B2C;&#x4E8C;&#x79CD;&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#x542F;&#x52A8;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-sql"># &#x542F;&#x52A8;mongod&#xFF0C;&#x5E76;&#x542F;&#x7528;&#x7528;&#x6237;&#x8BA4;&#x8BC1;
+python@ubuntu:~$ sudo mongod <span class="hljs-comment">--auth</span>
+</code></pre>
+<pre><code class="lang-sql"># &#x542F;&#x52A8;mongo shell
+python@ubuntu:~$ mongo
+MongoDB shell version: 3.2.8
+connecting to: test
+
+# 1. &#x5207;&#x6362;admin&#x6570;&#x636E;&#x5E93;&#x4E0B;
+&gt; use admin
+switched to db admin
+
+# 2. &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x62E5;&#x6709;root&#x6743;&#x9650;&#x7684;&#x8D85;&#x7EA7;&#x7528;&#x6237;&#xFF0C;&#x62E5;&#x6709;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6240;&#x6709;&#x6743;&#x9650;
+#      &#x7528;&#x6237;&#x540D;&#xFF1A;python&#xFF0C;&#x5BC6;&#x7801;&#xFF1A;chuanzhi&#xFF0C;&#x89D2;&#x8272;&#x6743;&#x9650;&#xFF1A;root&#xFF08;&#x6700;&#x9AD8;&#x6743;&#x9650;&#xFF09;
+&gt; db.createUser({user : &quot;python&quot;, pwd : &quot;chuanzhi&quot;, roles : [&quot;root&quot;]})
+Successfully added user: { &quot;user&quot; : &quot;python&quot;, &quot;roles&quot; : [ &quot;root&quot; ] }
+
+# 3. &#x5982;&#x679C; MongoDB &#x5F00;&#x542F;&#x4E86;&#x6743;&#x9650;&#x6A21;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x67D0;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x8BA4;&#x8BC1;&#x6743;&#x9650;&#x5E76;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x7EE7;&#x7EED;&#x521B;&#x5EFA;&#x7B2C;&#x4E8C;&#x4E2A;&#x7528;&#x6237;&#x65F6;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#xFF0C;&#x82E5;&#x60F3;&#x7EE7;&#x7EED;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x5219;&#x5FC5;&#x987B;&#x8BA4;&#x8BC1;&#x767B;&#x5F55;&#x3002;
+&gt; db.createUser({user : &quot;bigcat&quot;, pwd : &quot;bigcat&quot;, roles : [{role : &quot;read&quot;, db : &quot;db_01&quot;}, {role : &quot;readWrite&quot;, db : &quot;db_02&quot;}]})
+couldn&apos;t add user: not authorized on admin to execute command{ createUser: &quot;bigcat&quot;, pwd: &quot;xxx&quot;, roles: [ { role: &quot;read&quot;, db: &quot;db_01&quot; }, { role: &quot;readWrite&quot;, db: &quot;db_02&quot; } ], digestPassword: false, writeConcern: { w: &quot;majority&quot;, wtimeout: 30000.0 } } :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+DB.prototype.createUser@src/mongo/shell/db.js:1267:15
+
+# 4. &#x8BA4;&#x8BC1;&#x767B;&#x5F55;&#x5230;python&#x7528;&#x6237;&#xFF08;&#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;&#x7684;&#x7528;&#x6237;&#xFF09;
+&gt; db.auth(&quot;python&quot;,&quot;chuanzhi&quot;)
+1
+&gt;
+# 5. &#x67E5;&#x770B;&#x5F53;&#x524D;&#x8BA4;&#x8BC1;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+&gt; show users
+{
+    &quot;_id&quot; : &quot;admin.python&quot;,
+    &quot;user&quot; : &quot;python&quot;,
+    &quot;db&quot; : &quot;admin&quot;,
+    &quot;roles&quot; : [
+        {
+            &quot;role&quot; : &quot;root&quot;,
+            &quot;db&quot; : &quot;admin&quot;
+        }
+    ]
+}
+
+&gt; 
+
+# 6. &#x8BA4;&#x8BC1;&#x767B;&#x5F55;&#x6210;&#x529F;&#xFF0C;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x521B;&#x5EFA;&#x7B2C;&#x4E8C;&#x4E2A;&#x7528;&#x6237;
+#      &#x7528;&#x6237;&#x540D;&#xFF1A;bigcat&#xFF0C;&#x5BC6;&#x7801;&#xFF1A;bigcat&#xFF0C;&#x89D2;&#x8272;&#x6743;&#x9650;&#xFF1A;[&#x5BF9;db_01 &#x62E5;&#x6709;&#x8BFB;&#x6743;&#x9650;&#xFF0C;&#x5BF9;db_02&#x62E5;&#x6709;&#x8BFB;/&#x5199;&#x6743;&#x9650;]
+&gt; db.createUser({user : &quot;bigcat&quot;, pwd : &quot;bigcat&quot;, roles : [{role : &quot;read&quot;, db : &quot;db_01&quot;}, {role : &quot;readWrite&quot;, db : &quot;db_02&quot;}]})
+Successfully added user: {
+    &quot;user&quot; : &quot;bigcat&quot;,
+    &quot;roles&quot; : [
+        {
+            &quot;role&quot; : &quot;read&quot;,
+            &quot;db&quot; : &quot;db_01&quot;
+        },
+        {
+            &quot;role&quot; : &quot;readWrite&quot;,
+            &quot;db&quot; : &quot;db_02&quot;
+        }
+    ]
+}
+
+# 7. &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;.
+&gt; db.system.users.find()
+{ &quot;_id&quot; : &quot;admin.python&quot;, &quot;user&quot; : &quot;python&quot;, &quot;db&quot; : &quot;admin&quot;, &quot;credentials&quot; : { &quot;SCRAM-SHA-1&quot; : { &quot;iterationCount&quot; : 10000, &quot;salt&quot; : &quot;y/3yPLzhDKa7cJ3Zd/8DXg==&quot;, &quot;storedKey&quot; : &quot;9XaUqiUteEtFAfof3k+HJjevqCA=&quot;, &quot;serverKey&quot; : &quot;YjIoUPl7HTHQZuklSFXXYpZB/U4=&quot; } }, &quot;roles&quot; : [ { &quot;role&quot; : &quot;root&quot;, &quot;db&quot; : &quot;admin&quot; } ] }
+{ &quot;_id&quot; : &quot;admin.bigcat&quot;, &quot;user&quot; : &quot;bigcat&quot;, &quot;db&quot; : &quot;admin&quot;, &quot;credentials&quot; : { &quot;SCRAM-SHA-1&quot; : { &quot;iterationCount&quot; : 10000, &quot;salt&quot; : &quot;ZcCaT057Gz0WODuSx70Ncg==&quot;, &quot;storedKey&quot; : &quot;pNYyLMPisTcYuUHMdR46vndteIo=&quot;, &quot;serverKey&quot; : &quot;IOzB2pyBRyCgKTNNSf1wljsVxms=&quot; } }, &quot;roles&quot; : [ { &quot;role&quot; : &quot;read&quot;, &quot;db&quot; : &quot;db_01&quot; }, { &quot;role&quot; : &quot;readWrite&quot;, &quot;db&quot; : &quot;db_02&quot; } ] }
+
+&gt;
+# 8. &#x8BA4;&#x8BC1;&#x767B;&#x5F55;&#x5230; bigcat &#x7528;&#x6237;
+&gt; db.auth(&quot;bigcat&quot;, &quot;bigcat&quot;)
+1
+&gt;
+# 9. &#x5207;&#x6362;&#x5230; &#x6570;&#x636E;&#x5E93;db_01&#xFF0C;&#x8BFB;&#x64CD;&#x4F5C;&#x6CA1;&#x6709;&#x95EE;&#x9898;
+&gt; use db_01
+switched to db db_01
+&gt; show collections
+&gt; 
+# 10. &#x5207;&#x6362;&#x5230; &#x6570;&#x636E;&#x5E93;db_02&#xFF0C;&#x8BFB;&#x64CD;&#x4F5C;&#x6CA1;&#x6709;&#x95EE;&#x9898;
+&gt; use db_02
+switched to db db_02
+&gt; show collections
+&gt; 
+# 11. &#x5207;&#x6362;&#x5230; &#x6570;&#x636E;&#x5E93;db_03&#xFF0C;&#x8BFB;&#x64CD;&#x4F5C;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;bigcat&#x7528;&#x6237;&#x5728;db_03&#x6570;&#x636E;&#x5E93;&#x4E0B;&#x6CA1;&#x6709;&#x76F8;&#x5173;&#x6743;&#x9650;
+&gt; use db_03
+switched to db db_03
+&gt; show collections
+2017-05-17T00:26:56.143+0800 E QUERY    [thread1] Error: listCollections failed: {
+    &quot;ok&quot; : 0,
+    &quot;errmsg&quot; : &quot;not authorized on db_03 to execute command { listCollections: 1.0, filter: {} }&quot;,
+    &quot;code&quot; : 13
+} :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+DB.prototype._getCollectionInfosCommand@src/mongo/shell/db.js:773:1
+DB.prototype.getCollectionInfos@src/mongo/shell/db.js:785:19
+DB.prototype.getCollectionNames@src/mongo/shell/db.js:796:16
+shellHelper.show@src/mongo/shell/utils.js:754:9
+shellHelper@src/mongo/shell/utils.js:651:15
+@(shellhelp2):1:1
+
+&gt;
+# 12. &#x8BA4;&#x8BC1;&#x767B;&#x5F55;&#x5230;python&#x7528;&#x6237;&#x4E0B;
+&gt; db.auth(&quot;python&quot;, &quot;chuanzhi&quot;)
+1
+&gt;
+# 13. &#x5220;&#x9664;bigcat&#x7528;&#x6237;
+&gt; db.dropUser(&quot;bigcat&quot;)
+true
+&gt;
+# 14. &#x5C1D;&#x8BD5;&#x8BA4;&#x8BC1;&#x767B;&#x5F55;bigcat&#x5931;&#x8D25;
+&gt; db.auth(&quot;bigcat&quot;, &quot;bigcat&quot;)
+Error: Authentication failed.
+0
+&gt;
+# 15. &#x9000;&#x51FA;mongo shell
+&gt; exit
+bye
+python@ubuntu:~$
+</code></pre>
+<blockquote>
+<p>&#x53C2;&#x8003;&#x9605;&#x8BFB;&#xFF1A;<a href="http://docs.mongoing.com/manual-zh/core/authentication.html" target="_blank">http://docs.mongoing.com/manual-zh/core/authentication.html</a></p>
+</blockquote>
+<h2 id="mongod&#x90E8;&#x5206;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x4E86;&#x89E3;&#xFF09;&#xFF1A;">mongod&#x90E8;&#x5206;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF08;&#x4E86;&#x89E3;&#xFF09;&#xFF1A;</h2>
+<p><code>dbpath</code>&#xFF1A;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x8DEF;&#x5F84;&#x3002;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x4F1A;&#x5728;&#x5176;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B50;&#x76EE;&#x5F55;&#xFF0C;&#x9632;&#x6B62;&#x540C;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x591A;&#x6B21;&#x8FD0;&#x884C;&#x7684;mongod.lock&#x4E5F;&#x4FDD;&#x5B58;&#x5728;&#x6B21;&#x76EE;&#x5F55;&#x4E2D;&#x3002;</p>
+<p><code>logpath</code>&#xFF1A;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;</p>
+<p><code>auth</code>&#xFF1A;&#x7528;&#x6237;&#x8BA4;&#x8BC1;</p>
+<p><code>logappend</code>&#xFF1A;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x91C7;&#x7528;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;(&#x9ED8;&#x8BA4;&#x8986;&#x5199;&#x6A21;&#x5F0F;)</p>
+<p><code>bind_ip</code>&#xFF1A;&#x5BF9;&#x5916;&#x670D;&#x52A1;&#x7684;&#x7ED1;&#x5B9A;ip&#xFF0C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;&#x7A7A;&#xFF0C;&#x53CA;&#x7ED1;&#x5B9A;&#x5728;&#x672C;&#x673A;&#x6240;&#x6709;&#x53EF;&#x7528;ip&#x4E0A;&#x3002;&#x5982;&#x6709;&#x9700;&#x8981;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x7ED1;&#x5B9A;&#x3002;</p>
+<p><code>port</code>&#xFF1A;&#x5BF9;&#x5916;&#x670D;&#x52A1;&#x7AEF;&#x53E3;&#x3002;Web&#x7BA1;&#x7406;&#x7AEF;&#x53E3;&#x5728;&#x8FD9;&#x4E2A;port&#x7684;&#x57FA;&#x7840;&#x4E0A;+1000&#x3002;</p>
+<p><code>fork</code>&#xFF1A;&#x4EE5;&#x540E;&#x53F0;Daemon&#x5F62;&#x5F0F;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x3002;</p>
+<p><code>journal</code>&#xFF1A;&#x5F00;&#x542F;&#x65E5;&#x5FD7;&#x529F;&#x80FD;&#xFF0C;&#x901A;&#x8FC7;&#x4FDD;&#x5B58;&#x64CD;&#x4F5C;&#x65E5;&#x5FD7;&#x6765;&#x964D;&#x4F4E;&#x5355;&#x673A;&#x6545;&#x969C;&#x7684;&#x6062;&#x590D;&#x65F6;&#x95F4;&#x3002;</p>
+<p><code>syncdelay</code>&#xFF1A;&#x7CFB;&#x7EDF;&#x540C;&#x6B65;&#x5237;&#x65B0;&#x78C1;&#x76D8;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x65F6;60&#x79D2;&#x3002;</p>
+<p><code>directoryperdb</code>&#xFF1A;&#x6BCF;&#x4E2A;db&#x5B58;&#x653E;&#x5728;&#x5355;&#x72EC;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5EFA;&#x8BAE;&#x8BBE;&#x7F6E;&#x8BE5;&#x53C2;&#x6570;&#x3002;</p>
+<p><code>repairpath</code>&#xFF1A;&#x6267;&#x884C;repair&#x65F6;&#x7684;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5F00;&#x542F;journal&#xFF0C;&#x5F02;&#x5E38;down&#x673A;&#x540E;&#x91CD;&#x542F;&#xFF0C;&#x5FC5;&#x987B;&#x6267;&#x884C;repair&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;mongod&#x7684;&#x53C2;&#x6570;&#x5206;&#x4E3A;&#x4E00;&#x822C;&#x53C2;&#x6570;&#xFF0C;windows&#x53C2;&#x6570;&#xFF0C;replication&#x53C2;&#x6570;&#xFF0C;replica set&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x9690;&#x542B;&#x53C2;&#x6570;&#x3002;&#x4E0A;&#x9762;&#x5217;&#x4E3E;&#x7684;&#x65F6;&#x4E00;&#x822C;&#x53C2;&#x6570;&#x3002;</p>
+<blockquote>
+<p>mongod&#x7684;&#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x7684;&#x76F8;&#x5173;&#x53C2;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;MongoDB&#x4F7F;&#x7528;os mmap&#x673A;&#x5236;&#x6765;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x6570;&#x636E;&#xFF0C;&#x81EA;&#x8EAB;&#x76EE;&#x524D;&#x4E0D;&#x63D0;&#x4F9B;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x3002;mmap&#x5728;&#x6570;&#x636E;&#x91CF;&#x4E0D;&#x8D85;&#x8FC7;&#x5185;&#x5B58;&#x65F6;&#x6548;&#x7387;&#x5F88;&#x9AD8;&#xFF0C;&#x4F46;&#x662F;&#x6570;&#x636E;&#x8D85;&#x8FC7;&#x5185;&#x5B58;&#x540E;&#xFF0C;&#x5199;&#x5165;&#x7684;&#x6027;&#x80FD;&#x4E0D;&#x592A;&#x7A33;&#x5B9A;&#x3002;</p>
+</blockquote>
+<h2 id="mongodb-&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF08;&#x4E86;&#x89E3;&#xFF09;">MongoDB &#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF08;&#x4E86;&#x89E3;&#xFF09;</h2>
+<p>&#x8981;&#x83B7;&#x5F97;&#x5173;&#x4E8E;MongoDB&#x7684;&#x670D;&#x52A1;&#x5668;&#x7EDF;&#x8BA1;&#xFF0C;&#x9700;&#x8981;&#x5728;MongoDB&#x5BA2;&#x6237;&#x7AEF;&#x952E;&#x5165;&#x547D;&#x4EE4;<code>db.stats()</code>&#x3002;&#x8FD9;&#x5C06;&#x663E;&#x793A;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#xFF0C;&#x6536;&#x96C6;&#x548C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6587;&#x6863;&#x4FE1;&#x606F;&#x3002;&#x8F93;&#x51FA;&#x7684;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#x6240;&#x793A;</p>
+<p><img src="../images/03_mongo_status.png" alt=""></p>
+<p>&#x4E86;&#x89E3;&#x4E0B;&#x4E00;&#x4E0B;&#x5404;&#x4E2A;&#x53C2;&#x6570;</p>
+<pre><code class="lang-sh"><span class="hljs-string">&quot;db&quot;</span> : <span class="hljs-string">&quot;test&quot;</span> ,&#x8868;&#x793A;&#x5F53;&#x524D;&#x662F;&#x9488;&#x5BF9;<span class="hljs-string">&quot;test&quot;</span>&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x60F3;&#x8981;&#x67E5;&#x770B;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x8FD0;&#x884C;$ use datbasename
+<span class="hljs-string">&quot;collections&quot;</span> : <span class="hljs-number">3</span>,&#x8868;&#x793A;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x6709;&#x591A;&#x5C11;&#x4E2A;collections.&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD0;&#x884C;show collections&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x5177;&#x4F53;&#x6709;&#x54EA;&#x4E9B;collection.
+<span class="hljs-string">&quot;objects&quot;</span> : <span class="hljs-number">267</span>,&#x8868;&#x793A;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x6240;&#x6709;collection&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x884C;&#x6570;&#x636E;&#x3002;&#x663E;&#x793A;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E00;&#x4E2A;&#x4F30;&#x8BA1;&#x503C;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x7CBE;&#x786E;&#x3002;
+<span class="hljs-string">&quot;avgObjSize&quot;</span> : <span class="hljs-number">623.2322097378277</span>,&#x8868;&#x793A;&#x6BCF;&#x884C;&#x6570;&#x636E;&#x662F;&#x5927;&#x5C0F;&#xFF0C;&#x4E5F;&#x662F;&#x4F30;&#x8BA1;&#x503C;&#xFF0C;&#x5355;&#x4F4D;&#x662F;bytes
+<span class="hljs-string">&quot;dataSize&quot;</span> : <span class="hljs-number">16640</span>,&#x8868;&#x793A;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x6240;&#x6709;&#x6570;&#x636E;&#x7684;&#x603B;&#x5927;&#x5C0F;&#xFF0C;&#x4E0D;&#x662F;&#x6307;&#x5360;&#x6709;&#x78C1;&#x76D8;&#x5927;&#x5C0F;&#x3002;&#x5355;&#x4F4D;&#x662F;bytes
+<span class="hljs-string">&quot;storageSize&quot;</span> : <span class="hljs-number">110592</span>,&#x8868;&#x793A;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x5360;&#x6709;&#x78C1;&#x76D8;&#x5927;&#x5C0F;&#xFF0C;&#x5355;&#x4F4D;&#x662F;bytes,&#x56E0;&#x4E3A;mongodb&#x6709;&#x9884;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x673A;&#x5236;&#xFF0C;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x5F53;&#x6709;&#x5927;&#x91CF;&#x6570;&#x636E;&#x63D2;&#x5165;&#x65F6;&#x5BF9;&#x78C1;&#x76D8;&#x7684;&#x538B;&#x529B;,&#x56E0;&#x6B64;&#x4F1A;&#x4E8B;&#x5148;&#x591A;&#x5206;&#x914D;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x3002;
+<span class="hljs-string">&quot;numExtents&quot;</span> : <span class="hljs-number">0</span>,&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x771F;&#x5B9E;&#x610F;&#x4E49;
+<span class="hljs-string">&quot;indexes&quot;</span> : <span class="hljs-number">2</span> ,&#x8868;&#x793A;system.indexes&#x8868;&#x6570;&#x636E;&#x884C;&#x6570;&#x3002;
+<span class="hljs-string">&quot;indexSize&quot;</span> : <span class="hljs-number">53248</span>,&#x8868;&#x793A;&#x7D22;&#x5F15;&#x5360;&#x6709;&#x78C1;&#x76D8;&#x5927;&#x5C0F;&#x3002;&#x5355;&#x4F4D;&#x662F;bytes
+<span class="hljs-string">&quot;ok&quot;</span> : <span class="hljs-number">1</span>,&#x8868;&#x793A;&#x670D;&#x52A1;&#x5668;&#x6B63;&#x5E38;
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; BigCat all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x300C;Revision Time:
+2017-05-17 00:57:42&#x300D;
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../file/MongoDB/1.html" class="navigation navigation-prev " aria-label="Previous page: MongoDB的安装与使用"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../file/MongoDB/2_1.html" class="navigation navigation-next " aria-label="Next page: 数据库操作"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbookuse"},"github":{"url":"https://github.com/dododream"},"search-pro":{"cutWordLib":"nodejieba","defineWord":["gitbook-use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright © BigCat","modify_label":"「Revision Time:","modify_format":"YYYY-MM-DD HH:mm:ss」"},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sitemap":{"hostname":"http://www.treenewbee.top"},"donate":{"wechat":"http://weixin.png","alipay":"http://alipay.png","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"edit-link":{"base":"https://github.com/dododream/edit","label":"Edit This Page"},"splitter":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python数据分析课程讲义 -->
+</html>
