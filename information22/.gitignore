@@ -1,0 +1,5 @@
+.idea/*
+.idea
+logs/*
+migrations/
+*.py[cod]
