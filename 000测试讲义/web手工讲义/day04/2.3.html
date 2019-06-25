@@ -1,0 +1,895 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>网络基础知识---GET和POST | web手工项目</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../day04/3.0.html" />
+    
+    
+    <link rel="prev" href="../day04/2.2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="8.3"
+        data-chapter-title="网络基础知识---GET和POST"
+        data-filepath="day04/2.3.md"
+        data-basepath=".."
+        data-revision="Tue Aug 21 2018 23:33:05 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        课程介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="day01/0.html">
+            
+                
+                    <a href="../day01/0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        项目测试流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="day01/1.html">
+            
+                
+                    <a href="../day01/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        项目测试第一步---搭建测试环境
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="day01/1.1.html">
+            
+                
+                    <a href="../day01/1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        了解项目的架构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="day01/1.2.html">
+            
+                
+                    <a href="../day01/1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        部署测试环境
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="day01/2.html">
+            
+                
+                    <a href="../day01/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        项目测试第二步---快速熟悉项目
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="day01/2.1.html">
+            
+                
+                    <a href="../day01/2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        项目背景调研
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="day01/2.2.html">
+            
+                
+                    <a href="../day01/2.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        项目组织架构图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="day01/2.3.html">
+            
+                
+                    <a href="../day01/2.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        测试范围列表
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="day01/3.html">
+            
+                
+                    <a href="../day01/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        项目测试第三、四步---测试计划、测试方案
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="day01/3.1.html">
+            
+                
+                    <a href="../day01/3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        测试计划
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="day01/3.2.html">
+            
+                
+                    <a href="../day01/3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        测试方案
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="day01/3.3.html">
+            
+                
+                    <a href="../day01/3.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        计划和方案不同点
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="day01/4.html">
+            
+                
+                    <a href="../day01/4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        项目测试第五步---UI界面
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="day01/4.1.html">
+            
+                
+                    <a href="../day01/4.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        功能测试---UI
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="day02/1.0.html">
+            
+                
+                    <a href="../day02/1.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        项目测试第五步---针对对立的功能点
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="day02/1.1.html">
+            
+                
+                    <a href="../day02/1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        独立功能点测试---注册功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="day03/1.1.html">
+            
+                
+                    <a href="../day03/1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        独立功能点测试---会员搜索功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="day03/1.2.html">
+            
+                
+                    <a href="../day03/1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        独立功能点测试---会员删除/批量删除功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="day03/1.3.html">
+            
+                
+                    <a href="../day03/1.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        独立功能点测试---服饰鞋帽筛选功能
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="day04/1.0.html">
+            
+                
+                    <a href="../day04/1.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        项目测试第五步---业务场景测试
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="day04/1.1.html">
+            
+                
+                    <a href="../day04/1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        业务场景测试---用户角度
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="day04/1.2.html">
+            
+                
+                    <a href="../day04/1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        业务场景测试---项目本身角度
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="day04/1.3.html">
+            
+                
+                    <a href="../day04/1.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        业务场景测试---广度图和深度图
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="day04/2.0.html">
+            
+                
+                    <a href="../day04/2.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        项目测试第五步---网络基础知识
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="day04/2.1.html">
+            
+                
+                    <a href="../day04/2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        网络基础知识---HTML和HTTP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="day04/2.2.html">
+            
+                
+                    <a href="../day04/2.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        网络基础知识---请求和响应
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.3" data-path="day04/2.3.html">
+            
+                
+                    <a href="../day04/2.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        网络基础知识---GET和POST
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="day04/3.0.html">
+            
+                
+                    <a href="../day04/3.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        项目测试第五步---非功能测试
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="day04/3.1.html">
+            
+                
+                    <a href="../day04/3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        非功能测试---效率性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="day04/3.2.html">
+            
+                
+                    <a href="../day04/3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        非功能测试---可靠性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="day04/3.3.html">
+            
+                
+                    <a href="../day04/3.3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        非功能测试---可移植性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="day04/3.4.html">
+            
+                
+                    <a href="../day04/3.4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        非功能测试---易用性和可用性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="day04/3.5.html">
+            
+                
+                    <a href="../day04/3.5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        非功能测试---可维护性
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="day05/1.0.html">
+            
+                
+                    <a href="../day05/1.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        项目测试第五步---接口测试
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="day05/1.1.html">
+            
+                
+                    <a href="../day05/1.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        接口测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="day05/1.2.html">
+            
+                
+                    <a href="../day05/1.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        接口测试-fiddler工具
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="day05/2.0.html">
+            
+                
+                    <a href="../day05/2.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        项目测试第六步---编写测试报告
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="day05/2.1.html">
+            
+                
+                    <a href="../day05/2.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        测试报告
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="day05/3.0.html">
+            
+                
+                    <a href="../day05/3.0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        项目阶段总结
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="day05/3.1.html">
+            
+                
+                    <a href="../day05/3.1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                        项目测试流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="day05/3.2.html">
+            
+                
+                    <a href="../day05/3.2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                        关于设计编写测试用例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >web手工项目</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x7F51;&#x7EDC;&#x57FA;&#x7840;&#x77E5;&#x8BC6;get&#x548C;post">&#x7F51;&#x7EDC;&#x57FA;&#x7840;&#x77E5;&#x8BC6;---GET&#x548C;POST</h1>
+<p>GET &#x548C; POST &#x662F;&#x4E24;&#x79CD;&#x6700;&#x5E38;&#x89C1;&#x7684;HTTP &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="get-&#x65B9;&#x6CD5;">GET &#x65B9;&#x6CD5;</h2>
+<p>GET &#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x62FF;&#x6570;&#x636E;</p>
+<ul>
+<li><p>&#x7528;&#x5230;Get&#x65B9;&#x6CD5;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</p>
+<p>  &#x573A;&#x666F;&#xFF1A;</p>
+<pre><code>      &#x5728;iwebbshop&#x7F51;&#x7AD9;&#x4E0A;&#x641C;&#x7D22;&#x67D0;&#x4E00;&#x4E2A;&#x5173;&#x952E;&#x5B57;
+</code></pre><p>  &#x80CC;&#x666F;&#xFF1A;</p>
+<pre><code>      &#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x4FDD;&#x5B58;&#x5728;iwebshop&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;
+      &#x5BA2;&#x6237;&#x7AEF;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7684;&#x6570;&#x636E;
+      &#x5BA2;&#x6237;&#x7AEF;&#x53EA;&#x9700;&#x8981;&#x544A;&#x8BC9;iwebshop&#x7684;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x641C;&#x7D22;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x6570;&#x636E;
+</code></pre></li>
+</ul>
+<p>&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x62FF;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E; &#x4F7F;&#x7528;&#x7684;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x5C31;&#x662F; GET &#x65B9;&#x6CD5;</p>
+<ul>
+<li><p>GET&#x65B9;&#x6CD5;&#x8868;&#x73B0;&#x5F62;&#x5F0F;</p>
+<p>  &#x4F7F;&#x7528; GET &#x65B9;&#x6CD5;&#x8BF7;&#x6C42;&#x7684;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x770B;&#x5230;&#x3002;</p>
+</li>
+<li><p>&#x7EC3;&#x4E60;</p>
+<p>  &#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5730;&#x5740;&#x680F;&#x4E2D;&#xFF0C;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF0C;&#x7136;&#x540E;&#x89C2;&#x5BDF;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>  <a href="https://www.baidu.com/s?wd=&#x9ED1;&#x9A6C;&#x7A0B;&#x5E8F;&#x5458;" target="_blank">https://www.baidu.com/s?wd=&#x9ED1;&#x9A6C;&#x7A0B;&#x5E8F;&#x5458;</a></p>
+<p>  &#x5176;&#x4E2D;&#xFF1A; </p>
+<pre><code>      * s &#x8868;&#x793A;&#x641C;&#x7D22;&#xFF08;search&#xFF09;
+      * wd &#x8868;&#x793A;&#x5173;&#x952E;&#x5B57;(word)
+      * = &#x53F3;&#x4FA7;&#x5C31;&#x662F;&#x8981;&#x641C;&#x7D22;&#x7684;&#x5185;&#x5BB9;
+</code></pre></li>
+</ul>
+<h2 id="post-&#x65B9;&#x6CD5;">POST &#x65B9;&#x6CD5;</h2>
+<p>POST &#x65B9;&#x6CD5;&#x662F;&#x628A;&#x6570;&#x636E;&#x63D0;&#x4EA4;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x670D;&#x52A1;&#x5668;&#x505A;&#x51FA;&#x54CD;&#x5E94;&#x3002;</p>
+<ul>
+<li><p>&#x7528;&#x5230;POST&#x65B9;&#x6CD5;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;</p>
+<p>  &#x7528;&#x6237;&#x767B;&#x5F55;</p>
+<pre><code>      &#x9700;&#x8981;&#x628A;&#x7528;&#x6237;&#x540D;&#x3001;&#x5BC6;&#x7801;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;
+      &#x5BC6;&#x7801;&#x51FA;&#x73B0;&#x5728; URL &#x4E2D;&#x663E;&#x7136;&#x4E0D;&#x5B89;&#x5168;
+</code></pre><p>  &#x7528;&#x6237;&#x6CE8;&#x518C;</p>
+<pre><code>      &#x9700;&#x8981;&#x628A;&#x7528;&#x6237;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;
+</code></pre><p>  &#x5546;&#x57CE;&#x8D2D;&#x7269;</p>
+<pre><code>      &#x9700;&#x8981;&#x628A;&#x9009;&#x8D2D;&#x7684;&#x5546;&#x54C1;&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;
+</code></pre></li>
+<li><p>&#x89C2;&#x5BDF;&#x4EE5;&#x4E0A;&#x51E0;&#x4E2A;&#x573A;&#x666F;&#xFF0C;&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x7528;&#x6237;&#x767B;&#x5F55;&#xFF0C;&#x8FD8;&#x662F;&#x9009;&#x8D2D;&#x5546;&#x54C1;&#xFF1A;</p>
+<pre><code>  &#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x628A;&#x67D0;&#x4E9B;&#x4FE1;&#x606F;&#x4E3B;&#x52A8;&#x544A;&#x8BC9;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#xFF0C;
+  &#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x4E4B;&#x524D;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x8981;&#x767B;&#x5F55;&#xFF0C;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x7528;&#x6237;&#x5177;&#x4F53;&#x8981;&#x8D2D;&#x4E70;&#x7684;&#x5546;&#x54C1;&#x3002;
+</code></pre></li>
+<li><p>POST&#x65B9;&#x6CD5;&#x8868;&#x73B0;&#x5F62;&#x5F0F;</p>
+<pre><code>      &#x4F7F;&#x7528; POST &#x65B9;&#x6CD5;&#x8BF7;&#x6C42;&#x7684;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x65E0;&#x6CD5;&#x770B;&#x5230;
+      &#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x5B89;&#x5168;&#xFF0C;&#x4F46;&#x662F; POST &#x65B9;&#x6CD5;&#x8BF7;&#x6C42;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x7528;&#x6293;&#x5305;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x62E6;&#x622A;&#x3002;
+</code></pre></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../day04/2.2.html" class="navigation navigation-prev " aria-label="Previous page: 网络基础知识---请求和响应"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../day04/3.0.html" class="navigation navigation-next " aria-label="Next page: 项目测试第五步---非功能测试"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
