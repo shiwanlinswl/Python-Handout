@@ -1,0 +1,2809 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Python运维加强 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>VLAN原理和配置 | Python运维加强</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../wang-luo-ji-zhu/vlanji-zhu/vlanjian-lu-you.html" />
+    
+    
+    <link rel="prev" href="../../wang-luo-ji-zhu/vlanji-zhu.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="2.13.1"
+        data-chapter-title="VLAN原理和配置"
+        data-filepath="wang-luo-ji-zhu/vlanji-zhu/vlanyuan-li-he-pei-zhi.md"
+        data-basepath="../.."
+        data-revision="Tue Feb 19 2019 19:35:47 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Python运维加强
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="../../chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        运维基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter1/yun-wei-ke-pu.html">
+            
+                
+                    <a href="../../chapter1/yun-wei-ke-pu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        运维科普
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="chapter1/yun-wei-ke-pu/yun-wei-gai-shu.html">
+            
+                
+                    <a href="../../chapter1/yun-wei-ke-pu/yun-wei-gai-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        运维概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="chapter1/yun-wei-ke-pu/qi-ye-yun-zuo-mo-shi.html">
+            
+                
+                    <a href="../../chapter1/yun-wei-ke-pu/qi-ye-yun-zuo-mo-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        企业运作模式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1/ji-suan-ji-ying-jian.html">
+            
+                
+                    <a href="../../chapter1/ji-suan-ji-ying-jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        计算机组成原理
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="chapter1/ji-suan-ji-ying-jian/ji-suan-ji.html">
+            
+                
+                    <a href="../../chapter1/ji-suan-ji-ying-jian/ji-suan-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.1.</b>
+                        
+                        计算机硬件组成
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="chapter1/ji-suan-ji-ying-jian/ren-shi.html">
+            
+                
+                    <a href="../../chapter1/ji-suan-ji-ying-jian/ren-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.2.</b>
+                        
+                        认识计算机硬件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1/cao-zuo-xi-tong.html">
+            
+                
+                    <a href="../../chapter1/cao-zuo-xi-tong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        操作系统
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="chapter1/cao-zuo-xi-tong/cao-zuo-xi-tong-fen-lei.html">
+            
+                
+                    <a href="../../chapter1/cao-zuo-xi-tong/cao-zuo-xi-tong-fen-lei.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        操作系统分类
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter1/pcji-cao-zuo-xi-tong-an-zhuang.html">
+            
+                
+                    <a href="../../chapter1/pcji-cao-zuo-xi-tong-an-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        操作系统安装
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="chapter1/pcji-cao-zuo-xi-tong-an-zhuang/zhi-zuo-u-pan-qi-dong-gong-ju.html">
+            
+                
+                    <a href="../../chapter1/pcji-cao-zuo-xi-tong-an-zhuang/zhi-zuo-u-pan-qi-dong-gong-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.1.</b>
+                        
+                        制作U盘启动工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="chapter1/pcji-cao-zuo-xi-tong-an-zhuang/xia-zai-xi-tong-jing-xiang-wen-jian.html">
+            
+                
+                    <a href="../../chapter1/pcji-cao-zuo-xi-tong-an-zhuang/xia-zai-xi-tong-jing-xiang-wen-jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.2.</b>
+                        
+                        下载系统镜像文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="chapter1/pcji-cao-zuo-xi-tong-an-zhuang/she-zhi-bios-qi-dong-you-xian-ji.html">
+            
+                
+                    <a href="../../chapter1/pcji-cao-zuo-xi-tong-an-zhuang/she-zhi-bios-qi-dong-you-xian-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.3.</b>
+                        
+                        设置BIOS启动优先级
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="chapter1/pcji-cao-zuo-xi-tong-an-zhuang/xi-tong-an-zhuang.html">
+            
+                
+                    <a href="../../chapter1/pcji-cao-zuo-xi-tong-an-zhuang/xi-tong-an-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.4.</b>
+                        
+                        系统安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="chapter1/pcji-cao-zuo-xi-tong-an-zhuang/qu-dong-an-zhuang.html">
+            
+                
+                    <a href="../../chapter1/pcji-cao-zuo-xi-tong-an-zhuang/qu-dong-an-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.5.</b>
+                        
+                        驱动安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter1/vmwaremo-ni-pc-ji-an-zhuang-xi-tong.html">
+            
+                
+                    <a href="../../chapter1/vmwaremo-ni-pc-ji-an-zhuang-xi-tong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        VMware模拟PC机安装系统
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="chapter1/an-zhuang-vmware-workstation.html">
+            
+                
+                    <a href="../../chapter1/an-zhuang-vmware-workstation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.1.</b>
+                        
+                        安装VMware Workstation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="chapter1/chuang-jian-xu-ni-ji.html">
+            
+                
+                    <a href="../../chapter1/chuang-jian-xu-ni-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.2.</b>
+                        
+                        创建虚拟机
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="chapter1/vmwaremo-ni-u-pan-qi-dong.html">
+            
+                
+                    <a href="../../chapter1/vmwaremo-ni-u-pan-qi-dong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.3.</b>
+                        
+                        VMware模拟U盘启动
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="chapter1/ying-pan-fen-qu-he-xi-tong-an-zhuang.html">
+            
+                
+                    <a href="../../chapter1/ying-pan-fen-qu-he-xi-tong-an-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.4.</b>
+                        
+                        硬盘分区和系统安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="wang-luo-ji-zhu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        网络技术
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="wang-luo-ji-zhu/wang-luo-ji-chu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/wang-luo-ji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        网络基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="wang-luo-ji-zhu/ipbian-zhi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/ipbian-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        IP编址
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="wang-luo-ji-zhu/ipbian-zhi/zi-wang-yan-ma.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/ipbian-zhi/zi-wang-yan-ma.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        子网掩码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="wang-luo-ji-zhu/ipbian-zhi/wang-guan.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/ipbian-zhi/wang-guan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.2.</b>
+                        
+                        网关
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="wang-luo-ji-zhu/wang-luo-ji-zhu-xue-xi-shen-5668-ensp.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/wang-luo-ji-zhu-xue-xi-shen-5668-ensp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        网络技术学习神器-eNSP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="wang-luo-ji-zhu/icmpxie-yi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/icmpxie-yi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        ICMP协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="wang-luo-ji-zhu/arpxie-yi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/arpxie-yi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        ARP协议
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="wang-luo-ji-zhu/chuan-shu-ceng-xie-yi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/chuan-shu-ceng-xie-yi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        传输层协议
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.6.1" data-path="wang-luo-ji-zhu/chuan-shu-ceng-xie-yi/tcp.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/chuan-shu-ceng-xie-yi/tcp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.1.</b>
+                        
+                        TCP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6.2" data-path="wang-luo-ji-zhu/chuan-shu-ceng-xie-yi/udp.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/chuan-shu-ceng-xie-yi/udp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.2.</b>
+                        
+                        UDP
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="wang-luo-ji-zhu/vrpji-chu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/vrpji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        VRP基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="wang-luo-ji-zhu/ming-ling-xing-ji-chu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/ming-ling-xing-ji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        命令行基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.8.1" data-path="wang-luo-ji-zhu/ming-ling-xing-ji-chu/ji-ben-pei-zhi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/ming-ling-xing-ji-chu/ji-ben-pei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.1.</b>
+                        
+                        基本配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="wang-luo-ji-zhu/jiao-huan-wang-luo-ji-chu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/jiao-huan-wang-luo-ji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        交换网络基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="wang-luo-ji-zhu/iplu-you-ji-chu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/iplu-you-ji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.10.</b>
+                        
+                        IP路由基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="wang-luo-ji-zhu/jing-tai-lu-you-ji-chu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/jing-tai-lu-you-ji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.11.</b>
+                        
+                        静态路由基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="wang-luo-ji-zhu/wang-luo-she-bei-chan-pin-shou-ce.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/wang-luo-she-bei-chan-pin-shou-ce.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.12.</b>
+                        
+                        网络设备产品手册
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="wang-luo-ji-zhu/vlanji-zhu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/vlanji-zhu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.</b>
+                        
+                        VLAN技术
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.13.1" data-path="wang-luo-ji-zhu/vlanji-zhu/vlanyuan-li-he-pei-zhi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/vlanji-zhu/vlanyuan-li-he-pei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.1.</b>
+                        
+                        VLAN原理和配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13.2" data-path="wang-luo-ji-zhu/vlanji-zhu/vlanjian-lu-you.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/vlanji-zhu/vlanjian-lu-you.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.13.2.</b>
+                        
+                        VLAN间路由
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="wang-luo-ji-zhu/natji-zhu.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/natji-zhu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.14.</b>
+                        
+                        NAT技术
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.14.1" data-path="wang-luo-ji-zhu/natji-zhu/natpei-zhi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/natji-zhu/natpei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.14.1.</b>
+                        
+                        NAT配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="wang-luo-ji-zhu/telnetpei-zhi.html">
+            
+                
+                    <a href="../../wang-luo-ji-zhu/telnetpei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.15.</b>
+                        
+                        Telnet配置
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="yun-wei-jin-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        运维进阶
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="yun-wei-jin-jie/windows-serverjie-shao-he-an-zhuang.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-serverjie-shao-he-an-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Windows Server-介绍和安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="yun-wei-jin-jie/vmwarewang-luo-mo-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/vmwarewang-luo-mo-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        VMware网络模式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="yun-wei-jin-jie/windows-server-dhcpfu-wu-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dhcpfu-wu-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Windows Server-DHCP服务器
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/dhcpfu-wu-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/dhcpfu-wu-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        DHCP服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/an-zhuang-dhcp.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/an-zhuang-dhcp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        安装DHCP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/dhcpfu-wu-qi-pei-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/dhcpfu-wu-qi-pei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        DHCP服务器配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/ke-hu-duan-ce-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dhcpfu-wu-qi/ke-hu-duan-ce-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        客户端测试
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="yun-wei-jin-jie/windows-server-dnsfu-wu-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dnsfu-wu-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Windows Server-DNS服务器
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="yun-wei-jin-jie/windows-server-dnsfu-wu-qi/dnsfu-wu-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dnsfu-wu-qi/dnsfu-wu-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.1.</b>
+                        
+                        DNS服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="yun-wei-jin-jie/windows-server-dnsfu-wu-qi/an-zhuang-dns.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dnsfu-wu-qi/an-zhuang-dns.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.2.</b>
+                        
+                        安装DNS
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="yun-wei-jin-jie/windows-server-dnsfu-wu-qi/dnsfu-wu-qi-pei-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dnsfu-wu-qi/dnsfu-wu-qi-pei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.3.</b>
+                        
+                        DNS服务器配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="yun-wei-jin-jie/windows-server-dnsfu-wu-qi/ke-hu-duan-ce-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-dnsfu-wu-qi/ke-hu-duan-ce-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.4.</b>
+                        
+                        客户端测试
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Windows Server-AD服务器
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/yu-yu-huo-dong-mu-lu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/yu-yu-huo-dong-mu-lu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        域与活动目录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/huo-dong-mu-lu-she-ji.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/huo-dong-mu-lu-she-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.2.</b>
+                        
+                        活动目录设计
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/an-zhuang-ad.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/an-zhuang-ad.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.3.</b>
+                        
+                        安装AD
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.4" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/yu-kong-zhi-qi-pei-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/yu-kong-zhi-qi-pei-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.4.</b>
+                        
+                        域控制器配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.5" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/jiang-ji-suan-ji-jia-ru-yu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/jiang-ji-suan-ji-jia-ru-yu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.5.</b>
+                        
+                        将计算机加入域
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.6" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/chuang-jian-zu-zhi-dan-wei.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/chuang-jian-zu-zhi-dan-wei.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.6.</b>
+                        
+                        创建组织单位
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.7" data-path="yun-wei-jin-jie/windows-server-adfu-wu-qi/shi-yong-yu-yong-hu-deng-lu-ji-suan-ji.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windows-server-adfu-wu-qi/shi-yong-yu-yong-hu-deng-lu-ji-suan-ji.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.7.</b>
+                        
+                        使用域用户登录计算机
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="yun-wei-jin-jie/windowsyuan-cheng-zhuo-mian.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/windowsyuan-cheng-zhuo-mian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Windows远程桌面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="yun-wei-jin-jie/linuxfa-zhan-shi-yu-an-zhuang.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxfa-zhan-shi-yu-an-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Linux发展史与安装
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="yun-wei-jin-jie/linuxfa-zhan-shi-yu-an-zhuang/linuxfa-zhan-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxfa-zhan-shi-yu-an-zhuang/linuxfa-zhan-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        Linux发展史
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" data-path="yun-wei-jin-jie/linuxfa-zhan-shi-yu-an-zhuang/linuxan-zhuang.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxfa-zhan-shi-yu-an-zhuang/linuxan-zhuang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.2.</b>
+                        
+                        Linux安装
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="yun-wei-jin-jie/yun-fu-wu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/yun-fu-wu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        云服务
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="yun-wei-jin-jie/yun-fu-wu/gou-mai-yun-fu-wu-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/yun-fu-wu/gou-mai-yun-fu-wu-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.1.</b>
+                        
+                        购买云服务器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="yun-wei-jin-jie/yun-fu-wu/yu-ming-fu-wu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/yun-fu-wu/yu-ming-fu-wu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.2.</b>
+                        
+                        域名服务
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="yun-wei-jin-jie/linuxmu-lu-jie-gou.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxmu-lu-jie-gou.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Linux目录结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Linux文件及目录管理实战
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/linuxzhong-duan-ming-ling-ge-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/linuxzhong-duan-ming-ling-ge-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        Linux终端命令格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/lscdpwdtreeming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/lscdpwdtreeming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        ls、cd、pwd、tree命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.3" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/mkdirtouchming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/mkdirtouchming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.3.</b>
+                        
+                        mkdir、touch命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.4" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/cpmvrmrmdirming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/cpmvrmrmdirming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.4.</b>
+                        
+                        cp、mv、rm、rmdir命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.5" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/filebasenamedirnameming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/filebasenamedirnameming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.5.</b>
+                        
+                        file、basename、dirname命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.6" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/bian-ji-qi-shen-5668-vim.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/bian-ji-qi-shen-5668-vim.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.6.</b>
+                        
+                        编辑器神器-vim
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.7" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/wen-jian-nei-rong-cha-kan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/wen-jian-nei-rong-cha-kan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.7.</b>
+                        
+                        文件内容查看
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.8" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/lnjian-li-lian-jie-wen-jian.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/lnjian-li-lian-jie-wen-jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.8.</b>
+                        
+                        ln-建立链接文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.9" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/sou-suo-wen-jian-ming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/sou-suo-wen-jian-ming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.9.</b>
+                        
+                        搜索文件命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.10" data-path="yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/gui-dang-yu-ya-suo.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-ji-mu-lu-guan-li-shi-zhan/gui-dang-yu-ya-suo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.10.</b>
+                        
+                        归档与压缩
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="yun-wei-jin-jie/sshfu-wu-ying-yong/wang-qia-she-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/sshfu-wu-ying-yong/wang-qia-she-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.11.</b>
+                        
+                        网卡设置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="yun-wei-jin-jie/sshfu-wu-ying-yong.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/sshfu-wu-ying-yong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.12.</b>
+                        
+                        SSH服务应用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.12.1" data-path="yun-wei-jin-jie/sshfu-wu-ying-yong/yuan-cheng-zhong-duan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/sshfu-wu-ying-yong/yuan-cheng-zhong-duan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.12.1.</b>
+                        
+                        远程终端
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.2" data-path="yun-wei-jin-jie/sshfu-wu-ying-yong/wen-jian-shang-chuan-xia-zai-gong-ju.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/sshfu-wu-ying-yong/wen-jian-shang-chuan-xia-zai-gong-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.12.2.</b>
+                        
+                        文件上传下载工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12.3" data-path="yun-wei-jin-jie/sshfu-wu-ying-yong/yuan-cheng-kao-bei-wen-4ef6-scp.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/sshfu-wu-ying-yong/yuan-cheng-kao-bei-wen-4ef6-scp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.12.3.</b>
+                        
+                        远程拷贝文件-scp
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="yun-wei-jin-jie/linuxte-shu-zi-fu-ming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxte-shu-zi-fu-ming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.13.</b>
+                        
+                        Linux特殊字符命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="yun-wei-jin-jie/linuxxin-xi-xian-shi-xiang-guan-ming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxxin-xi-xian-shi-xiang-guan-ming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.14.</b>
+                        
+                        Linux信息显示相关命令
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="yun-wei-jin-jie/linuxyong-hu-he-zu-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxyong-hu-he-zu-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.15.</b>
+                        
+                        Linux用户和组管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.</b>
+                        
+                        Linux文件权限管理
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.16.1" data-path="yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li/quan-xian-she-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li/quan-xian-she-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.1.</b>
+                        
+                        权限设置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16.2" data-path="yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li/shu-zhu-he-shu-zu-she-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li/shu-zhu-he-shu-zu-she-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.2.</b>
+                        
+                        属主和属组设置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16.3" data-path="yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li/sudoming-ling.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-quan-xian-guan-li/sudoming-ling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.16.3.</b>
+                        
+                        sudo命令
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.17" data-path="yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.17.</b>
+                        
+                        Linux软件安装与管理
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.17.1" data-path="yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li/rpmfang-shi-an-zhuang-rpm-bao.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li/rpmfang-shi-an-zhuang-rpm-bao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.17.1.</b>
+                        
+                        rpm方式安装rpm包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.17.2" data-path="yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li/yumfang-fa-an-zhuang-rpm-bao.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li/yumfang-fa-an-zhuang-rpm-bao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.17.2.</b>
+                        
+                        yum方法安装rpm包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.17.3" data-path="yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li/make-installyuan-dai-ma-an-zhuang-bao.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxruan-jian-an-zhuang-yu-guan-li/make-installyuan-dai-ma-an-zhuang-bao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.17.3.</b>
+                        
+                        make install源代码安装包
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.18" data-path="yun-wei-jin-jie/linuxci-pan-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxci-pan-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.18.</b>
+                        
+                        Linux磁盘管理
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.18.1" data-path="yun-wei-jin-jie/linuxci-pan-guan-li/ci-pan-fen-qu-gong-5177-fdisk.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxci-pan-guan-li/ci-pan-fen-qu-gong-5177-fdisk.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.18.1.</b>
+                        
+                        磁盘分区工具-fdisk
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.18.2" data-path="yun-wei-jin-jie/linuxci-pan-guan-li/ci-pan-ge-shi-hua-yu-gua-zai-wen-jian-xi-tong.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxci-pan-guan-li/ci-pan-ge-shi-hua-yu-gua-zai-wen-jian-xi-tong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.18.2.</b>
+                        
+                        磁盘格式化与挂载文件系统
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.18.3" data-path="yun-wei-jin-jie/linuxci-pan-guan-li/zi-dong-gua-zai-wen-jian-xi-tong.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxci-pan-guan-li/zi-dong-gua-zai-wen-jian-xi-tong.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.18.3.</b>
+                        
+                        自动挂载文件系统
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.19" data-path="yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.19.</b>
+                        
+                        Linux文件处理三剑客
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.19.1" data-path="yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke/grepwen-ben-guo-lv-gong-ju.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke/grepwen-ben-guo-lv-gong-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.19.1.</b>
+                        
+                        grep-文本过滤工具
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.19.2" data-path="yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke/sedzi-fu-liu-bian-ji-qi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke/sedzi-fu-liu-bian-ji-qi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.19.2.</b>
+                        
+                        sed-字符流编辑器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.19.3" data-path="yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke/awkzui-qiang-da-de-wen-ben-chu-li-gong-ju.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/linuxwen-jian-chu-li-san-jian-ke/awkzui-qiang-da-de-wen-ben-chu-li-gong-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.19.3.</b>
+                        
+                        awk-最强大的文本处理工具
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20" data-path="yun-wei-jin-jie/shellbian-cheng.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.</b>
+                        
+                        Shell编程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.20.1" data-path="yun-wei-jin-jie/shellbian-cheng/shellru-men.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellru-men.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.1.</b>
+                        
+                        Shell入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.2" data-path="yun-wei-jin-jie/shellbian-cheng/shellbian-liang.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellbian-liang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.2.</b>
+                        
+                        Shell变量
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.20.2.1" data-path="yun-wei-jin-jie/shellbian-cheng/shellbian-liang/shellhuan-jing-bian-liang.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellbian-liang/shellhuan-jing-bian-liang.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.2.1.</b>
+                        
+                        Shell环境变量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.2.2" data-path="yun-wei-jin-jie/shellbian-cheng/shellchuan-di-can-shu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellchuan-di-can-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.2.2.</b>
+                        
+                        Shell传递参数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.2.3" data-path="yun-wei-jin-jie/shellbian-cheng/shellbian-liang/shellshu-zu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellbian-liang/shellshu-zu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.2.3.</b>
+                        
+                        Shell数组
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.3" data-path="yun-wei-jin-jie/shellbian-cheng/shellzhong-shu-xue-yun-suan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellzhong-shu-xue-yun-suan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.3.</b>
+                        
+                        Shell中数学运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.4" data-path="yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.4.</b>
+                        
+                        Shell脚本的条件测试与比较
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.20.4.1" data-path="yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/shelljiao-ben-de-tiao-jian-ce-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/shelljiao-ben-de-tiao-jian-ce-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.4.1.</b>
+                        
+                        Shell脚本的条件测试
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.4.2" data-path="yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/wen-jian-ce-shi-biao-da-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/wen-jian-ce-shi-biao-da-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.4.2.</b>
+                        
+                        文件测试表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.4.3" data-path="yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/zi-fu-chuan-ce-shi-biao-da-shi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/zi-fu-chuan-ce-shi-biao-da-shi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.4.3.</b>
+                        
+                        字符串测试表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.4.4" data-path="yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/zheng-shu-er-yuan-bi-jiao-cao-zuo-fu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/zheng-shu-er-yuan-bi-jiao-cao-zuo-fu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.4.4.</b>
+                        
+                        整数二元比较操作符
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.4.5" data-path="yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/luo-ji-cao-zuo-fu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shelljiao-ben-de-tiao-jian-ce-shi-yu-bi-jiao/luo-ji-cao-zuo-fu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.4.5.</b>
+                        
+                        逻辑操作符
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.5" data-path="yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.5.</b>
+                        
+                        Shell流程控制
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.20.5.1" data-path="yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-dan-fen-zhi-jie-gou.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-dan-fen-zhi-jie-gou.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.5.1.</b>
+                        
+                        if条件语句-单分支结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.5.2" data-path="yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-shuang-fen-zhi-jie-gou.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-shuang-fen-zhi-jie-gou.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.5.2.</b>
+                        
+                        if条件语句-双分支结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.5.3" data-path="yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-duo-fen-zhi-jie-gou.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-duo-fen-zhi-jie-gou.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.5.3.</b>
+                        
+                        if条件语句-多分支结构
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.5.4" data-path="yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-ying-yong-an-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/iftiao-jian-yu-53e5-ying-yong-an-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.5.4.</b>
+                        
+                        if条件语句-应用案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.5.5" data-path="yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/casetiao-jian-yu-ju.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellliu-cheng-kong-zhi/casetiao-jian-yu-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.5.5.</b>
+                        
+                        case条件语句
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.6" data-path="yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.6.</b>
+                        
+                        Shell循环语句
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.20.6.1" data-path="yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/whilexun-huan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/whilexun-huan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.6.1.</b>
+                        
+                        while循环
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.6.2" data-path="yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/forxun-huan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/forxun-huan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.6.2.</b>
+                        
+                        for循环
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.6.3" data-path="yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/untilhe-select-xun-huan-yu-ju.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/untilhe-select-xun-huan-yu-ju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.6.3.</b>
+                        
+                        until和select循环语句
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.6.4" data-path="yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/tiao-chu-xun-huan.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellxun-huan-yu-ju/tiao-chu-xun-huan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.6.4.</b>
+                        
+                        跳出循环
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.20.7" data-path="yun-wei-jin-jie/shellbian-cheng/shellhan-shu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/shellbian-cheng/shellhan-shu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.20.7.</b>
+                        
+                        Shell函数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.</b>
+                        
+                        Docker容器技术
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.21.1" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerrong-qi-ji-zhu-ji-chu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerrong-qi-ji-zhu-ji-chu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.1.</b>
+                        
+                        Docker容器技术基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.21.1.1" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerrong-qi-ji-zhu-ji-chu/dockerjian-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerrong-qi-ji-zhu-ji-chu/dockerjian-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.1.1.</b>
+                        
+                        Docker简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.1.2" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerrong-qi-ji-zhu-ji-chu/dockerkuai-su-ru-men.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerrong-qi-ji-zhu-ji-chu/dockerkuai-su-ru-men.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.1.2.</b>
+                        
+                        Docker快速入门
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.2" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.2.</b>
+                        
+                        Docker核心技术
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.21.2.1" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/jing-xiang-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/jing-xiang-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.2.1.</b>
+                        
+                        镜像管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.2.2" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/rong-qi-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/rong-qi-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.2.2.</b>
+                        
+                        容器管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.2.3" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/cang-ku-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/cang-ku-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.2.3.</b>
+                        
+                        仓库管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.2.4" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/shu-ju-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/shu-ju-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.2.4.</b>
+                        
+                        数据管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.2.5" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/wang-luo-guan-li.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockerhe-xin-ji-zhu/wang-luo-guan-li.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.2.5.</b>
+                        
+                        网络管理
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.</b>
+                        
+                        Docker高级实践
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.21.3.1" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.</b>
+                        
+                        Dockerfile
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.21.3.1.1" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/dockerfilekuai-su-ru-men.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/dockerfilekuai-su-ru-men.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.1.</b>
+                        
+                        Dockerfile快速入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.1.2" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/ji-chu-zhi-ling-xiang-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/ji-chu-zhi-ling-xiang-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.2.</b>
+                        
+                        基础指令详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.1.3" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/wen-jian-bian-ji-zhi-ling-xiang-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/wen-jian-bian-ji-zhi-ling-xiang-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.3.</b>
+                        
+                        文件编辑指令详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.1.4" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/huan-jing-zhi-ling-xiang-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/huan-jing-zhi-ling-xiang-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.4.</b>
+                        
+                        环境指令详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.1.5" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/dockerfilegou-jian-guo-cheng.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/dockerfilegou-jian-guo-cheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.5.</b>
+                        
+                        Dockerfile构建过程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.1.6" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/xiao-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/dockerfile/xiao-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.1.6.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.2" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.2.</b>
+                        
+                        Docker Compose
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.21.3.2.1" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/docker-composekuai-su-ru-men.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/docker-composekuai-su-ru-men.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.2.1.</b>
+                        
+                        Docker Compose快速入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.2.2" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/ming-ling-xiang-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/ming-ling-xiang-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.2.2.</b>
+                        
+                        命令详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.2.3" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/wen-jian-xiang-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/wen-jian-xiang-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.2.3.</b>
+                        
+                        文件详解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.21.3.2.4" data-path="yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/xiao-jie.html">
+            
+                
+                    <a href="../../yun-wei-jin-jie/dockerrong-qi-ji-zhu/dockergao-ji-shi-jian/docker-compose/xiao-jie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.21.3.2.4.</b>
+                        
+                        小结
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="fu-lu-ff08-yun-wei-qi-ta-ji-neng-ff09.html">
+            
+                
+                    <a href="../../fu-lu-ff08-yun-wei-qi-ta-ji-neng-ff09.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        附录（运维其他技能）
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Python运维加强</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="vlan&#x539F;&#x7406;&#x548C;&#x914D;&#x7F6E;">VLAN&#x539F;&#x7406;&#x548C;&#x914D;&#x7F6E;</h1>
+<p>&#x968F;&#x7740;&#x7F51;&#x7EDC;&#x4E2D;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x6570;&#x91CF;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x4F20;&#x7EDF;&#x7684;&#x4EE5;&#x592A;&#x7F51;&#x7EDC;&#x5F00;&#x59CB;&#x9762;&#x4E34;&#x51B2;&#x7A81;&#x4E25;&#x91CD;&#x3001;&#x5E7F;&#x64AD;&#x6CDB;&#x6EE5;&#x4EE5;&#x53CA;&#x5B89;&#x5168;&#x6027;&#x65E0;&#x6CD5;&#x4FDD;&#x969C;&#x7B49;&#x5404;&#x79CD;&#x95EE;&#x9898;&#x3002;</p>
+<p><strong>VLAN&#xFF08;Virtual Local Area Network&#xFF09;&#x5373;&#x865A;&#x62DF;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;</strong>&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x7684;&#x5C40;&#x57DF;&#x7F51;&#x5728;&#x903B;&#x8F91;&#x4E0A;&#x5212;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5E7F;&#x64AD;&#x57DF;&#x7684;&#x6280;&#x672F;&#x3002;&#x901A;&#x8FC7;&#x5728;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x914D;&#x7F6E;VLAN&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728;&#x540C;&#x4E00;&#x4E2A;VLAN&#x5185;&#x7684;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E8C;&#x5C42;&#x4E92;&#x8BBF;&#xFF0C;&#x800C;&#x4E0D;&#x540C;VLAN&#x95F4;&#x7684;&#x7528;&#x6237;&#x88AB;&#x4E8C;&#x5C42;&#x9694;&#x79BB;&#x3002;&#x8FD9;&#x6837;&#x65E2;&#x80FD;&#x591F;&#x9694;&#x79BB;&#x5E7F;&#x64AD;&#x57DF;&#xFF0C;&#x53C8;&#x80FD;&#x591F;&#x63D0;&#x5347;&#x7F51;&#x7EDC;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<h2 id="1-&#x4F20;&#x7EDF;&#x4EE5;&#x592A;&#x7F51;">1. &#x4F20;&#x7EDF;&#x4EE5;&#x592A;&#x7F51;</h2>
+<p><img src="../../assets/vlan1.png" alt=""></p>
+<ul>
+<li>&#x968F;&#x7740;&#x4E3B;&#x673A;&#x6570;&#x91CF;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x51B2;&#x7A81;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x4E25;&#x91CD;&#xFF0C;&#x4EA4;&#x6362;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x5E7F;&#x64AD;&#x4E5F;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x3002;</li>
+</ul>
+<p>&#x65E9;&#x671F;&#x7684;&#x5C40;&#x57DF;&#x7F51;LAN&#x6280;&#x672F;&#x662F;&#x57FA;&#x4E8E;&#x603B;&#x7EBF;&#x578B;&#x7ED3;&#x6784;&#x7684;&#xFF0C;&#x5B83;&#x5B58;&#x5728;&#x4EE5;&#x4E0B;&#x4E3B;&#x8981;&#x95EE;&#x9898;&#xFF1A;</p>
+<ol>
+<li>&#x82E5;&#x67D0;&#x65F6;&#x523B;&#x6709;&#x591A;&#x4E2A;&#x8282;&#x70B9;&#x540C;&#x65F6;&#x8BD5;&#x56FE;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4EEC;&#x5C06;&#x4EA7;&#x751F;&#x51B2;&#x7A81;&#x3002;</li>
+<li>&#x4ECE;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x53D1;&#x51FA;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x4F1A;&#x88AB;&#x53D1;&#x9001;&#x5230;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#xFF0C;&#x5F62;&#x6210;&#x5E7F;&#x64AD;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x4E3B;&#x673A;&#x5171;&#x4EAB;&#x4E00;&#x6761;&#x4F20;&#x8F93;&#x901A;&#x9053;&#xFF0C;&#x65E0;&#x6CD5;&#x63A7;&#x5236;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x3002;</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x7F51;&#x7EDC;&#x6784;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x51B2;&#x7A81;&#x57DF;&#xFF0C;&#x7F51;&#x7EDC;&#x4E2D;&#x8BA1;&#x7B97;&#x673A;&#x6570;&#x91CF;&#x8D8A;&#x591A;&#xFF0C;&#x51B2;&#x7A81;&#x8D8A;&#x4E25;&#x91CD;&#xFF0C;&#x7F51;&#x7EDC;&#x6548;&#x7387;&#x8D8A;&#x4F4E;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x8BE5;&#x7F51;&#x7EDC;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5E7F;&#x64AD;&#x57DF;&#xFF0C;&#x5F53;&#x7F51;&#x7EDC;&#x4E2D;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x6570;&#x91CF;&#x53D8;&#x591A;&#x65F6;&#xFF0C;&#x5E7F;&#x64AD;&#x6D41;&#x91CF;&#x5C06;&#x4F1A;&#x8017;&#x8D39;&#x5927;&#x91CF;&#x5E26;&#x5BBD;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x4F20;&#x7EDF;&#x5C40;&#x57DF;&#x7F51;&#x4E0D;&#x4EC5;&#x9762;&#x4E34;&#x51B2;&#x7A81;&#x57DF;&#x592A;&#x5927;&#x548C;&#x5E7F;&#x64AD;&#x57DF;&#x592A;&#x5927;&#x4E24;&#x5927;&#x96BE;&#x9898;&#xFF0C;&#x800C;&#x4E14;&#x65E0;&#x6CD5;&#x4FDD;&#x969C;&#x4F20;&#x8F93;&#x4FE1;&#x606F;&#x7684;&#x5B89;&#x5168;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x6269;&#x5C55;&#x4F20;&#x7EDF;LAN&#xFF0C;&#x4EE5;&#x63A5;&#x5165;&#x66F4;&#x591A;&#x8BA1;&#x7B97;&#x673A;&#xFF0C;&#x540C;&#x65F6;&#x907F;&#x514D;&#x51B2;&#x7A81;&#x7684;&#x6076;&#x5316;&#xFF0C;&#x51FA;&#x73B0;&#x4E86;&#x7F51;&#x6865;&#x548C;&#x4E8C;&#x5C42;&#x4EA4;&#x6362;&#x673A;&#xFF0C;&#x5B83;&#x4EEC;&#x80FD;&#x6709;&#x6548;&#x9694;&#x79BB;&#x51B2;&#x7A81;&#x57DF;&#x3002;&#x7F51;&#x6865;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x91C7;&#x7528;&#x4EA4;&#x6362;&#x65B9;&#x5F0F;&#x5C06;&#x6765;&#x81EA;&#x5165;&#x7AEF;&#x53E3;&#x7684;&#x4FE1;&#x606F;&#x8F6C;&#x53D1;&#x5230;&#x51FA;&#x7AEF;&#x53E3;&#x4E0A;&#xFF0C;&#x514B;&#x670D;&#x4E86;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x51B2;&#x7A81;&#x95EE;&#x9898;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x91C7;&#x7528;&#x4EA4;&#x6362;&#x673A;&#x8FDB;&#x884C;&#x7EC4;&#x7F51;&#x65F6;&#xFF0C;&#x5E7F;&#x64AD;&#x57DF;&#x548C;&#x4FE1;&#x606F;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x4F9D;&#x65E7;&#x5B58;&#x5728;&#x3002;</p>
+<p>&#x4E3A;&#x9650;&#x5236;&#x5E7F;&#x64AD;&#x57DF;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x51CF;&#x5C11;&#x5E7F;&#x64AD;&#x6D41;&#x91CF;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x6CA1;&#x6709;&#x4E8C;&#x5C42;&#x4E92;&#x8BBF;&#x9700;&#x6C42;&#x7684;&#x4E3B;&#x673A;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x9694;&#x79BB;&#x3002;&#x8DEF;&#x7531;&#x5668;&#x662F;&#x57FA;&#x4E8E;&#x4E09;&#x5C42;IP&#x5730;&#x5740;&#x4FE1;&#x606F;&#x6765;&#x9009;&#x62E9;&#x8DEF;&#x7531;&#x548C;&#x8F6C;&#x53D1;&#x6570;&#x636E;&#x7684;&#xFF0C; &#x5176;&#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x7F51;&#x6BB5;&#x65F6;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x6291;&#x5236;&#x5E7F;&#x64AD;&#x62A5;&#x6587;&#x7684;&#x8F6C;&#x53D1;&#xFF0C;&#x4F46;&#x6210;&#x672C;&#x8F83;&#x9AD8;&#x3002;&#x56E0;&#x6B64;&#xFF0C; &#x4EBA;&#x4EEC;&#x8BBE;&#x60F3;&#x5728;&#x7269;&#x7406;&#x5C40;&#x57DF;&#x7F51;&#x4E0A;&#x6784;&#x5EFA;&#x591A;&#x4E2A;&#x903B;&#x8F91;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;&#x5373;VLAN&#x3002;</p>
+<h2 id="2-vlan&#x6280;&#x672F;">2. VLAN&#x6280;&#x672F;</h2>
+<p><img src="../../assets/vlan2.png" alt=""></p>
+<ul>
+<li>VLAN&#x80FD;&#x591F;&#x9694;&#x79BB;&#x5E7F;&#x64AD;&#x57DF;</li>
+</ul>
+<p>VLAN&#x6280;&#x672F;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x5C40;&#x57DF;&#x7F51;&#x5728;&#x903B;&#x8F91;&#x4E0A;&#x5212;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5E7F;&#x64AD;&#x57DF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x591A;&#x4E2A;VLAN&#x3002;VLAN&#x6280;&#x672F;&#x90E8;&#x7F72;&#x5728;&#x6570;&#x636E;&#x94FE;&#x8DEF;&#x5C42;&#xFF0C;&#x7528;&#x4E8E;&#x9694;&#x79BB;&#x4E8C;&#x5C42;&#x6D41;&#x91CF;&#x3002;&#x540C;&#x4E00;&#x4E2A;VLAN&#x5185;&#x7684;&#x4E3B;&#x673A;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x5E7F;&#x64AD;&#x57DF;&#xFF0C;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x4E8C;&#x5C42;&#x901A;&#x4FE1;&#x3002; &#x800C;VLAN&#x95F4;&#x7684;&#x4E3B;&#x673A;&#x5C5E;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x5E7F;&#x64AD;&#x57DF;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5B9E;&#x73B0;&#x4E8C;&#x5C42;&#x4E92;&#x901A;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5E7F;&#x64AD;&#x62A5;&#x6587;&#x5C31;&#x88AB;&#x9650;&#x5236;&#x5728;&#x5404;&#x4E2A;&#x76F8;&#x5E94;&#x7684;VLAN&#x5185;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x63D0;&#x9AD8;&#x4E86;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x6027;&#x3002;</p>
+<p>&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x539F;&#x672C;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x5E7F;&#x64AD;&#x57DF;&#x7684;&#x4E3B;&#x673A;&#x88AB;&#x5212;&#x5206;&#x5230;&#x4E86;&#x4E24;&#x4E2A;VLAN&#x4E2D;&#xFF0C;&#x5373;&#xFF0C;VLAN1&#x548C;VLAN2&#x3002;VLAN&#x5185;&#x90E8;&#x7684;&#x4E3B;&#x673A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x4E8C;&#x5C42;&#x4E92;&#x76F8;&#x901A;&#x4FE1;&#xFF0C;VLAN1&#x548C;VLAN2&#x4E4B;&#x95F4;&#x7684;&#x4E3B;&#x673A;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x5B9E;&#x73B0;&#x4E8C;&#x5C42;&#x901A;&#x4FE1;&#x3002;</p>
+<h2 id="3-&#x94FE;&#x8DEF;&#x7C7B;&#x578B;">3. &#x94FE;&#x8DEF;&#x7C7B;&#x578B;</h2>
+<p><img src="../../assets/vlan3.png" alt=""></p>
+<ul>
+<li><strong>&#x7528;&#x6237;&#x4E3B;&#x673A;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x4E4B;&#x95F4;&#x7684;&#x94FE;&#x8DEF;&#x4E3A;&#x63A5;&#x5165;&#x94FE;&#x8DEF;&#xFF0C;&#x4EA4;&#x6362;&#x673A;&#x4E0E;&#x4EA4;&#x6362;&#x673A;&#x4E4B;&#x95F4;&#x7684;&#x94FE;&#x8DEF;&#x4E3A;&#x5E72;&#x9053;&#x94FE;&#x8DEF;&#x3002;</strong></li>
+</ul>
+<p>VLAN&#x94FE;&#x8DEF;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;<strong>Access&#x94FE;&#x8DEF;</strong>&#x548C;<strong>Trunk&#x94FE;&#x8DEF;&#x3002;</strong></p>
+<p><strong>&#x63A5;&#x5165;&#x94FE;&#x8DEF;(Access Link)&#xFF1A;</strong>&#x8FDE;&#x63A5;&#x7528;&#x6237;&#x4E3B;&#x673A;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x94FE;&#x8DEF;&#x79F0;&#x4E3A;&#x63A5;&#x5165;&#x94FE;&#x8DEF;&#x3002;</p>
+<p>&#x5982;&#x672C;&#x4F8B;&#x6240;&#x793A;&#xFF0C;&#x56FE;&#x4E2D;&#x4E3B;&#x673A;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x4E4B;&#x95F4;&#x7684;&#x94FE;&#x8DEF;&#x90FD;&#x662F;&#x63A5;&#x5165;&#x94FE;&#x8DEF;&#x3002;</p>
+<p><strong>&#x5E72;&#x9053;&#x94FE;&#x8DEF;(Trunk Link)&#xFF1A;</strong>&#x8FDE;&#x63A5;&#x4EA4;&#x6362;&#x673A;&#x548C;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x94FE;&#x8DEF;&#x79F0;&#x4E3A;&#x5E72;&#x9053;&#x94FE;&#x8DEF;&#x3002;</p>
+<p>&#x5982;&#x672C;&#x4F8B;&#x6240;&#x793A;&#xFF0C;&#x56FE;&#x4E2D;&#x4EA4;&#x6362;&#x673A;&#x4E4B;&#x95F4;&#x7684;&#x94FE;&#x8DEF;&#x90FD;&#x662F;&#x5E72;&#x9053;&#x94FE;&#x8DEF;&#x3002;</p>
+<h2 id="4-vlan&#x5212;&#x5206;&#x65B9;&#x6CD5;">4. VLAN&#x5212;&#x5206;&#x65B9;&#x6CD5;</h2>
+<p><img src="../../assets/vlan4.png" alt=""></p>
+<ul>
+<li>&#x57FA;&#x4E8E;&#x7AEF;&#x53E3;&#x7684;VLAN&#x5212;&#x5206;&#x65B9;&#x6CD5;&#x5728;&#x5B9E;&#x9645;&#x4E2D;&#x6700;&#x4E3A;&#x5E38;&#x89C1;&#x3002;</li>
+</ul>
+<p>VLAN&#x7684;&#x5212;&#x5206;&#x5E38;&#x7528;&#x65B9;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<ul>
+<li><strong>&#x57FA;&#x4E8E;&#x7AEF;&#x53E3;&#x5212;&#x5206;&#xFF1A;</strong>&#x6839;&#x636E;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x7AEF;&#x53E3;&#x7F16;&#x53F7;&#x6765;&#x5212;&#x5206;VLAN&#x3002;&#x901A;&#x8FC7;&#x4E3A;&#x4EA4;&#x6362;&#x673A;&#x7684;&#x6BCF;&#x4E2A;&#x7AEF;&#x53E3;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;PVID&#xFF08;Port VLAN ID&#xFF0C;&#x5373;&#x7AEF;&#x53E3;VLAN ID&#xFF09;&#xFF0C;&#x6765;&#x5C06;&#x4E0D;&#x540C;&#x7AEF;&#x53E3;&#x5212;&#x5206;&#x5230;VLAN&#x4E2D;&#x3002;&#x4F46;&#x662F;&#x5F53;&#x4E3B;&#x673A;&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x914D;&#x7F6E;VLAN&#x3002;</li>
+<li><strong>&#x57FA;&#x4E8E;MAC&#x5730;&#x5740;&#x5212;&#x5206;&#xFF1A;</strong>&#x6839;&#x636E;&#x4E3B;&#x673A;&#x7F51;&#x5361;&#x7684;MAC&#x5730;&#x5740;&#x5212;&#x5206;VLAN&#x3002;&#x6B64;&#x5212;&#x5206;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x5458;&#x63D0;&#x524D;&#x914D;&#x7F6E;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x4E3B;&#x673A;MAC&#x5730;&#x5740;&#x548C;VLAN ID&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x3002;&#x5728;&#x4F7F;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x914D;&#x7F6E;VLAN&#x65F6;&#xFF0C;&#x5373;&#x4F7F;&#x4E3B;&#x673A;&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x914D;&#x7F6E;VLAN&#x3002;</li>
+</ul>
+<h2 id="5-vlan&#x914D;&#x7F6E;">5. VLAN&#x914D;&#x7F6E;</h2>
+<h3 id="51-&#x521B;&#x5EFA;vlan&#x5728;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x5212;&#x5206;vlan&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x9996;&#x5148;&#x521B;&#x5EFA;vlan&#x3002;&#x5728;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x6267;&#x884C;vlan-vlanid&#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA;vlan&#x3002;">5.1 &#x521B;&#x5EFA;VLAN<img src="../../assets/vlan5.png" alt="">&#x5728;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x5212;&#x5206;VLAN&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x9996;&#x5148;&#x521B;&#x5EFA;VLAN&#x3002;&#x5728;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x6267;&#x884C;<strong>vlan &lt;vlan-id&gt;</strong>&#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA;VLAN&#x3002;</h3>
+<p>&#x5982;&#x672C;&#x4F8B;&#x6240;&#x793A;&#xFF0C;&#x6267;&#x884C;vlan 10&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x5C31;&#x521B;&#x5EFA; &#x4E86;VLAN 10&#xFF0C;&#x5E76;&#x8FDB;&#x5165;&#x4E86;VLAN 10&#x89C6;&#x56FE;&#x3002;</p>
+<p><strong>VLAN ID&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;1&#x5230;4094&#x3002; </strong></p>
+<p>&#x5982;&#x9700;&#x521B;&#x5EFA;&#x591A;&#x4E2A;VLAN&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4EA4;&#x6362;&#x673A;&#x4E0A;&#x6267;&#x884C;<strong>vlan batch { vlan- id1 [ to vlan-id2 ] }</strong>&#x547D;&#x4EE4;&#xFF0C;&#x4EE5;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;VLAN&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x6267;&#x884C;<strong>vlan batch { vlan-id1 vlan-id2 }</strong>&#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;VLAN&#xFF0C;VLAN&#x53F7;&#x4E4B;&#x95F4;&#x9700;&#x8981;&#x6709;&#x7A7A;&#x683C;&#x3002;</p>
+<p><strong>&#x914D;&#x7F6E;&#x9A8C;&#x8BC1;&#xFF1A;</strong></p>
+<p><img src="../../assets/vlan6.png" alt="">&#x521B;&#x5EFA;VLAN&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;<strong>display vlan</strong>&#x547D;&#x4EE4;&#x9A8C;&#x8BC1;&#x914D;&#x7F6E;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x8BE5;&#x547D;&#x4EE4;&#x5C06;&#x663E;&#x793A;&#x6240;&#x6709;VLAN&#x7684;&#x7B80;&#x8981;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6267;&#x884C;<strong>display vlan [ vlan-id [ verbose ] ]</strong>&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6307;&#x5B9A;VLAN&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;VLAN ID&#x3001;&#x7C7B;&#x578B;&#x3001;&#x63CF;&#x8FF0;&#x3001;VLAN&#x7684;&#x72B6;&#x6001;&#x3001;VLAN&#x4E2D;&#x7684;&#x7AEF;&#x53E3;&#x3001; &#x4EE5;&#x53CA;VLAN&#x4E2D;&#x7AEF;&#x53E3;&#x7684;&#x6A21;&#x5F0F;&#x7B49;&#x3002;</p>
+<p>&#x6267;&#x884C;<strong>display vlan vlan-id statistics</strong>&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6307;&#x5B9A;VLAN&#x4E2D;&#x7684;&#x6D41;&#x91CF;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6267;&#x884C;<strong>display vlan summary</strong>&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;VLAN&#x7684;&#x6C47;&#x603B;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="52-&#x914D;&#x7F6E;access&#x7AEF;&#x53E3;">5.2 &#x914D;&#x7F6E;Access&#x7AEF;&#x53E3;</h3>
+<p><img src="../../assets/vlan7.png" alt=""></p>
+<p>&#x914D;&#x7F6E;&#x7AEF;&#x53E3;&#x7C7B;&#x578B;&#x7684;&#x547D;&#x4EE4;&#x662F;<strong>port link-type &lt;type&gt;</strong>&#xFF0C;type&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E3A;<strong>Access&#xFF0C; Trunk&#x6216;Hybrid&#x3002;</strong></p>
+<h3 id="53-&#x6DFB;&#x52A0;&#x7AEF;&#x53E3;&#x5230;vlan">5.3 &#x6DFB;&#x52A0;&#x7AEF;&#x53E3;&#x5230;VLAN</h3>
+<p><img src="../../assets/vlan8.png" alt="">&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x628A;&#x7AEF;&#x53E3;&#x52A0;&#x5165;&#x5230;VLAN&#x3002;</p>
+<ol>
+<li>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x8FDB;&#x5165;&#x5230;VLAN&#x89C6;&#x56FE;&#xFF0C;&#x6267;&#x884C;<strong>port &lt;interface&gt;</strong>&#x547D;&#x4EE4;&#xFF0C;&#x628A;&#x7AEF;&#x53E3;&#x52A0;&#x5165;VLAN&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x8FDB;&#x5165;&#x5230;&#x63A5;&#x53E3;&#x89C6;&#x56FE;&#xFF0C;&#x6267;&#x884C;<strong>port default vlan &lt;vlan-id&gt;</strong>&#x547D;&#x4EE4;&#xFF0C; &#x628A;&#x7AEF;&#x53E3;&#x52A0;&#x5165;VLAN&#x3002;vlan-id&#x662F;&#x6307;&#x7AEF;&#x53E3;&#x8981;&#x52A0;&#x5165;&#x7684;VLAN&#x3002;</li>
+</ol>
+<p><strong>&#x914D;&#x7F6E;&#x9A8C;&#x8BC1;&#xFF1A;</strong></p>
+<p><img src="../../assets/vlan9.png" alt="">&#x6267;&#x884C;<strong>display vlan</strong>&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x786E;&#x8BA4;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x52A0;&#x5165;&#x5230;VLAN&#x4E2D;&#x3002;&#x5728;&#x672C;&#x793A;&#x4F8B;&#x4E2D; &#xFF0C; &#x7AEF;&#x53E3;GigabitEthernet0/0/5&#x548C;GigabitEthernet0/0/7&#x5206; &#x522B;&#x52A0; &#x5165; &#x4E86;VLAN 3&#x548C;VLAN 2&#x3002;</p>
+<h3 id="54-&#x914D;&#x7F6E;trunk&#x7AEF;&#x53E3;">5.4 &#x914D;&#x7F6E;trunk&#x7AEF;&#x53E3;</h3>
+<p><img src="../../assets/trunk1.png" alt="">&#x914D;&#x7F6E;Trunk&#x65F6;&#xFF0C;&#x5E94;&#x5148;&#x4F7F;&#x7528;<strong>port link-type trunk</strong>&#x547D;&#x4EE4;&#x4FEE;&#x6539;&#x7AEF;&#x53E3;&#x7684;&#x7C7B;&#x578B;&#x4E3A;Trunk&#xFF0C;&#x7136;&#x540E;&#x518D;&#x914D;&#x7F6E;Trunk&#x7AEF;&#x53E3;&#x5141;&#x8BB8;&#x54EA;&#x4E9B;VLAN&#x7684;&#x6570;&#x636E;&#x5E27;&#x901A;&#x8FC7;&#x3002;&#x6267;&#x884C;<strong>port trunk allow-pass vlan { { vlan-id1 [ to vlan-id2 ] } | all }</strong>&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x7AEF;&#x53E3;&#x5141;&#x8BB8;&#x7684;VLAN&#xFF0C;<strong>all&#x8868;&#x793A;&#x5141;&#x8BB8;&#x6240;&#x6709;VLAN&#x7684;&#x6570;&#x636E;&#x5E27;&#x901A;&#x8FC7;&#x3002;</strong></p>
+<p>&#x5728;&#x672C;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5C06;SWA&#x7684;G0/0/1&#x7AEF;&#x53E3;&#x914D;&#x7F6E;&#x4E3A;Trunk&#x7AEF;&#x53E3;&#x3002;<strong>&#x914D;&#x7F6E;port trunk allow-pass vlan 2 3&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#xFF0C;&#x8BE5;Trunk&#x5141;&#x8BB8; VLAN 2&#x548C;VLAN 3&#x7684;&#x6570;&#x636E;&#x6D41;&#x91CF;&#x901A;&#x8FC7;&#x3002;</strong></p>
+<p><strong>&#x914D;&#x7F6E;&#x9A8C;&#x8BC1;&#xFF1A;</strong></p>
+<p><img src="../../assets/trunk2.png" alt="">&#x6267;&#x884C;<strong>display vlan</strong>&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x914D;&#x7F6E;&#x3002;TG&#x8868;&#x660E;&#x8BE5;&#x7AEF;&#x53E3;&#x5728;&#x8F6C;&#x53D1;&#x5BF9;&#x5E94;VLAN&#x7684;&#x6570;&#x636E;&#x5E27;&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x5265;&#x79BB;&#x6807;&#x7B7E;&#xFF0C;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x8F6C;&#x53D1;&#xFF0C;&#x8BE5;&#x7AEF;&#x53E3;&#x53EF;&#x4EE5;&#x662F;Trunk&#x7AEF;&#x53E3;&#x6216;&#x5E26;&#x6807;&#x7B7E;&#x7684;Hybrid&#x7AEF;&#x53E3;&#x3002;&#x672C;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;GigabitEthernet0/0/1&#x5728;&#x8F6C;&#x53D1;VLAN 2&#x548C;VLAN 3&#x7684;&#x6D41;&#x91CF;&#x65F6;&#xFF0C;&#x4E0D;&#x5265;&#x79BB;&#x6807;&#x7B7E;&#xFF0C;&#x76F4;&#x63A5;&#x8F6C;&#x53D1;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../wang-luo-ji-zhu/vlanji-zhu.html" class="navigation navigation-prev " aria-label="Previous page: VLAN技术"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../wang-luo-ji-zhu/vlanji-zhu/vlanjian-lu-you.html" class="navigation navigation-next " aria-label="Next page: VLAN间路由"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"toggle-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python运维加强 -->
+</html>
