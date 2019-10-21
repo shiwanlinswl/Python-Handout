@@ -1,0 +1,1611 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Python爬虫课程讲义 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>12306购票抓包分析以及任务分解 | Python爬虫课程讲义</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="author" content="BigCat">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../files/09-项目-12306购票（requests）/2.处理验证码并完成登陆.html" />
+    
+    
+    <link rel="prev" href="../../files/09-项目-12306购票（requests）/index.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="9.1"
+        data-chapter-title="12306购票抓包分析以及任务分解"
+        data-filepath="files/09-项目-12306购票（requests）/1.12306购票抓包分析以及任务分解.md"
+        data-basepath="../.."
+        data-revision="Thu Feb 28 2019 03:09:16 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        传智播客Python学科爬虫课件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="files/01-爬虫基础/index.html">
+            
+                
+                    <a href="../../files/01-爬虫基础/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        网络爬虫知识基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="files/01-爬虫基础/1.爬虫概述.html">
+            
+                
+                    <a href="../../files/01-爬虫基础/1.爬虫概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫概述与分类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="files/01-爬虫基础/2.通用爬虫和聚焦爬虫.html">
+            
+                
+                    <a href="../../files/01-爬虫基础/2.通用爬虫和聚焦爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        (了解) 通用爬虫和聚焦爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="files/01-爬虫基础/3.爬虫基础知识.html">
+            
+                
+                    <a href="../../files/01-爬虫基础/3.爬虫基础知识.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        爬虫基础知识
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="files/01-爬虫基础/4.http协议复习.html">
+            
+                
+                    <a href="../../files/01-爬虫基础/4.http协议复习.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        (复习) http协议复习
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="files/02-requests模块/index.html">
+            
+                
+                    <a href="../../files/02-requests模块/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        HTTP请求处理工具：requests
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="files/02-requests模块/requests模块1.html">
+            
+                
+                    <a href="../../files/02-requests模块/requests模块1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        requests模块处理的基本使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="files/02-requests模块/requests模块2.html">
+            
+                
+                    <a href="../../files/02-requests模块/requests模块2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        requests模块处理Cookie和Proxy高级功能
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="files/02-requests模块/requests模块3.html">
+            
+                
+                    <a href="../../files/02-requests模块/requests模块3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        requests模块处理post请求与session会话保持
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="files/03-数据提取/index.html">
+            
+                
+                    <a href="../../files/03-数据提取/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        HTTP数据提取工具：jsonpath 和 lxml/xpath
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="files/03-数据提取/1.数据提取概述.html">
+            
+                
+                    <a href="../../files/03-数据提取/1.数据提取概述.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        数据提取概述
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="files/03-数据提取/2.数据提取-jsonpath模块.html">
+            
+                
+                    <a href="../../files/03-数据提取/2.数据提取-jsonpath模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        数据提取-jsonpath模块
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="files/03-数据提取/3.数据提取-lxml模块.html">
+            
+                
+                    <a href="../../files/03-数据提取/3.数据提取-lxml模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        数据提取-lxml模块
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="files/04-selenium的使用/index.html">
+            
+                
+                    <a href="../../files/04-selenium的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        web自动化测试工具：selenium
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="files/04-selenium的使用/1.selenium的介绍.html">
+            
+                
+                    <a href="../../files/04-selenium的使用/1.selenium的介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        selenium的介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="files/04-selenium的使用/2.selenium定位获取标签对象并提取数据.html">
+            
+                
+                    <a href="../../files/04-selenium的使用/2.selenium定位获取标签对象并提取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        selenium定位获取标签对象并提取数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="files/04-selenium的使用/3.selenium的其它使用方法.html">
+            
+                
+                    <a href="../../files/04-selenium的使用/3.selenium的其它使用方法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        selenium的其它使用方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="files/05-抓包、反爬与反爬解决方案/index.html">
+            
+                
+                    <a href="../../files/05-抓包、反爬与反爬解决方案/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        抓包、反爬与反爬解决方案
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="files/05-抓包、反爬与反爬解决方案/1.常见的反爬手段、原理以及应对思路.html">
+            
+                
+                    <a href="../../files/05-抓包、反爬与反爬解决方案/1.常见的反爬手段、原理以及应对思路.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        常见的反爬手段、原理以及应对思路
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="files/05-抓包、反爬与反爬解决方案/2.打码平台处理验证码.html">
+            
+                
+                    <a href="../../files/05-抓包、反爬与反爬解决方案/2.打码平台处理验证码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        打码平台处理验证码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="files/05-抓包、反爬与反爬解决方案/3.chrome浏览器的使用.html">
+            
+                
+                    <a href="../../files/05-抓包、反爬与反爬解决方案/3.chrome浏览器的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        chrome浏览器的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="files/05-抓包、反爬与反爬解决方案/4.js2py模块的使用.html">
+            
+                
+                    <a href="../../files/05-抓包、反爬与反爬解决方案/4.js2py模块的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        js2py模块的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="files/05-抓包、反爬与反爬解决方案/5.cookie池和代理池.html">
+            
+                
+                    <a href="../../files/05-抓包、反爬与反爬解决方案/5.cookie池和代理池.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        cookie池和代理池
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="files/06-mongodb数据库/index.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        MongoDB数据库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="files/06-mongodb数据库/1.mongodb介绍和安装.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/1.mongodb介绍和安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        mongodb介绍和安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="files/06-mongodb数据库/2.mongodb的简单使用.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/2.mongodb的简单使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        mongodb的简单使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="files/06-mongodb数据库/3.mongodb的增删改查.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/3.mongodb的增删改查.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        mongodb的增删改查
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="files/06-mongodb数据库/4.mongodb的索引操作.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/4.mongodb的索引操作.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        mongodb的索引操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="files/06-mongodb数据库/5.mongodb的权限管理.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/5.mongodb的权限管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        mongodb的权限管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="files/06-mongodb数据库/6.mongodb和python交互（pymongo模块的使用）.html">
+            
+                
+                    <a href="../../files/06-mongodb数据库/6.mongodb和python交互（pymongo模块的使用）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        mongodb和python交互（pymongo模块的使用）
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="files/07-scrapy爬虫框架/index.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Scrapy爬虫框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="files/07-scrapy爬虫框架/1.scrapy的概念作用和工作流程.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/1.scrapy的概念作用和工作流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        scrapy的概念作用和工作流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="files/07-scrapy爬虫框架/2.scrapy的入门使用.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/2.scrapy的入门使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        scrapy的入门使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="files/07-scrapy爬虫框架/3.scrapy构造并发送请求.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/3.scrapy构造并发送请求.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        scrapy构造并发送请求
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="files/07-scrapy爬虫框架/4.scrapy模拟登陆.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/4.scrapy模拟登陆.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        scrapy模拟登陆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="files/07-scrapy爬虫框架/5.scrapy管道的使用.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/5.scrapy管道的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        scrapy管道的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="files/07-scrapy爬虫框架/6.scrapy中间件的使用.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/6.scrapy中间件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        scrapy中间件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="files/07-scrapy爬虫框架/7.scrapy_redis概念作用和流程.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/7.scrapy_redis概念作用和流程.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        scrapy_redis概念作用和流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="files/07-scrapy爬虫框架/8.scrapy_redis原理分析并实现断点续爬以及分布式爬虫.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/8.scrapy_redis原理分析并实现断点续爬以及分布式爬虫.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        scrapy_redis原理分析并实现断点续爬以及分布式爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="files/07-scrapy爬虫框架/9.scrapy_splash组件的使用.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/9.scrapy_splash组件的使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        scrapy_splash组件的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="files/07-scrapy爬虫框架/10.scrapy的日志信息与配置.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/10.scrapy的日志信息与配置.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.10.</b>
+                        
+                        scrapy的日志信息与配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.11" data-path="files/07-scrapy爬虫框架/11.scrapyd部署scrapy项目.html">
+            
+                
+                    <a href="../../files/07-scrapy爬虫框架/11.scrapyd部署scrapy项目.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.11.</b>
+                        
+                        scrapyd部署scrapy项目
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="files/08-appium的使用/index.html">
+            
+                
+                    <a href="../../files/08-appium的使用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        移动端APP自动化测试工具：appium
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="files/08-appium的使用/1.appium环境安装.html">
+            
+                
+                    <a href="../../files/08-appium的使用/1.appium环境安装.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        appium环境安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="files/08-appium的使用/2.利用appium自动控制移动设备并提取数据.html">
+            
+                
+                    <a href="../../files/08-appium的使用/2.利用appium自动控制移动设备并提取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        利用appium自动控制移动设备并提取数据
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="files/09-项目-12306购票（requests）/index.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        项目：12306购票（requests）
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="9.1" data-path="files/09-项目-12306购票（requests）/1.12306购票抓包分析以及任务分解.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/1.12306购票抓包分析以及任务分解.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        12306购票抓包分析以及任务分解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="files/09-项目-12306购票（requests）/2.处理验证码并完成登陆.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/2.处理验证码并完成登陆.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        处理验证码并完成登陆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="files/09-项目-12306购票（requests）/3.解析车站信息以及车辆信息.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/3.解析车站信息以及车辆信息.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        解析车站信息以及车辆信息
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="files/09-项目-12306购票（requests）/4.预定订单初始化、解析用户信息以及坐席信息.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/4.预定订单初始化、解析用户信息以及坐席信息.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        预定订单初始化、解析用户信息以及坐席信息
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="files/09-项目-12306购票（requests）/5.构造时间参数以及下单购票.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/5.构造时间参数以及下单购票.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        构造时间参数以及下单购票
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="files/09-项目-12306购票（requests）/6.测试运行以及完整代码.html">
+            
+                
+                    <a href="../../files/09-项目-12306购票（requests）/6.测试运行以及完整代码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        测试运行以及完整代码
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="files/10-项目-国家企业公示网（selenium）/index.html">
+            
+                
+                    <a href="../../files/10-项目-国家企业公示网（selenium）/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        项目：国家企业公示网（selenium）
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="files/10-项目-国家企业公示网（selenium）/1.项目分析.html">
+            
+                
+                    <a href="../../files/10-项目-国家企业公示网（selenium）/1.项目分析.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        项目分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="files/10-项目-国家企业公示网（selenium）/2.webapi实现.html">
+            
+                
+                    <a href="../../files/10-项目-国家企业公示网（selenium）/2.webapi实现.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        webapi实现
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="files/10-项目-国家企业公示网（selenium）/3.node_server节点任务调度.html">
+            
+                
+                    <a href="../../files/10-项目-国家企业公示网（selenium）/3.node_server节点任务调度.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        node_server节点任务调度
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="files/10-项目-国家企业公示网（selenium）/4.crawler爬虫抓取数据.html">
+            
+                
+                    <a href="../../files/10-项目-国家企业公示网（selenium）/4.crawler爬虫抓取数据.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                        crawler爬虫抓取数据
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="files/10-项目-国家企业公示网（selenium）/5.运行效果.html">
+            
+                
+                    <a href="../../files/10-项目-国家企业公示网（selenium）/5.运行效果.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.</b>
+                        
+                        运行效果
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="files/duanzi/duanzi.html">
+            
+                
+                    <a href="../../files/duanzi/duanzi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        课余段子
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Python爬虫课程讲义</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="12306&#x8D2D;&#x7968;&#x6293;&#x5305;&#x5206;&#x6790;&#x4EE5;&#x53CA;&#x4EFB;&#x52A1;&#x5206;&#x89E3;">12306&#x8D2D;&#x7968;&#x6293;&#x5305;&#x5206;&#x6790;&#x4EE5;&#x53CA;&#x4EFB;&#x52A1;&#x5206;&#x89E3;</h2>
+<h5 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;&#xFF1A;">&#x5B66;&#x4E60;&#x76EE;&#x6807;&#xFF1A;</h5>
+<ol>
+<li>&#x4E86;&#x89E3; 12306&#x6293;&#x5305;&#x8FC7;&#x7A0B;</li>
+</ol>
+<hr>
+<h3 id="11-&#x6293;&#x5305;&#x5206;&#x6790;">1.1 &#x6293;&#x5305;&#x5206;&#x6790;</h3>
+<blockquote>
+<p>&#x4F7F;&#x7528;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x6216;fiddler&#x7B49;&#x6293;&#x5305;&#x5DE5;&#x5177;&#x5B8C;&#x6210;&#x767B;&#x9646;&#x4EE5;&#x53CA;&#x8D2D;&#x7968;&#x64CD;&#x4F5C;&#xFF0C;&#x8FDB;&#x884C;&#x6293;&#x5305;&#xFF0C;&#x6839;&#x636E; <code>&#x5177;&#x6709;&#x4E1A;&#x52A1;&#x4F5C;&#x7528;</code> &#x6216; <code>&#x88AB;set-cookie</code> &#x786E;&#x5B9A;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+</blockquote>
+<ol>
+<li>url</li>
+<li>query</li>
+<li>method</li>
+<li>data</li>
+<li>Referer</li>
+<li>response.text / response.json()</li>
+</ol>
+<h4 id="111-httpswww12306cnindex">1.1.1 <code>https://www.12306.cn/index/</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;cookies</p>
+</blockquote>
+<ul>
+<li>GET</li>
+</ul>
+<h4 id="112-httpskyfw12306cnotnloginconf">1.1.2 <code>https://kyfw.12306.cn/otn/login/conf</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;cookies</p>
+</blockquote>
+<ul>
+<li>POST</li>
+<li>data &#x65E0;</li>
+<li>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></li>
+</ul>
+<h4 id="113-httpskyfw12306cnotnindex12306getloginbanner">1.1.3 <code>https://kyfw.12306.cn/otn/index12306/getLoginBanner</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;cookies</p>
+</blockquote>
+<ul>
+<li><p>GET</p>
+</li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code class="lang-json">{<span class="hljs-string">&quot;validateMessagesShowId&quot;</span>:<span class="hljs-string">&quot;_validatorMessage&quot;</span>,<span class="hljs-string">&quot;status&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;httpstatus&quot;</span>:<span class="hljs-number">200</span>,<span class="hljs-string">&quot;data&quot;</span>:...
+</code></pre>
+</li>
+</ul>
+<h4 id="114-httpskyfw12306cnpassportwebauthuamtkstatic">1.1.4 <code>https://kyfw.12306.cn/passport/web/auth/uamtk-static</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;cookies&#xFF0C;&#x68C0;&#x67E5;&#x7528;&#x6237;&#x662F;&#x5426;&#x767B;&#x5F55;</p>
+</blockquote>
+<ul>
+<li><p>POST </p>
+</li>
+<li><p>data </p>
+<pre><code>{&apos;appid&apos;: &apos;otn&apos;}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;result_message&quot;:&quot;&#x7528;&#x6237;&#x672A;&#x767B;&#x5F55;&quot;,&quot;result_code&quot;:1}
+</code></pre></li>
+</ul>
+<h4 id="115-httpskyfw12306cnpassportwebcreateqr64">1.1.5 <code>https://kyfw.12306.cn/passport/web/create-qr64</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;cookies&#xFF0C;&#x83B7;&#x53D6;&#x767B;&#x5F55;&#x4E8C;&#x7EF4;&#x7801;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data </p>
+<pre><code>{&apos;appid&apos;: &apos;otn&apos;}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;result_message&quot;:&quot;&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x6210;&#x529F;&quot;,&quot;result_code&quot;:&quot;0&quot;,&quot;image&quot;:&quot;iVBO...&quot;,&quot;uuid&quot;:&quot;...&quot;}
+</code></pre><ul>
+<li>uuid</li>
+</ul>
+</li>
+</ul>
+<h4 id="116-httpskyfw12306cnpassportwebcheckqr">1.1.6 <code>https://kyfw.12306.cn/passport/web/checkqr</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;cookies&#xFF0C;&#x67E5;&#x8BE2;&#x4E8C;&#x7EF4;&#x7801;&#x72B6;&#x6001;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;appid&apos;: &apos;otn&apos;, &apos;uuid&apos;: uuid}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;result_message&quot;:&quot;&#x4E8C;&#x7EF4;&#x7801;&#x72B6;&#x6001;&#x67E5;&#x8BE2;&#x6210;&#x529F;&quot;,&quot;result_code&quot;:&quot;0&quot;}
+</code></pre></li>
+</ul>
+<h4 id="117-httpskyfw12306cnpassportcaptchacaptchaimage64loginsiteemoduleloginrandsjrand">1.1.7 <code>https://kyfw.12306.cn/passport/captcha/captcha-image64?login_site=E&amp;module=login&amp;rand=sjrand&amp;_={}</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;&#x9A8C;&#x8BC1;&#x7801;&#x56FE;&#x7247;</p>
+</blockquote>
+<ul>
+<li><p>GET</p>
+</li>
+<li><p>query </p>
+<ul>
+<li><code>str(time.time() * 1000)[:-5]</code> 13&#x4F4D;&#x65F6;&#x95F4;&#x6233;</li>
+</ul>
+</li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;result_message&quot;:&quot;&#x751F;&#x6210;&#x9A8C;&#x8BC1;&#x7801;&#x6210;&#x529F;&quot;,&quot;result_code&quot;:&quot;0&quot;,&quot;image&quot;:&quot;/9j...&quot;}
+</code></pre><ul>
+<li>image&#xFF1A;base64 &#x56FE;&#x7247;&#x7F16;&#x7801;</li>
+</ul>
+</li>
+</ul>
+<h4 id="118-httpskyfw12306cnpassportcaptchacaptchacheckanswerrandsjrandloginsitee">1.1.8 <code>https://kyfw.12306.cn/passport/captcha/captcha-check?answer={}&amp;rand=sjrand&amp;login_site=E&amp;_={}</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x9A8C;&#x8BC1;&#x56FE;&#x7247;&#x9A8C;&#x8BC1;&#x7801;</p>
+</blockquote>
+<ul>
+<li>GET</li>
+<li><p>query </p>
+<ul>
+<li>answer &#x56FE;&#x7247;&#x9A8C;&#x8BC1;&#x7801;&#x5750;&#x6807;</li>
+<li><code>str(time.time() * 1000)[:-5]</code> 13&#x4F4D;&#x65F6;&#x95F4;&#x6233;</li>
+</ul>
+</li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&apos;result_message&apos;: &apos;&#x9A8C;&#x8BC1;&#x7801;&#x6821;&#x9A8C;&#x6210;&#x529F;&apos;, &apos;result_code&apos;: &apos;4&apos;}
+</code></pre></li>
+</ul>
+<h4 id="119-httpskyfw12306cnpassportweblogin">1.1.9 <code>https://kyfw.12306.cn/passport/web/login</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x767B;&#x5F55;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;username&apos;: username,
+&apos;password&apos;: password,
+&apos;appid&apos;: &apos;otn&apos;,
+&apos;answer&apos;: answer} # &#x56FE;&#x7247;&#x9A8C;&#x8BC1;&#x7801;&#x5750;&#x6807; 1.8&#x5C0F;&#x7ED3;
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;result_message&quot;:&quot;&#x767B;&#x5F55;&#x6210;&#x529F;&quot;,&quot;result_code&quot;:0,&quot;uamtk&quot;:&quot;mZflRtMjLW9f7tIDMvjiZR0qp5uuO3zJQBHeCHvMrxssd1210&quot;}
+</code></pre></li>
+</ul>
+<h4 id="1110-httpskyfw12306cnotnloginuserlogin">1.1.10 <code>https://kyfw.12306.cn/otn/login/userLogin</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;302&#x8DF3;&#x8F6C;</p>
+</blockquote>
+<ul>
+<li>GET</li>
+<li>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></li>
+</ul>
+<h4 id="1111-httpskyfw12306cnotnpassportredirectotnloginuserlogin">1.1.11 <code>https://kyfw.12306.cn/otn/passport?redirect=/otn/login/userLogin</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8FDB;&#x5165;&#x767B;&#x9646;&#x9875;&#xFF0C;&#x83B7;&#x53D6;cookie&#x6216;&#x884C;&#x4E3A;&#x9A8C;&#x8BC1;</p>
+</blockquote>
+<ul>
+<li>GET</li>
+<li>Referer <code>https://kyfw.12306.cn/otn/resources/login.html</code></li>
+</ul>
+<h4 id="1112-httpskyfw12306cnpassportwebauthuamtk">1.1.12 <code>https://kyfw.12306.cn/passport/web/auth/uamtk</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;newapptk</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;appid&apos;: &apos;otn&apos;}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/passport?redirect=/otn/login/userLogin</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&apos;result_message&apos;: &apos;&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&apos;, &apos;result_code&apos;: 0, &apos;apptk&apos;: None, &apos;newapptk&apos;: &apos;9pHw2HZlkEEoUm_Nc4DJxl1QUk6NdAZqz4DXs3B2mHAga1210&apos;}
+</code></pre><ul>
+<li>newapptk </li>
+</ul>
+</li>
+</ul>
+<h4 id="1113-httpskyfw12306cnotnuamauthclient">1.1.13 <code>https://kyfw.12306.cn/otn/uamauthclient</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x767B;&#x5F55;&#x540E;&#x9A8C;&#x8BC1;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;tk&apos;: newapptk}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/passport?redirect=/otn/login/userLogin</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&apos;apptk&apos;: &apos;9pHw2HZlkEEoUm_Nc4DJxl1QUk6NdAZqz4DXs3B2mHAga1210&apos;, &apos;result_code&apos;: 0, &apos;result_message&apos;: &apos;&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&apos;, &apos;username&apos;: &apos;&#x8D75;&#x8273;&#x79CB;&apos;}
+</code></pre></li>
+</ul>
+<h4 id="1114-httpskyfw12306cnotnresourcesjsframeworkstationnamejsstationversion19076">1.1.14 <code>https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.9076</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x89E3;&#x6790;&#x83B7;&#x53D6;&#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x4FE1;&#x606F;&#x5B57;&#x5178;</p>
+</blockquote>
+<ul>
+<li>GET</li>
+<li>query<ul>
+<li>station_version=1.9076 # &#x968F;&#x7740;&#x56FD;&#x5BB6;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x65B0;&#x589E;&#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#xFF0C;&#x4F1A;&#x65B0;&#x589E;&#x7248;&#x672C;&#x53F7;</li>
+</ul>
+</li>
+</ul>
+<h4 id="1115-httpskyfw12306cnotnleftticketlogleftticketdtotraindatesleftticketdtofromstationsleftticketdtotostationspurposecodesadult">1.1.15 <code>https://kyfw.12306.cn/otn/leftTicket/log?leftTicketDTO.train_date=%s&amp;leftTicketDTO.from_station=%s&amp;leftTicketDTO.to_station=%s&amp;purpose_codes=ADULT</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x67E5;&#x8BE2;&#x8F66;&#x91CF;&#x4FE1;&#x606F;&#x524D;&#x7F6E;&#x64CD;&#x4F5C;</p>
+</blockquote>
+<ul>
+<li>GET</li>
+<li><p>query</p>
+<ul>
+<li>train_data &#x51FA;&#x884C;&#x65F6;&#x95F4; &#x56FA;&#x5B9A;&#x683C;&#x5F0F; <code>2018-12-03</code></li>
+<li>from_station_code &#x51FA;&#x884C;&#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x7F16;&#x7801;</li>
+<li>to_station_code &#x5230;&#x8FBE;&#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x7F16;&#x7801;</li>
+</ul>
+</li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/leftTicket/init</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;validateMessagesShowId&quot;:&quot;_validatorMessage&quot;,&quot;status&quot;:true,&quot;httpstatus&quot;:200,&quot;messages&quot;:[],&quot;validateMessages&quot;:{}}
+</code></pre></li>
+</ul>
+<h4 id="1116-httpskyfw12306cnotnleftticketqueryleftticketdtotraindatesleftticketdtofromstationsleftticketdtotostationspurposecodesadult">1.1.16 <code>https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=%s&amp;leftTicketDTO.from_station=%s&amp;leftTicketDTO.to_station=%s&amp;purpose_codes=ADULT</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x67E5;&#x8BE2;&#x8F66;&#x91CF;&#x4FE1;&#x606F;</p>
+</blockquote>
+<ul>
+<li>GET</li>
+<li><p>query</p>
+<ul>
+<li>train_data &#x51FA;&#x884C;&#x65F6;&#x95F4; &#x56FA;&#x5B9A;&#x683C;&#x5F0F; <code>2018-12-03</code></li>
+<li>from_station_code &#x51FA;&#x884C;&#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x7F16;&#x7801; from &#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x4FE1;&#x606F;&#x5B57;&#x5178;[from_station]</li>
+<li>to_station_code &#x5230;&#x8FBE;&#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x7F16;&#x7801; from &#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x4FE1;&#x606F;&#x5B57;&#x5178;[to_station]</li>
+</ul>
+</li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/leftTicket/init</code></p>
+</li>
+<li>response.json()<ul>
+<li>&#x6B64;&#x5904;&#x9700;&#x8981;&#x89E3;&#x6790;&#x8F66;&#x8F86;&#x4FE1;&#x606F;</li>
+<li>secretStr</li>
+<li>leftTicket</li>
+<li>train_location</li>
+</ul>
+</li>
+</ul>
+<h4 id="1117-httpskyfw12306cnotnlogincheckuser">1.1.17 <code>https://kyfw.12306.cn/otn/login/checkUser</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x68C0;&#x67E5;&#x7528;&#x6237;&#x662F;&#x5426;&#x4FDD;&#x6301;&#x767B;&#x5F55;&#x72B6;&#x6001;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;_json_att&apos;: &apos;&apos;}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/leftTicket/init</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&apos;validateMessagesShowId&apos;: &apos;_validatorMessage&apos;, &apos;status&apos;: True, &apos;httpstatus&apos;: 200, &apos;data&apos;: {&apos;flag&apos;: True}, &apos;messages&apos;: [], &apos;validateMessages&apos;: {}}
+</code></pre></li>
+</ul>
+<h4 id="1118-httpskyfw12306cnotnleftticketsubmitorderrequest">1.1.18 <code>https://kyfw.12306.cn/otn/leftTicket/submitOrderRequest</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x70B9;&#x51FB;&#x9884;&#x5B9A;&#x8F66;&#x7968;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{
+&apos;secretStr&apos;: secretStr,
+&apos;train_date&apos;: train_date,
+&apos;back_train_date&apos;: train_date,
+&apos;tour_flag&apos;: &apos;dc&apos;,  # dc &#x5355;&#x7A0B; wf &#x5F80;&#x8FD4;
+&apos;purpose_codes&apos;: &apos;ADULT&apos;,  # &#x6210;&#x4EBA;
+&apos;query_from_station_name&apos;: from_station, # &#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x4FE1;&#x606F;&#x5B57;&#x5178;[from_station]
+&apos;query_to_station_name&apos;: to_station, # &#x8F66;&#x7AD9;/&#x57CE;&#x5E02;&#x4FE1;&#x606F;&#x5B57;&#x5178;[to_station]
+&apos;undefined&apos;: &apos;&apos;
+}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/leftTicket/init</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;validateMessagesShowId&quot;:&quot;_validatorMessage&quot;,&quot;status&quot;:true,&quot;httpstatus&quot;:200,&quot;data&quot;:&quot;N&quot;,&quot;messages&quot;:[],&quot;validateMessages&quot;:{}}
+</code></pre></li>
+</ul>
+<h4 id="1119-httpskyfw12306cnotnconfirmpassengerinitdc">1.1.19 <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x8BA2;&#x5355;&#x521D;&#x59CB;&#x5316; &#x83B7;&#x53D6;REPEAT_SUBMIT_TOKEN &#x548C; key_check_isChange</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;_json_att&apos;: &apos;&apos;}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/leftTicket/init</code></p>
+</li>
+<li><p>response.text</p>
+<ul>
+<li>repeat_submit_token &#x6B63;&#x5219;&#x83B7;&#x53D6;</li>
+<li>key_check_isChange &#x6B63;&#x5219;&#x83B7;&#x53D6;</li>
+</ul>
+</li>
+</ul>
+<h4 id="1120-httpskyfw12306cnotnconfirmpassengergetpassengerdtos">1.1.20 <code>https://kyfw.12306.cn/otn/confirmPassenger/getPassengerDTOs</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{&apos;_json_att&apos;: &apos;&apos;,
+&apos;REPEAT_SUBMIT_TOKEN&apos;: repeat_submit_token} # 1.1.19&#x83B7;&#x53D6;
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></p>
+</li>
+<li><p>response.json()</p>
+<ul>
+<li><p>&#x9700;&#x8981;&#x89E3;&#x6790;&#x5E76;&#x6784;&#x9020;&#x4E58;&#x5BA2;&#x4FE1;&#x606F;</p>
+</li>
+<li><p>&#x9700;&#x8981;&#x89E3;&#x6790;&#x5750;&#x5E2D;&#x7F16;&#x7801; <code>seat_type</code></p>
+</li>
+<li><p>passengerTicketStr</p>
+<pre><code>passengerTicketStr = &apos;%s,0,1,%s,%s,%s,%s,N&apos; % (
+            seat_type, passenger_info_dict[&apos;passenger_name&apos;],
+            passenger_info_dict[&apos;passenger_id_type_code&apos;],
+            passenger_info_dict[&apos;passenger_id_no&apos;],
+            passenger_info_dict[&apos;passenger_mobile_no&apos;])
+</code></pre></li>
+<li><p>oldPassengerStr</p>
+<pre><code>oldPassengerStr = &apos;%s,%s,%s,1_&apos; % (
+            passenger_info_dict[&apos;passenger_name&apos;],
+            passenger_info_dict[&apos;passenger_id_type_code&apos;],
+            passenger_info_dict[&apos;passenger_id_no&apos;])
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h4 id="1121-httpskyfw12306cnotnconfirmpassengercheckorderinfo">1.1.21 <code>https://kyfw.12306.cn/otn/confirmPassenger/checkOrderInfo</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x68C0;&#x67E5;&#x9009;&#x7968;&#x4EBA;&#x4FE1;&#x606F;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{
+&apos;cancel_flag&apos;: &apos;2&apos;,  # &#x672A;&#x77E5;
+&apos;bed_level_order_num&apos;: &apos;000000000000000000000000000000&apos;,  # &#x672A;&#x77E5;
+&apos;passengerTicketStr&apos;: passengerTicketStr.encode(&apos;utf-8&apos;),  # O,0,1,&#x9773;&#x6587;&#x5F3A;,1,142303199512240614,18335456020,N
+&apos;oldPassengerStr&apos;: oldPassengerStr.encode(&apos;utf-8&apos;),  # &#x9773;&#x6587;&#x5F3A;,1,142303199512240614,1_
+&apos;tour_flag&apos;: &apos;dc&apos;,  # &#x5355;&#x7A0B;
+&apos;randCode&apos;: &apos;&apos;,
+&apos;whatsSelect&apos;: &apos;1&apos;,
+&apos;_json_att&apos;: &apos;&apos;,
+&apos;REPEAT_SUBMIT_TOKEN&apos;: repeat_submit_token # 1.1.19&#x83B7;&#x53D6;
+}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;validateMessagesShowId&quot;:&quot;_validatorMessage&quot;,&quot;status&quot;:true,&quot;httpstatus&quot;:200,&quot;data&quot;:{&quot;ifShowPassCode&quot;:&quot;N&quot;,&quot;canChooseBeds&quot;:&quot;N&quot;,&quot;canChooseSeats&quot;:&quot;N&quot;,&quot;choose_Seats&quot;:&quot;MOP9&quot;,&quot;isCanChooseMid&quot;:&quot;N&quot;,&quot;ifShowPassCodeTime&quot;:&quot;1&quot;,&quot;submitStatus&quot;:true,&quot;smokeStr&quot;:&quot;&quot;},&quot;messages&quot;:[],&quot;validateMessages&quot;:{}}
+</code></pre></li>
+</ul>
+<h4 id="1122-httpskyfw12306cnotnconfirmpassengergetqueuecount">1.1.22 <code>https://kyfw.12306.cn/otn/confirmPassenger/getQueueCount</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x63D0;&#x4EA4;&#x8BA2;&#x5355;,&#x5E76;&#x83B7;&#x53D6;&#x6301;&#x7968;&#x672A;&#x4ED8;&#x6B3E;&#x7684;&#x4EBA;&#x6570;&#xFF0C;&#x548C;&#x8F66;&#x7968;&#x7684;&#x771F;&#x5B9E;&#x4F59;&#x6570;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{
+&apos;train_date&apos;: parseDate(train_date),  # Fri Nov 24 2017 00:00:00 GMT+0800 (&#x4E2D;&#x56FD;&#x6807;&#x51C6;&#x65F6;&#x95F4;)
+&apos;train_no&apos;: train_info_dict[&apos;train_no&apos;],  # 6c0000G31205
+&apos;stationTrainCode&apos;: train_info_dict[&apos;stationTrainCode&apos;],  # G312
+&apos;seatType&apos;: seat_type,  # &#x5E2D;&#x522B;
+&apos;fromStationTelecode&apos;: train_info_dict[&apos;from_station&apos;],  # one_train[6]
+&apos;toStationTelecode&apos;: train_info_dict[&apos;to_station&apos;],  # ? one_train[7]
+&apos;leftTicket&apos;: train_info_dict[&apos;leftTicket&apos;],  # one_train[12]
+&apos;purpose_codes&apos;: &apos;00&apos;,
+&apos;train_location&apos;: train_info_dict[&apos;train_location&apos;],  # one_train[15]
+&apos;_json_att&apos;: &apos;&apos;,
+&apos;REPEAT_SUBMIT_TOKEN&apos;: repeat_submit_token # 1.1.19&#x83B7;&#x53D6;
+}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;validateMessagesShowId&quot;:&quot;_validatorMessage&quot;,&quot;status&quot;:true,&quot;httpstatus&quot;:200,&quot;data&quot;:{&quot;count&quot;:&quot;0&quot;,&quot;ticket&quot;:&quot;20,100&quot;,&quot;op_2&quot;:&quot;false&quot;,&quot;countT&quot;:&quot;0&quot;,&quot;op_1&quot;:&quot;false&quot;},&quot;messages&quot;:[],&quot;validateMessages&quot;:{}}
+</code></pre><ul>
+<li>count &#x6301;&#x7968;&#x672A;&#x4ED8;&#x6B3E;&#x7684;&#x4EBA;&#x6570;</li>
+<li>ticket &#x8F66;&#x7968;&#x7684;&#x771F;&#x5B9E;&#x4F59;&#x6570;</li>
+</ul>
+</li>
+</ul>
+<h4 id="1123-httpskyfw12306cnotnconfirmpassengerconfirmsingleforqueue">1.1.23 <code>https://kyfw.12306.cn/otn/confirmPassenger/confirmSingleForQueue</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x786E;&#x8BA4;&#x8BA2;&#x5355;,&#x8FDB;&#x884C;&#x6263;&#x7968;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{
+&apos;passengerTicketStr&apos;: passengerTicketStr.encode(&apos;utf-8&apos;),
+&apos;oldPassengerStr&apos;: oldPassengerStr.encode(&apos;utf-8&apos;),
+&apos;randCode&apos;: &apos;&apos;,
+&apos;purpose_codes&apos;: &apos;00&apos;,
+&apos;key_check_isChange&apos;: key_check_isChange,
+&apos;leftTicketStr&apos;: leftTicket,
+&apos;train_location&apos;: train_location,  # one_train[15]
+&apos;choose_seats&apos;: &apos;&apos;,  # &#x9009;&#x62E9;&#x5750;&#x5E2D; ABCDEF &#x4E0A;&#x4E2D;&#x4E0B;&#x94FA; &#x9ED8;&#x8BA4;&#x4E3A;&#x7A7A;&#x4E0D;&#x9009;
+&apos;seatDetailType&apos;: &apos;000&apos;,
+&apos;whatsSelect&apos;: &apos;1&apos;,
+&apos;roomType&apos;: &apos;00&apos;,
+&apos;dwAll&apos;: &apos;N&apos;,  # ?
+&apos;_json_att&apos;: &apos;&apos;,
+&apos;REPEAT_SUBMIT_TOKEN&apos;: repeat_submit_token # 1.1.19&#x83B7;&#x53D6;
+}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&apos;validateMessagesShowId&apos;: &apos;_validatorMessage&apos;, &apos;status&apos;: True, &apos;httpstatus&apos;: 200, &apos;data&apos;: {&apos;submitStatus&apos;: True}, &apos;messages&apos;: [], &apos;validateMessages&apos;: {}}
+</code></pre></li>
+</ul>
+<h4 id="1124-httpskyfw12306cnotnconfirmpassengerqueryorderwaittimerandomstourflagdcjsonattrepeatsubmittokens">1.1.24 <code>https://kyfw.12306.cn/otn/confirmPassenger/queryOrderWaitTime?random=%s&amp;tourFlag=dc&amp;_json_att=&amp;REPEAT_SUBMIT_TOKEN=%s</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x6392;&#x961F;&#x7B49;&#x5F85; &#x8FD4;&#x56DE;waittime(&#x4E0B;&#x6B21;&#x53D1;&#x9001;&#x91CD;&#x590D;&#x8BF7;&#x6C42;&#x6240;&#x9700;&#x8981;&#x7684;&#x7B49;&#x5F85;&#x65F6;&#x95F4;)  &#x91CD;&#x590D;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x76F4;&#x5230;&#x83B7;&#x53D6; requestID &#x548C; orderID</p>
+</blockquote>
+<ul>
+<li><p>GET</p>
+</li>
+<li><p>query</p>
+<ul>
+<li>str(int(time.time() * 1000))</li>
+<li>repeat_submit_token  # 1.1.19&#x83B7;&#x53D6;</li>
+</ul>
+</li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;validateMessagesShowId&quot;:&quot;_validatorMessage&quot;,&quot;status&quot;:true,&quot;httpstatus&quot;:200,&quot;data&quot;:{&quot;queryOrderWaitTimeStatus&quot;:true,&quot;count&quot;:0,&quot;waitTime&quot;:4,&quot;requestId&quot;:6478994818521140385,&quot;waitCount&quot;:1,&quot;tourFlag&quot;:&quot;dc&quot;,&quot;orderId&quot;:null},&quot;messages&quot;:[],&quot;validateMessages&quot;:{}}
+</code></pre></li>
+</ul>
+<h4 id="1125-httpskyfw12306cnotnconfirmpassengerresultorderfordcqueue">1.1.25 <code>https://kyfw.12306.cn/otn/confirmPassenger/resultOrderForDcQueue</code></h4>
+<blockquote>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x83B7;&#x53D6;&#x8BA2;&#x5355;&#x7ED3;&#x679C;&#xFF0C;&#x5982;&#x679C;&#x63D0;&#x793A;&#x201C;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x4E2D;&#x6570;&#x636E;&#x4E22;&#x5931;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x672A;&#x5B8C;&#x6210;&#x8BA2;&#x5355;&#xFF0C;&#x7EE7;&#x7EED;&#x652F;&#x4ED8;&#xFF01;&#x201D;&#x5219;&#x8D2D;&#x7968;&#x6210;&#x529F;&#xFF01;</p>
+</blockquote>
+<ul>
+<li><p>POST</p>
+</li>
+<li><p>data</p>
+<pre><code>{
+&apos;orderSequence_no&apos;: orderID, # 1.1.24&#x83B7;&#x53D6;
+&apos;_json_att&apos;: &apos;&apos;,
+&apos;REPEAT_SUBMIT_TOKEN&apos;: repeat_submit_token # 1.1.24&#x83B7;&#x53D6;
+}
+</code></pre></li>
+<li><p>Referer <code>https://kyfw.12306.cn/otn/confirmPassenger/initDc</code></p>
+</li>
+<li><p>response.json()</p>
+<pre><code>{&quot;validateMessagesShowId&quot;:&quot;_validatorMessage&quot;,&quot;status&quot;:true,&quot;httpstatus&quot;:200,&quot;data&quot;:{&quot;errMsg&quot;:&quot;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x4E2D;&#x6570;&#x636E;&#x4E22;&#x5931;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x672A;&#x5B8C;&#x6210;&#x8BA2;&#x5355;&#xFF0C;&#x7EE7;&#x7EED;&#x652F;&#x4ED8;&#xFF01;&quot;,&quot;submitStatus&quot;:false},&quot;messages&quot;:[],&quot;validateMessages&quot;:{}}
+</code></pre></li>
+</ul>
+<h3 id="12-&#x9879;&#x76EE;&#x4EFB;&#x52A1;&#x5206;&#x89E3;">1.2 &#x9879;&#x76EE;&#x4EFB;&#x52A1;&#x5206;&#x89E3;</h3>
+<p><img src="images/1.2-12306&#x8D2D;&#x7968;&#x9879;&#x76EE;&#x4EFB;&#x52A1;&#x5206;&#x89E3;.png" alt="1.2-12306&#x8D2D;&#x7968;&#x9879;&#x76EE;&#x4EFB;&#x52A1;&#x5206;&#x89E3;"></p>
+<hr>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<ol>
+<li>&#x4E86;&#x89E3; 12306&#x767B;&#x9646;&#x8D2D;&#x7968;&#x6293;&#x5305;&#x8FC7;&#x7A0B;</li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ITCast all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x300C;Revision Time:
+2019-02-28 02:13:33&#x300D;
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../files/09-项目-12306购票（requests）/index.html" class="navigation navigation-prev " aria-label="Previous page: 项目：12306购票（requests）"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../files/09-项目-12306购票（requests）/2.处理验证码并完成登陆.html" class="navigation navigation-next " aria-label="Next page: 处理验证码并完成登陆"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"gitbookuse"},"github":{"url":"https://github.com/dododream"},"search-pro":{"cutWordLib":"nodejieba","defineWord":["gitbook-use"]},"sharing":{"weibo":true,"facebook":true,"twitter":true,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"tbfed-pagefooter":{"copyright":"Copyright © ITCast","modify_label":"「Revision Time:","modify_format":"YYYY-MM-DD HH:mm:ss」"},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sitemap":{"hostname":"http://www.treenewbee.top"},"donate":{"wechat":"http://weixin.png","alipay":"http://alipay.png","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"edit-link":{"base":"https://github.com/dododream/edit","label":"Edit This Page"},"splitter":{},"toggle-chapters":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Python爬虫课程讲义 -->
+</html>
